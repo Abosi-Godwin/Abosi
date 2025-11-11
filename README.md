@@ -1,10 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is my personal portfolio website, built with Next.js and styled using TailwindCSS.
+It showcases my work, skills, and professional background in a clean, modern design with a white + indigo theme.
 
-## Getting Started
 
-First, run the development server:
+---
 
-```bash
+🚀 Getting Started
+
+Run the development server:
+
 npm run dev
 # or
 yarn dev
@@ -12,25 +15,76 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the homepage by modifying app/page.tsx.
+The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+🧠 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Framework: Next.js 14+
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Styling: TailwindCSS
 
-## Deploy on Vercel
+Fonts: Nunito via next/font
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deployment: Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+---
+
+🎨 Theme
+
+The design follows a modern white + indigo palette for a clean and professional look.
+
+Color Palette
+
+Role	Hex
+
+Background	#F9FAFB
+Foreground	#111827
+Primary	#6366F1
+Secondary	#A855F7
+Accent	#EEF2FF
+Muted	#6B7280
+Highlight	#F3E8FF
+
+
+
+---
+
+🧩 Features
+
+Responsive and mobile-friendly layout
+
+Dynamic components with clean animations
+
+Gradient hero section and section highlights
+
+SEO-friendly structure
+
+
+
+---
+
+🛠️ Development Notes
+
+Tailwind custom colors and gradients are defined in tailwind.config.js under the extend section.
+You can freely adjust them to match future design updates.
+
+
+---
+
+☁️ Deployment
+
+The easiest way to deploy this project is through Vercel, the creators of Next.js:
+
+👉 Deploy on Vercel
+
+For detailed deployment steps, refer to the official
+Next.js Deployment Docs.
