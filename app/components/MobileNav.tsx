@@ -15,7 +15,7 @@ const MobileNav = () => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="lucide lucide-user-round-icon lucide-user-round"
+          className="lucide lucide-user-round-icon lucide-user-round"
         >
           <circle
             cx="12"
@@ -36,7 +36,7 @@ const MobileNav = () => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="lucide
+          className="lucide
       lucide-code-icon lucide-code"
         >
           <path d="m16 18 6-6-6-6" />
@@ -57,7 +57,7 @@ const MobileNav = () => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="lucide
+          className="lucide
       lucide-biceps-flexed-icon lucide-biceps-flexed"
         >
           <path
@@ -87,7 +87,7 @@ const MobileNav = () => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="lucide
+          className="lucide
       lucide-user-star-icon lucide-user-star"
         >
           <path
@@ -120,7 +120,7 @@ const MobileNav = () => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="lucide
+          className="lucide
       lucide-message-circle-code-icon lucide-message-circle-code"
         >
           <path
