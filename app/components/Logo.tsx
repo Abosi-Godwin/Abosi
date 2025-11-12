@@ -1,5 +1,4 @@
-interface LogoInterface {}
-const Logo = (): LogoInterface => {
+const Logo = () => {
   return (
     <div className="font-bold tracking-wide text-2xl">
       Godwin<span className="text-primary">.</span>
