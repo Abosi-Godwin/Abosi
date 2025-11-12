@@ -2,7 +2,7 @@ const MobileNav = () => {
   return (
     <div
       className="flex gap-4 items-center justify-center border-x-2
-    border-primary px-2 divide-primary divide-x-2"
+    border-primary px-2 divide-black/80 divide-x-2"
     >
       <button className="text-center">
         <svg
@@ -17,11 +17,7 @@ const MobileNav = () => {
           stroke-linejoin="round"
           className="lucide lucide-user-round-icon lucide-user-round"
         >
-          <circle
-            cx="12"
-            cy="8"
-            r="5"
-          />
+          <circle cx="12" cy="8" r="5" />
           <path d="M20 21a8 8 0 0 0-16 0" />
         </svg>
       </button>
@@ -102,11 +98,7 @@ const MobileNav = () => {
             d="M8 15H7a4 4 0 0 0-4
       4v2"
           />
-          <circle
-            cx="10"
-            cy="7"
-            r="4"
-          />
+          <circle cx="10" cy="7" r="4" />
         </svg>
       </button>
       <button className="text-center bg-red-400 w-full block">

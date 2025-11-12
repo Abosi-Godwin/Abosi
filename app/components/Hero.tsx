@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="pt-18 px-5">
-      <div className="pt-10 relative ">
+    <div className="pt-10 flex flex-col pt-18 items-center justify-evenly px-5 md:flex-row md:pt-30 w-full">
+      <div className="relative ">
         <Image
           src="/Abosi.png"
           width={260}
@@ -14,7 +14,7 @@ const Hero = () => {
 
         <div
           className="font-bold flex gap-1 bg-primary w-fit rounded-md px-1
-        absolute top-24 right-4 text-white"
+        absolute top-24 right-4 text-white md:top-2"
         >
           <h1>Available</h1>
           <span className="relative flex size-3">
@@ -40,7 +40,8 @@ const Hero = () => {
           developer.
         </h1>
         <p className="">
-          I build unique modern, responsive websites that help brands stand out online.
+          I build unique modern, responsive websites that help brands stand out
+          online.
         </p>
         <div className="flex gap-4 py-8">
           <button
