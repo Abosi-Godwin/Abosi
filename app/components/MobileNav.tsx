@@ -72,7 +72,7 @@ const MobileNav = () => {
           />
         </svg>
       </button>
-      <button className="text-center bg-red-400 w-full">
+      <button className="text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -101,7 +101,7 @@ const MobileNav = () => {
           <circle cx="10" cy="7" r="4" />
         </svg>
       </button>
-      <button className="text-center bg-red-400 w-full block">
+      <button className="text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

@@ -1,8 +1,10 @@
-
+import Intro from "../components/Intro";
 const Main = () => {
   return (
-    <div>Main</div>
-  )
-}
+    <main className="">
+      <Intro />
+    </main>
+  );
+};
 
-export default Main
+export default Main;

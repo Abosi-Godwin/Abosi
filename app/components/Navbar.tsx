@@ -8,6 +8,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex justify-between items-center px-3 md:px-10 py-4">
         <Logo />
         <MobileNav />
+        <Navlinks />
       </div>
     </nav>
   );
