@@ -9,14 +9,13 @@ const Hero = () => {
           width={260}
           height={260}
           alt="Abosi Godwin"
-          className="-pl-10"
+          className=""
         />
 
         <div
           className="font-bold flex gap-1 bg-green-500 w-fit rounded-md px-1
-        absolute top-24 right-4 text-white"
-          className="font-bold flex gap-1 bg-primary w-fit rounded-md px-1
-        absolute top-24 right-4 text-white md:top-2"
+        absolute top-24 right-4 text-white
+         md:top-2"
         >
           <h1>Available</h1>
           <span className="relative flex size-3">
@@ -42,7 +41,9 @@ const Hero = () => {
           developer.
         </h1>
         <p>
-          I build unique modern, responsive websites that help brands stand out online.
+          I build unique modern, responsive websites that help brands stand out
+          online.
+        </p>
         <p className="">
           I build unique modern, responsive websites that help brands stand out
           online.
