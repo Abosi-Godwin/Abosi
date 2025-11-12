@@ -2,7 +2,7 @@ const MobileNav = () => {
   return (
     <div
       className="flex gap-4 items-center justify-center border-x-2
-    border-primary px-2 divide-black/80 divide-x-2"
+    border-black/80 px-2 divide-black/80 divide-x-2 md:hidden"
     >
       <button className="text-center">
         <svg

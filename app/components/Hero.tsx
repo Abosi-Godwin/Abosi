@@ -2,14 +2,14 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="pt-10 flex flex-col pt-18 items-center justify-evenly px-5 md:flex-row md:pt-30 w-full">
-      <div className="relative ">
+    <div className="pt-10 flex flex-col items-center justify-evenly px-5 md:flex-row md:pt-30 w-full">
+      <div className="relative w-full md:w-fit">
         <Image
           src="/Abosi.png"
           width={260}
           height={260}
           alt="Abosi Godwin"
-          className=""
+          className="sm:-ml-8"
         />
 
         <div
