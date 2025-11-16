@@ -7,6 +7,7 @@ const nunito = Nunito({
   weight: ["300", "400", "600", "700", "800"],
   variable: "--font-nunito",
 });
+import "swiper/css";
 
 export const metadata: Metadata = {
   title: "Abosi Godwin | Frontend, Shopify & WordPress Developer",

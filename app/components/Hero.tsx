@@ -35,18 +35,14 @@ const Hero = () => {
           Hi &#x270B;, i am <strong>Abosi Godwin.</strong>
         </p>
         <h1 className="text-2xl py-5 font-bold">
-          A <span className="text-accent font-extrabold">Full Stack, </span>
-          <span className="text-accent font-extrabold">Shopify, </span> and
-          <span className="text-accent font-extrabold"> WordPress </span>
+          A <span className="text-secondary font-extrabold">Full Stack, </span>
+          <span className="text-secondary font-extrabold">Shopify, </span> and
+          <span className="text-secondary font-extrabold"> WordPress </span>
           developer.
         </h1>
-        <p>
-          I build unique modern, responsive websites that help brands stand out
-          online.
-        </p>
+        <p>I build unique modern, responsive websites that help brands stand out online.</p>
         <p className="">
-          I build unique modern, responsive websites that help brands stand out
-          online.
+          I build unique modern, responsive websites that help brands stand out online.
         </p>
         <div className="flex gap-4 py-8">
           <button
