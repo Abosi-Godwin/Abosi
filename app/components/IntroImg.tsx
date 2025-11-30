@@ -1,5 +1,8 @@
 import Image from "next/image";
-
+interface ImageProp {
+  image: any;
+  title: string;
+}
 const IntroImage = ({ data }) => {
   return (
     <Image

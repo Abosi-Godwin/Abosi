@@ -12,9 +12,9 @@ const MobileNav = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide lucide-user-round-icon lucide-user-round"
         >
           <circle cx="12" cy="8" r="5" />
@@ -29,9 +29,9 @@ const MobileNav = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide
       lucide-code-icon lucide-code"
         >
@@ -50,9 +50,9 @@ const MobileNav = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide
       lucide-biceps-flexed-icon lucide-biceps-flexed"
         >
@@ -80,9 +80,9 @@ const MobileNav = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide
       lucide-user-star-icon lucide-user-star"
         >
@@ -109,9 +109,9 @@ const MobileNav = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide
       lucide-message-circle-code-icon lucide-message-circle-code"
         >
