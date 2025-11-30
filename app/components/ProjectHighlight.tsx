@@ -9,9 +9,11 @@ import Heading from "./Heading";
 
 import { introInfo, projectHighlight } from "../utils/assets";
 
+import "swiper/css/pagination";
+
 const ProjectHighlight = () => {
   return (
-    <div className="py-10 px-5 grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div className="py-5 md:py-10 px-2 md:px-5 grid grid-cols-1 gap-x-8 md:grid-cols-2">
       <div className="">
         <Heading text="Project Spotlight — Trexpenser" />
         <p className="tracking-wide">
@@ -19,12 +21,16 @@ const ProjectHighlight = () => {
           and set meaningful savings goals. Designed and built end-to-end with a
           focus on clarity, simplicity, and real-life usability.
         </p>
+        <p className="tracking-wide">
+          Every screen was designed with the goal of reducing friction. Users
+          should be able to understand their money at a glance.
+        </p>
       </div>
       <div className="row-span-2">
         <Swiper
           spaceBetween={10}
           slidesPerView={1}
-          className="w-[95%] h-52 overflow-hidden p-2 border-8
+          className="h-full overflow-hidden p-2 border-4
           border-gray-50 rounded-md"
           modules={[Pagination, A11y, Autoplay]}
           pagination={{ clickable: true }}
@@ -36,15 +42,10 @@ const ProjectHighlight = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="py-4 px-2">
-          <p className="text-sm text-center italic tracking-tight">
-            Every screen was designed with the goal of reducing friction. Users
-            should be able to understand their money at a glance.
-          </p>
-          <p className="flex items-center justify-center w-full text-center py-4">
-            React • Supabase • TailwindCSS • Context API • Recharts • motion •
-          </p>
-        </div>
+
+        <p className="flex p-4 items-center justify-center w-full text-center py-4">
+          React • Supabase • TailwindCSS • Context API • Recharts • motion •
+        </p>
       </div>
 
       <ul className="divide-y-2 divide-gray-100 gap-2 flex flex-col py-6">

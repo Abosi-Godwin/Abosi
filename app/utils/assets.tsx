@@ -23,8 +23,9 @@ import {
 } from "react-icons/lu";
 
 import type { StaticImageData } from "next/image";
-import myImage from "../../public/relaxe.jpg";
 
+import myImage from "../../public/relaxe.jpg";
+import trexpenser from "../../public/trexpenser.png";
 type HighlightProps = string[];
 
 interface SkillItem {
@@ -43,7 +44,7 @@ export const introInfo: IntroInfo[] = [
     title: "Landing page",
   },
   {
-    image: myImage,
+    image: trexpenser,
     title: "Sign up page",
   },
   {
@@ -51,7 +52,7 @@ export const introInfo: IntroInfo[] = [
     title: "login page",
   },
   {
-    image: myImage,
+    image: trexpenser,
     title: "Dashboard page",
   },
 ];
