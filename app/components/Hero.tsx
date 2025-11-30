@@ -40,9 +40,9 @@ const Hero = () => {
           <span className="text-secondary font-extrabold"> WordPress </span>
           developer.
         </h1>
-        <p>I build unique modern, responsive websites that help brands stand out online.</p>
-        <p className="">
-          I build unique modern, responsive websites that help brands stand out online.
+        <p>
+          I build unique modern, responsive websites that help brands stand out
+          online.
         </p>
         <div className="flex gap-4 py-8">
           <button

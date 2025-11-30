@@ -1,20 +1,19 @@
 interface SkillItem {
-  title: string,
-  icon: React.ElemetType
+  title: string;
+  icon: React.ElementType;
 }
-
 
 interface SkillsListProps {
   title: string;
-  datas: SkillItem[]
-};
+  datas: SkillItem[];
+}
 
-const SkillsList = ({ title, datas } : SkillsListProps) => {
+const SkillsList = ({ title, datas }: SkillsListProps) => {
   return (
     <div className="py-2">
-      <h1 className="text-2xl font-bold pb-2">{title}</h1>
-      <ul>
-        {datas.map(data => {
+      <h1 className="text-xl font-bold pb-2">{title}</h1>
+      <ul className="pt-2">
+        {datas.map((data) => {
           const Icon = data.icon;
           return (
             <li

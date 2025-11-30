@@ -8,24 +8,36 @@ import {
   FaGitAlt,
   FaGithub,
   FaFigma,
-  FaSquareGithub,
 } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiSupabase, SiVercel } from "react-icons/si";
 
+import {
+  LuBrain,
+  LuSearch,
+  LuMessagesSquare,
+  LuClock3,
+  LuRefreshCw,
+  LuUsers,
+  LuSparkles,
+} from "react-icons/lu";
+
+import type { StaticImageData } from "next/image";
 import myImage from "../../public/relaxe.jpg";
 
-type SkillItem = {
-  title: string;
-  icon: ComponentType;
-};
-type IntroInfo = {
-  image: StaticImageData;
-  title: string;
-};
 type HighlightProps = string[];
 
-export const introInfo: IntroInfo = [
+interface SkillItem {
+  title: string;
+  icon: React.ElementType;
+}
+
+interface IntroInfo {
+  image: StaticImageData;
+  title: string;
+}
+
+export const introInfo: IntroInfo[] = [
   {
     image: myImage,
     title: "Landing page",
@@ -43,6 +55,7 @@ export const introInfo: IntroInfo = [
     title: "Dashboard page",
   },
 ];
+
 export const projectHighlight: HighlightProps = [
   " Carefully designed financial UX for effortless daily use",
   "Savings goals with manual and automatic contribution options",
@@ -50,7 +63,8 @@ export const projectHighlight: HighlightProps = [
   "Fully built with React + Tailwind and optimized for mobile",
   "No backend dependencies — lightweight, fast, and reliable",
 ];
-export const coreSkills: SkillItem = [
+
+export const coreSkills: SkillItem[] = [
   { title: "HTML5", icon: FaHtml5 },
 
   { title: "CSS3", icon: FaCss3Alt },
@@ -66,7 +80,7 @@ export const coreSkills: SkillItem = [
   { title: "TailwindCSS", icon: RiTailwindCssFill },
 ];
 
-export const tools: SkillItem = [
+export const tools: SkillItem[] = [
   {
     title: "Shopify",
     icon: FaShopify,
@@ -96,7 +110,41 @@ export const tools: SkillItem = [
     icon: FaFigma,
   },
 ];
-export const softSkills: SkillItem = [
+
+export const softSkills: SkillItem[] = [
+  {
+    title: "Problem-Solving",
+    icon: LuBrain,
+  },
+  {
+    title: "Attention to Detail",
+    icon: LuSearch,
+  },
+  {
+    title: "Communication",
+    icon: LuMessagesSquare,
+  },
+  {
+    title: "Time Management",
+    icon: LuClock3,
+  },
+  {
+    title: "Adaptability",
+    icon: LuRefreshCw,
+  },
+  {
+    title: "Team Collaboration",
+    icon: LuUsers,
+  },
+  {
+    title: "Creativity",
+    icon: LuSparkles,
+  },
+];
+
+/*
+
+export const softSkills: SkillItem[] = [
   {
     title: "Problem-Solving",
     icon: FaShopify,
@@ -126,3 +174,4 @@ export const softSkills: SkillItem = [
     icon: FaFigma,
   },
 ];
+*/

@@ -1,6 +1,6 @@
 const Navlinks = () => {
   return (
-    <ul className="hidden md:flex space-x-8 text-black/80">
+    <ul className="hidden font-bold md:flex space-x-8 text-black/80">
       <li className="hover:text-primary transition">Home</li>
       <li className="hover:text-primary transition">About</li>
       <li className="hover:text-primary transition">Work</li>
