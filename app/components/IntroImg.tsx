@@ -5,10 +5,11 @@ interface ImageProp {
 }
 const IntroImage = ({ data }: ImageProp) => {
   return (
-    <>
-      <Image src={data.image} alt={data.title} layout="fill" className="" />;
-      <h1>{data.title}</h1>
-    </>
+    <Image
+      src={data.image}
+      alt={data.title}
+      fill
+    />
   );
 };
 export default IntroImage;

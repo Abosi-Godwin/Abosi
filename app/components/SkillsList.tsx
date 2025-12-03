@@ -12,7 +12,7 @@ const SkillsList = ({ title, datas }: SkillsListProps) => {
   return (
     <div className="py-2">
       <h1 className="text-xl font-bold pb-2">{title}</h1>
-      <ul className="pt-2">
+      <ul className="pt-2 flex flex-col gap-1">
         {datas.map((data) => {
           const Icon = data.icon;
           return (

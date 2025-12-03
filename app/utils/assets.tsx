@@ -9,6 +9,7 @@ import {
   FaGithub,
   FaFigma,
 } from "react-icons/fa6";
+
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiSupabase, SiVercel } from "react-icons/si";
 
@@ -22,21 +23,10 @@ import {
   LuSparkles,
 } from "react-icons/lu";
 
-import type { StaticImageData } from "next/image";
+import { SkillItem, HighlightProps, IntroInfo, ProjectsProps } from "./types";
 
 import myImage from "../../public/relaxe.jpg";
 import trexpenser from "../../public/trexpenser.png";
-type HighlightProps = string[];
-
-interface SkillItem {
-  title: string;
-  icon: React.ElementType;
-}
-
-interface IntroInfo {
-  image: StaticImageData;
-  title: string;
-}
 
 export const introInfo: IntroInfo[] = [
   {
@@ -143,36 +133,45 @@ export const softSkills: SkillItem[] = [
   },
 ];
 
-/*
-
-export const softSkills: SkillItem[] = [
+export const projects: ProjectsProps[] = [
   {
-    title: "Problem-Solving",
-    icon: FaShopify,
+    id: 1,
+    slug: "leeslagos",
+    title: "LeesLagos — Cosmetics E-commerce Store",
+    shortDescription:
+      "A beautifully designed cosmetics e-commerce website with a complete product catalogue and smooth shopping experience.",
+    thumbnail: trexpenser,
+    tags: ["React", "TailwindCSS", "E-commerce", "Frontend"],
+    liveUrl: "https://your-live-link.com",
   },
   {
-    title: "Attention to Detail",
-    icon: FaWordpress,
+    id: 2,
+    slug: "trexpenser",
+    title: "Trexpenser — Personal Finance Tracker",
+    shortDescription:
+      "A modern expense tracking app helping users manage income, expenses, savings goals, and spending insights.",
+    thumbnail: trexpenser,
+    tags: ["React", "TailwindCSS", "Charts", "Finance"],
+    liveUrl: "https://trexpenser.vercel.app",
   },
   {
-    title: "Communication",
-    icon: SiSupabase,
+    id: 3,
+    slug: "chirp-landing-page",
+    title: "Chirp Landing Page — Frontend Mentor",
+    shortDescription:
+      "A pixel-perfect recreation of the Chirp landing page challenge using clean HTML and CSS.",
+    thumbnail: trexpenser,
+    tags: ["HTML", "CSS", "Frontend Mentor", "Responsive"],
+    liveUrl: "https://your-live-link.com",
   },
   {
-    title: "Time Management",
-    icon: FaGitAlt,
-  },
-  {
-    title: "Adaptability",
-    icon: FaGithub,
-  },
-  {
-    title: "Team Collaboration",
-    icon: SiVercel,
-  },
-  {
-    title: "Creativity",
-    icon: FaFigma,
+    id: 4,
+    slug: "elvanex",
+    title: "Elvanex — Corporate Website",
+    shortDescription:
+      "A modern corporate website built with Next.js, optimized for performance, responsiveness, and SEO.",
+    thumbnail: trexpenser,
+    tags: ["Next.js", "TailwindCSS", "SEO", "Corporate Website"],
+    liveUrl: "https://your-live-link.com",
   },
 ];
-*/

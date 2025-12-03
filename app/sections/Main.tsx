@@ -1,10 +1,12 @@
 import Intro from "../components/Intro";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 const Main = () => {
   return (
-    <main className="px-5 md:px-10">
+    <main className="px-3 md:px-10">
       <Intro />
       <Skills />
+      <Projects />
     </main>
   );
 };
