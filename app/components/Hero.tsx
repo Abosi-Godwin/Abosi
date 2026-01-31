@@ -1,65 +1,59 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="pt-10 flex flex-col items-center justify-evenly px-5 md:flex-row md:pt-30 w-full">
-      <div className="relative w-full md:w-fit">
+    <section className="flex w-full flex-col items-center justify-evenly px-5 pt-10 md:flex-row md:pt-32">
+      {/* Image Container */}
+      <div className="relative w-fit">
         <Image
           src="/Abosi.png"
           width={260}
           height={260}
           alt="Abosi Godwin"
-          className="sm:-ml-8"
+          className="rounded-full sm:-ml-8" // Added rounded-full assuming a headshot
+          priority // Ensures this loads fast as it's above the fold
         />
 
-        <div
-          className="font-bold flex gap-1 bg-green-500 w-fit rounded-md px-1
-        absolute top-24 right-4 text-white
-         md:top-2"
-        >
-          <h1>Available</h1>
-          <span className="relative flex size-3">
-            <span
-              className="absolute inline-flex h-full w-full animate-ping
-            rounded-full bg-white opacity-75"
-            ></span>
-            <span
-              className="relative inline-flex size-3 rounded-full
-            bg-white/60"
-            ></span>
+        {/* Status Badge */}
+        <div className="absolute top-20 right-0 flex items-center gap-2 rounded-md bg-green-500 px-2 py-0.5 text-xs font-bold text-white md:top-4 md:-right-4">
+          <span>Available</span>
+          <span className="relative flex size-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
+            <span className="relative inline-flex size-2 rounded-full bg-white"></span>
           </span>
         </div>
       </div>
-      <div className="">
-        <p className="text-sm">
-          Hi &#x270B;, i am <strong>Abosi Godwin.</strong>
+
+      {/* Text Content */}
+      <div className="max-w-xl text-center md:text-left">
+        <p className="text-sm text-gray-600">
+          Hi 👋, I am <strong>Abosi Godwin.</strong>
         </p>
-        <h1 className="text-2xl py-5 font-bold">
-          A <span className="text-secondary font-extrabold">Full Stack, </span>
-          <span className="text-secondary font-extrabold">Shopify, </span> and
-          <span className="text-secondary font-extrabold"> WordPress </span>
+        
+        {/* Main SEO Heading */}
+        <h1 className="py-5 text-3xl font-bold leading-tight md:text-4xl">
+          A <span className="text-secondary">Full Stack, </span>
+          <span className="text-secondary">Shopify, </span> and
+          <span className="text-secondary">WordPress </span>
           developer.
         </h1>
-        <p>
-          I build unique modern, responsive websites that help brands stand out
-          online.
+        
+        <p className="text-gray-700">
+          I build unique, modern, and responsive websites that help brands stand out online.
         </p>
-        <div className="flex gap-4 py-8">
-          <button
-            className="ring-2 rounded-md px-5 py-2 ring-white font-bold
-        capitalize bg-secondary text-white"
-          >
+
+        {/* Action Buttons */}
+        <div className="flex justify-center gap-4 py-8 md:justify-start">
+          <button className="bg-secondary rounded-md px-6 py-2 font-bold capitalize text-white transition-transform hover:scale-105 active:scale-95">
             Hire me
           </button>
-          <button
-            className="ring-2 rounded-md px-5 py-1 ring-black/60 font-bold
-        capitalize text-black/70"
-          >
-            view Projects
+          <button className="rounded-md border-2 border-black/60 px-6 py-2 font-bold capitalize text-black/70 transition-colors hover:bg-black/5">
+            View Projects
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

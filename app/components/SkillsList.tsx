@@ -1,34 +1,40 @@
 interface SkillItem {
-  title: string;
-  icon: React.ElementType;
+    title: string;
+    icon: React.ElementType;
 }
 
 interface SkillsListProps {
-  title: string;
-  datas: SkillItem[];
+    title: string;
+    items: SkillItem[];
 }
 
-const SkillsList = ({ title, datas }: SkillsListProps) => {
-  return (
-    <div className="py-2">
-      <h1 className="text-xl font-bold pb-2">{title}</h1>
-      <ul className="pt-2 flex flex-col gap-1">
-        {datas.map((data) => {
-          const Icon = data.icon;
-          return (
-            <li
-              key={data.title}
-              className="flex gap-2 items-center uppercase p-1.5
-                  rounded-md odd:bg-gray-100"
-            >
-              <Icon />
-              {data.title}
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
+const SkillsList = ({ title, items }: SkillsListProps) => {
+    return (
+        <div className="py-2">
+            <h2 className="text-xl font-bold pb-2 border-b border-gray-100">
+                {title}
+            </h2>
+            <ul className="pt-2 flex flex-col gap-1">
+                {items.map(item => {
+                    const Icon = item.icon;
+                    return (
+                        <li
+                            key={item.title}
+                            className="flex gap-3 items-center uppercase p-2 
+                                       rounded-md odd:bg-gray-50 hover:bg-gray-100 
+                                       transition-colors duration-200"
+                        >
+                      
+                            <Icon className="text-secondary text-lg" />
+                            <span className="text-sm font-medium tracking-wide">
+                                {item.title}
+                            </span>
+                        </li>
+                    );
+                })}
+            </ul>
+        </div>
+    );
 };
 
 export default SkillsList;

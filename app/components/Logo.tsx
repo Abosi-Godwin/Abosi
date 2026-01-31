@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 const Logo = () => {
-  return (
-    <div className="font-bold tracking-wide text-2xl">
-      Godwin<span className="text-primary">.</span>
-    </div>
-  );
+    return (
+        <Link href="/">
+            <span className="font-bold tracking-wide text-xl">
+                Godwin<span className="text-primary">.</span>
+            </span>
+        </Link>
+    );
 };
 
 export default Logo;
