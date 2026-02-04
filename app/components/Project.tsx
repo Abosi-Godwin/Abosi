@@ -19,7 +19,7 @@ const Project = ({ data }: ProjectProps) => {
     return (
         <div className="group w-full rounded-md overflow-hidden shadow-xl shadow-gray-200">
             {/* Image Container */}
-            <div className="relative h-52 w-full overflow-hidden">
+            <div className="relative h-52 w-full overflow-hidden cursor-pointer">
                 <Link href={`/projects/${data.slug}`}>
                     <Image
                         src={data.thumbnail}
@@ -31,9 +31,8 @@ const Project = ({ data }: ProjectProps) => {
             </div>
 
             {/* Content */}
-            <div
-                className="px-2 py-4"
-            >
+            <div className="px-2 py-4">
+              
                 <h1 className="text-xl font-bold transition-colors group-hover:text-secondary">
                     {data.title}
                 </h1>
@@ -49,7 +48,10 @@ const Project = ({ data }: ProjectProps) => {
                     ))}
                 </ul>
 
-                <p className="pb-4 tracking-tight text-gray-600">
+                <p
+                    className="pb-4 tracking-tight text-gray-600 leading-relaxed
+                text-gray-700"
+                >
                     {data.shortDescription}
                 </p>
 

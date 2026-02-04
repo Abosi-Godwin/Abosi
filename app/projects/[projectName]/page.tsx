@@ -1,15 +1,21 @@
+import { caseStudies } from "../../utils/assets";
+
 const ProjectDetails = async ({
     params
 }: {
     params: Promise<{ projectName: string }>;
 }) => {
     const { projectName } = await params;
+    const item = caseStudies.find(
+        data => data.title.toLowerCase() === projectName
+    );
 
     return (
-        <main className="">
-            <h1>Hello good afternoon.</h1>
+        <main className="py-36 px-5">
             <h1>Project: {projectName}</h1>
             <p>Details for the {projectName}.</p>
+            <p>{item?.shortDescription}</p>
+            <p className="leading-relaxed">{item.overview}</p>
         </main>
     );
 };

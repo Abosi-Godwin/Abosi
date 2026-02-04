@@ -9,9 +9,8 @@ const Projects = () => {
             <p>Real projects I’ve designed, developed, and shipped.</p>
 
             <div className="grid grid-cols-1 gap-5 py-10 p-2 md:grid-cols-3">
-                {projects.map(project => (
-                    <Project key={project.id} data={project} />
-                ))}
+                {projects.map(project => <Project key={project.id} data={project} />
+                )}
             </div>
         </div>
     );
