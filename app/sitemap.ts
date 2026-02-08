@@ -1,13 +1,12 @@
 import { MetadataRoute } from "next";
 import { caseStudies } from "@/utils/assets";
 
-export default function sitemap(): MetadataRoute.Robots {
+export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://abosi.vercel.app";
-
-    const projectUrls = caseStudies.map(project => ({
+    const projectUrls: MetadataRoute.Sitemap = caseStudies.map(project => ({
         url: `${baseUrl}/projects/${project.title.toLowerCase()}`,
         lastModified: new Date(),
-        changeFrequency: "monthly" as const,
+        changeFrequency: "monthly",
         priority: 0.7
     }));
 
