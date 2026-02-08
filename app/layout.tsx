@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         type: "website"
     },
     verification: {
-        
-        google: "google-site-verification=g6HPtn69cZ_ccl0r3vNxdYvI7gt_KR4ZOUoj8qj5LHc"
+        google: "google-site-verification=8wKxFBoxKbThGGJsFMXBoid6P9uWONt00GcfrWKw0BU"
     }
 };
+ 
 
 export default function RootLayout({
     children
