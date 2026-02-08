@@ -1,69 +1,47 @@
 import { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./styles/globals.css";
-
 import Navbar from "./components/Navbar";
-import Footer from './sections/Footer';
+import Footer from "./sections/Footer";
+import "swiper/css";
+
 const nunito = Nunito({
     subsets: ["latin"],
     weight: ["300", "400", "600", "700", "800"],
     variable: "--font-nunito"
 });
-import "swiper/css";
 
 export const metadata: Metadata = {
     title: "Abosi Godwin | Frontend, Shopify & WordPress Developer",
     description:
-        "I'm Abosi Godwin, a frontend, Shopify, and WordPress developer creating modern, fast, and responsive websites using Next.js, React, and TailwindCSS.",
+        "Portfolio of Abosi Godwin — building modern, responsive websites using Next.js, React, and TailwindCSS.",
+    metadataBase: new URL("https://abosi.vercel.app"),
+    alternates: {
+        canonical: "/"
+    },
     keywords: [
         "Abosi Godwin",
         "Frontend Developer",
-        "React Developer",
         "Next.js Developer",
-        "TailwindCSS",
         "Shopify Developer",
         "WordPress Developer",
-        "Website Designer",
-        "UI Developer",
-        "Web Designer",
-        "Ecommerce Developer"
+        "LeetCode Abosi Godwin",
+        "Codewars Abosi Godwin"
     ],
-    authors: [{ name: "Abosi Godwin", url: "https://abosi-godwin.github.io" }],
-    creator: "Abosi Godwin",
-    publisher: "Abosi Godwin",
+    authors: [{ name: "Abosi Godwin" }],
     openGraph: {
-        title: "Abosi Godwin | Frontend, Shopify & WordPress Developer",
-        description:
-            "Portfolio of Abosi Godwin — a frontend, Shopify, and WordPress developer building modern, responsive, and user-focused websites using React, Next.js, and TailwindCSS.",
-        url: "https://abosi-godwin.github.io",
+        title: "Abosi Godwin | Portfolio",
+        description: "Frontend, Shopify & WordPress Developer.",
+        url: "https://abosi.vercel.app",
         siteName: "Abosi Godwin Portfolio",
-        images: [
-            {
-                url: "https://abosi-godwin.github.io/og-image.png",
-                width: 1200,
-                height: 630,
-                alt: "Abosi Godwin Portfolio Preview"
-            }
-        ],
-        locale: "en_US",
         type: "website"
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "Abosi Godwin | Frontend, Shopify & WordPress Developer",
-        description:
-            "Explore the portfolio of Abosi Godwin — expert in frontend, Shopify, and WordPress development, crafting visually stunning and high-performing websites.",
-        creator: "@abosigodwin",
-        images: ["https://abosi-godwin.github.io/og-image.png"]
-    },
-    icons: {
-        icon: "/favicon.ico"
-    },
-    metadataBase: new URL("https://abosi-godwin.github.io"),
-    alternates: {
-        canonical: "https://abosi-godwin.github.io/"
+    verification: {
+        
+        google: "google-site-verification=g6HPtn69cZ_ccl0r3vNxdYvI7gt_KR4ZOUoj8qj5LHc"
     }
 };
+
 export default function RootLayout({
     children
 }: {
@@ -71,10 +49,36 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={nunito.variable}>
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Person",
+                            name: "Abosi Godwin",
+                            url: "https://abosi.vercel.app",
+                            jobTitle: "Frontend, Shopify & WordPress Developer",
+                            sameAs: [
+                                "https://github.com/abosi-godwin",
+                                "https://abosi-godwin.github.io/",
+                                "https://linkedin.com/in/AbosiGodwin",
+                                "https://www.tiktok.com/goddymadeit",
+                                "https://www.facebook.com/AbosiGodwinN",
+                                "https://www.instagram.com/abosigodwin",
+                                "https://medium.com/@abosigodwin",
+                                "https://leetcode.com/abosigodwin",
+                                "https://www.codewars.com/users/abosigodwin",
+                                "https://twitter.com/AbosiGodwin"
+                            ]
+                        })
+                    }}
+                />
+            </head>
             <body className="font-sans">
                 <Navbar />
                 {children}
-                <Footer/>
+                <Footer />
             </body>
         </html>
     );

@@ -35,24 +35,26 @@ const currentYear = new Date().getFullYear();
 const Footer = () => {
     return (
         <footer className="w-full min-w-max py-8">
-            <hr className="mb-10"/>
-            <p className="text-center capitalize mb-4 mt-8">
-                copyright &copy; {currentYear} Abosi Godwin
-            </p>
-            <div className="mx-auto w-fit flex space-x-4 gap-2 w-fit">
-                {socials.map(social => {
-                    const Icon = social.icon;
-                    return (
-                        <a
-                            className=""
-                            key={social.name}
-                            href={social.url}
-                            target="_blank"
-                        >
-                            <Icon className="text-lg" />
-                        </a>
-                    );
-                })}
+            <hr className="mb-10" />
+            <div className="px-5 mx-auto md:flex md:justify-center md:items-center md:gap-10">
+                <p className="text-center capitalize mb-4 mt-8">
+                    copyright &copy; {currentYear} Abosi Godwin
+                </p>
+                <div className="mx-auto w-fit flex space-x-4 gap-2 w-fit">
+                    {socials.map(social => {
+                        const Icon = social.icon;
+                        return (
+                            <a
+                                className=""
+                                key={social.name}
+                                href={social.url}
+                                target="_blank"
+                            >
+                                <Icon className="text-lg" />
+                            </a>
+                        );
+                    })}
+                </div>
             </div>
         </footer>
     );

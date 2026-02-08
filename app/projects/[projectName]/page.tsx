@@ -1,22 +1,54 @@
 import { caseStudies } from "../../utils/assets";
+import { Metadata } from "next";
 
-const ProjectDetails = async ({
-    params
-}: {
+type Props = {
     params: Promise<{ projectName: string }>;
-}) => {
+};
+
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { projectName } = await params;
+    const item = caseStudies.find(
+        data => data.title.toLowerCase() === projectName
+    );
+
+    return {
+        title: `${item?.title || "Project"} | Abosi Godwin`,
+        description:
+            item?.subtitle || "A detailed look into my development work.",
+        alternates: {
+            canonical: `/projects/${projectName}`
+        },
+        openGraph: {
+            title: `${item?.title} | Abosi Godwin`,
+            description: item?.subtitle,
+            url: `https://abosi.vercel.app/projects/${projectName}`,
+            type: "article"
+        }
+    };
+}
+
+const ProjectDetails = async ({ params }: Props) => {
     const { projectName } = await params;
 
     const item = caseStudies.find(
         data => data.title.toLowerCase() === projectName
     );
 
+    if (!item) return <main className="py-28 px-5">Project not found</main>;
+
     return (
-        <main className="py-36 px-5">
-            <h1>Project: {projectName}</h1>
-            <p>Details for the {projectName}.</p>
-            <p className="leading-relaxed py-5">{item?.shortDescription}</p>
-            <p className="leading-relaxed">{item?.overview}</p>
+        <main className="py-28 px-5">
+            <div>
+                <h1 className="text-2xl font-bold">{item.title}</h1>
+                <p>{item.subtitle}.</p>
+            </div>
+
+            <div className="flex justify-between w-full py-2">
+                <span>web application</span>
+                <span>2025</span>
+                <span>completed</span>
+            </div>
         </main>
     );
 };
