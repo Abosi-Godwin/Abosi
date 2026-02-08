@@ -18,9 +18,8 @@ export const metadata: Metadata = {
     metadataBase: new URL("https://abosi.vercel.app"),
     alternates: {
         canonical: "/"
-    },verification: {
-        google: "8wKxFBoxKbThGGJsFMXBoid6P9uWONt00GcfrWKw0BU", 
     },
+     
     keywords: [
         "Abosi Godwin",
         "Frontend Developer",
@@ -42,7 +41,6 @@ export const metadata: Metadata = {
         google: "google-site-verification=8wKxFBoxKbThGGJsFMXBoid6P9uWONt00GcfrWKw0BU"
     }
 };
- 
 
 export default function RootLayout({
     children
