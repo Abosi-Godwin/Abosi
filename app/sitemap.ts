@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { caseStudies } from "@/utils/assets";
+import { caseStudies } from "./utils/assets";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://abosi.vercel.app";
