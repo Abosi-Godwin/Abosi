@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/"
     },
-     
+
     keywords: [
         "Abosi Godwin",
         "Frontend Developer",
@@ -35,8 +35,17 @@ export const metadata: Metadata = {
         description: "Frontend, Shopify & WordPress Developer.",
         url: "https://abosi.vercel.app",
         siteName: "Abosi Godwin Portfolio",
-        type: "website"
+        type: "website",
+        images: [
+            {
+                url: "https://abosi.vercel.app/Abosi.png",
+                width: 1200,
+                height: 630,
+                alt: "Abosi Godwin Portfolio Preview"
+            }
+        ]
     },
+
     verification: {
         google: "8wKxFBoxKbThGGJsFMXBoid6P9uWONt00GcfrWKw0BU"
     }

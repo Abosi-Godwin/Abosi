@@ -4,18 +4,18 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="flex w-full flex-col items-center justify-evenly px-5 pt-10 md:flex-row md:pt-32">
-      {/* Image Container */}
+      
       <div className="relative w-fit">
         <Image
           src="/Abosi.png"
           width={260}
           height={260}
           alt="Abosi Godwin"
-          className="rounded-full sm:-ml-8" // Added rounded-full assuming a headshot
-          priority // Ensures this loads fast as it's above the fold
+          className="rounded-full sm:-ml-8"
+          priority
         />
 
-        {/* Status Badge */}
+        
         <div className="absolute top-20 right-0 flex items-center gap-2 rounded-md bg-green-500 px-2 py-0.5 text-xs font-bold text-white md:top-4 md:-right-4">
           <span>Available</span>
           <span className="relative flex size-2">
