@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/"
     },
-
     keywords: [
         "Abosi Godwin",
         "Frontend Developer",
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
         title: "Abosi Godwin | Portfolio",
         description: "Frontend, Shopify & WordPress Developer.",
         url: "https://abosi.vercel.app",
-        siteName: "Abosi Godwin Portfolio",
+        siteName: "Abosi Godwin",
         type: "website",
         images: [
             {
@@ -45,7 +44,6 @@ export const metadata: Metadata = {
             }
         ]
     },
-
     verification: {
         google: "8wKxFBoxKbThGGJsFMXBoid6P9uWONt00GcfrWKw0BU"
     }
@@ -56,32 +54,44 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://abosi.vercel.app/#website",
+                url: "https://abosi.vercel.app",
+                name: "Abosi Godwin",
+                publisher: { "@id": "https://abosi.vercel.app/#person" }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://abosi.vercel.app/#person",
+                name: "Abosi Godwin",
+                url: "https://abosi.vercel.app",
+                jobTitle: "Frontend, Shopify & WordPress Developer",
+                sameAs: [
+                    "https://github.com/abosi-godwin",
+                    "https://abosi-godwin.github.io/",
+                    "https://linkedin.com/in/AbosiGodwin",
+                    "https://www.tiktok.com/goddymadeit",
+                    "https://www.facebook.com/AbosiGodwinN",
+                    "https://www.instagram.com/abosigodwin",
+                    "https://medium.com/@AbosiGodwin",
+                    "https://leetcode.com/Abosi-Godwin",
+                    "https://www.codewars.com/users/abosigodwin",
+                    "https://twitter.com/AbosiGodwin"
+                ]
+            }
+        ]
+    };
+
     return (
         <html lang="en" className={nunito.variable}>
             <head>
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Person",
-                            name: "Abosi Godwin",
-                            url: "https://abosi.vercel.app",
-                            jobTitle: "Frontend, Shopify & WordPress Developer",
-                            sameAs: [
-                                "https://github.com/abosi-godwin",
-                                "https://abosi-godwin.github.io/",
-                                "https://linkedin.com/in/AbosiGodwin",
-                                "https://www.tiktok.com/goddymadeit",
-                                "https://www.facebook.com/AbosiGodwinN",
-                                "https://www.instagram.com/abosigodwin",
-                                "https://medium.com/@abosigodwin",
-                                "https://leetcode.com/abosigodwin",
-                                "https://www.codewars.com/users/abosigodwin",
-                                "https://twitter.com/AbosiGodwin"
-                            ]
-                        })
-                    }}
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
             <body className="font-sans">
