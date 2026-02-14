@@ -21,40 +21,35 @@ interface ProjectsProps {
     tags: Array<string>;
     liveUrl: string;
 }
-interface ProblemOrSolution  {
+interface ProblemOrSolution {
     summary: string;
     points: string[];
-};
+}
 
-interface Feature  {
-    title: string;
-    details: string[];
-};
-
-interface UXDecision  {
+interface UXDecision {
     decision: string;
     reason: string;
-};
+}
 
-interface TechStack  {
+interface TechStack {
     frontend: string[];
     styling: string[];
     stateManagement: string[];
     backend: string[];
     dataVisualization: string[];
     deployment: string[];
-};
+}
 
-interface Outcomes  {
+interface Outcomes {
     summary: string;
     highlights: string[];
-};
+}
 
-interface ProjectLinks  {
+interface ProjectLinks {
     live: string | null;
     github: string | null;
-};
-
+}
+/*
 interface CaseStudy  {
     id: string;
     slug: string;
@@ -86,5 +81,74 @@ interface CaseStudy  {
 
     tags: string[];
 };
+*/
+interface CaseStudyResult {
+    metric: string;
+    label: string;
+}
 
-export type { SkillItem, HighlightProps, IntroInfo, ProjectsProps, CaseStudy };
+interface Feature {
+    title: string;
+    details: string[];
+    icon?: React.ReactNode; // ✅ optional (fixes your error)
+}
+
+interface CaseStudy {
+    id: string;
+    slug: string;
+    title: string;
+    subtitle: string;
+    category: string;
+    status: string;
+    year: string;
+
+    overview: string;
+    shortDescription: string;
+    positioning?: string; // ✅ optional
+    role?: string; // ✅ optional
+    duration?: string; // ✅ optional
+    heroImage?: string; // ✅ optional
+
+    liveUrl?: string; // ✅ optional
+    githubUrl?: string; // ✅ optional
+
+    problem: {
+        summary: string;
+        points: string[];
+    };
+
+    solution: {
+        summary: string;
+        points: string[];
+    };
+
+    results?: CaseStudyResult[]; // ✅ optional
+
+    features: Feature[];
+
+    uxDecisions: {
+        decision: string;
+        reason: string;
+    }[];
+    outcomes?: {
+        summary: string;
+        highlights: string[];
+    };
+    techStack: Record<string, string[]>;
+
+    challengesAndLearnings: string[];
+
+    links: ProjectLinks;
+    cta: string[];
+     tags: string[];
+}
+
+export type {
+    SkillItem,
+    HighlightProps,
+    IntroInfo,
+    ProjectsProps,
+    CaseStudy,
+    CaseStudyResult,
+    Feature
+};

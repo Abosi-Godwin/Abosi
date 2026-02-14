@@ -1,16 +1,20 @@
-import Link from "next/link";
+ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { caseStudies } from "../../utils/assets";
 
-type Props = { params: { projectName: string } };
+// Updated type to handle Promise
+type Props = { 
+    params: Promise<{ projectName: string }>; 
+};
 
 import SectionTitle from "./SectionTitle";
 import Meta from "./Meta";
 import Badge from "./Badge";
 
 const ProjectDetails = async ({ params }: Props) => {
-    const { projectName } = params;
+    // In Next.js 15+, you MUST await params
+    const { projectName } = await params;
 
     const item = caseStudies.find(data => data.slug === projectName);
 
@@ -18,16 +22,13 @@ const ProjectDetails = async ({ params }: Props) => {
 
     return (
         <main className="py-24 px-5 max-w-6xl mx-auto space-y-24">
-            {" "}
-            {/* ================= HERO ================= */}{" "}
+            {/* ================= HERO ================= */}
             <section className="space-y-8">
-                {" "}
                 <Link
                     href="/projects"
                     className="text-sm hover:underline text-gray-600"
                 >
-                    {" "}
-                    ← Back to Projects{" "}
+                    ← Back to Projects
                 </Link>
                 <div className="space-y-4 max-w-3xl">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -35,10 +36,9 @@ const ProjectDetails = async ({ params }: Props) => {
                     </h1>
                     <p className="text-xl text-gray-700">{item.subtitle}</p>
 
-                    {/* positioning sentence */}
-                    {item.positioning && (
+                    {item.shortDescription && (
                         <p className="text-gray-600 leading-relaxed">
-                            {item.positioning}
+                            {item.shortDescription}
                         </p>
                     )}
                 </div>
@@ -47,25 +47,9 @@ const ProjectDetails = async ({ params }: Props) => {
                     <Meta label="Category" value={item.category} />
                     <Meta label="Year" value={item.year} />
                     <Meta label="Status" value={item.status} />
-                    {item.role && <Meta label="Role" value={item.role} />}
-                    {item.duration && (
-                        <Meta label="Duration" value={item.duration} />
-                    )}
                 </div>
-                {/* hero image */}
-                {item.heroImage && (
-                    <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
-                        <Image
-                            src={item.heroImage}
-                            alt={item.title}
-                            width={1400}
-                            height={800}
-                            className="w-full h-auto object-cover"
-                            priority
-                        />
-                    </div>
-                )}
             </section>
+
             {/* ================= OVERVIEW ================= */}
             <section className="grid md:grid-cols-3 gap-12">
                 <SectionTitle>Overview</SectionTitle>
@@ -73,6 +57,7 @@ const ProjectDetails = async ({ params }: Props) => {
                     <p>{item.overview}</p>
                 </div>
             </section>
+
             {/* ================= PROBLEM / SOLUTION ================= */}
             <section className="grid md:grid-cols-2 gap-12 bg-gray-50 p-10 rounded-3xl">
                 <div className="space-y-4">
@@ -95,27 +80,7 @@ const ProjectDetails = async ({ params }: Props) => {
                     </ul>
                 </div>
             </section>
-            {/* ================= RESULTS (NEW SENIOR SECTION) ================= */}
-            {item.results && (
-                <section className="space-y-10">
-                    <SectionTitle centered>Results & Impact</SectionTitle>
-                    <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-                        {item.results.map((result, i) => (
-                            <div
-                                key={i}
-                                className="p-6 border border-gray-200 rounded-2xl bg-white"
-                            >
-                                <p className="text-3xl font-bold">
-                                    {result.metric}
-                                </p>
-                                <p className="text-sm text-gray-600 mt-2">
-                                    {result.label}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            )}
+
             {/* ================= FEATURES ================= */}
             <section className="space-y-12">
                 <SectionTitle centered>Core Features</SectionTitle>
@@ -126,31 +91,24 @@ const ProjectDetails = async ({ params }: Props) => {
                             key={i}
                             className="border border-gray-200 p-6 rounded-2xl hover:shadow-lg transition-all bg-white"
                         >
-                            <div className="flex items-start gap-4">
-                                {feature.icon && (
-                                    <span className="text-2xl">
-                                        {feature.icon}
-                                    </span>
-                                )}
+                            <div className="space-y-3">
+                                <h4 className="font-bold text-lg">
+                                    {feature.title}
+                                </h4>
 
-                                <div className="space-y-3">
-                                    <h4 className="font-bold text-lg">
-                                        {feature.title}
-                                    </h4>
-
-                                    <ul className="space-y-2 text-sm text-gray-600">
-                                        {feature.details
-                                            .slice(0, 4)
-                                            .map((detail, idx) => (
-                                                <li key={idx}>• {detail}</li>
-                                            ))}
-                                    </ul>
-                                </div>
+                                <ul className="space-y-2 text-sm text-gray-600">
+                                    {feature.details
+                                        .slice(0, 4)
+                                        .map((detail, idx) => (
+                                            <li key={idx}>• {detail}</li>
+                                        ))}
+                                </ul>
                             </div>
                         </div>
                     ))}
                 </div>
             </section>
+
             {/* ================= UX + TECH ================= */}
             <section className="grid md:grid-cols-2 gap-20">
                 {/* UX */}
@@ -182,8 +140,8 @@ const ProjectDetails = async ({ params }: Props) => {
                                         {group}
                                     </p>
                                     <div className="flex flex-wrap gap-2">
-                                        {techs.map(
-                                            (tech: string, i: number) => (
+                                        {(techs as string[]).map(
+                                            (tech, i) => (
                                                 <span
                                                     key={i}
                                                     className="px-3 py-1 bg-gray-200 rounded-full text-xs"
@@ -208,24 +166,28 @@ const ProjectDetails = async ({ params }: Props) => {
                     </div>
                 </div>
             </section>
+
             {/* ================= CTA ================= */}
             <footer className="pt-12 border-t border-gray-200 flex flex-wrap gap-4 justify-between items-center">
                 <div className="flex gap-4">
-                    {item.liveUrl && (
+                    {item.links.live && (
                         <a
-                            href={item.liveUrl}
+                            href={item.links.live}
                             target="_blank"
-                            className="px-6 py-3 bg-black text-white rounded-xl font-medium hover:opacity-80 transition"
+                            className="px-6 py-3 bg-black text-white rounded-xl
+                            font-medium hover:opacity-80 transition"
+                            rel="noopener noreferrer"
                         >
                             🚀 View Live Product
                         </a>
                     )}
 
-                    {item.githubUrl && (
+                    {item.links.github && (
                         <a
-                            href={item.githubUrl}
+                            href={item.links.github}
                             target="_blank"
                             className="px-6 py-3 border border-gray-300 rounded-xl font-medium hover:bg-gray-50 transition"
+                            rel="noopener noreferrer"
                         >
                             🧠 Explore Source Code
                         </a>
