@@ -5,7 +5,6 @@ type Props = {
     params: Promise<{ projectName: string }>;
 };
 
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { projectName } = await params;
     const item = caseStudies.find(
@@ -48,6 +47,10 @@ const ProjectDetails = async ({ params }: Props) => {
                 <span>web application</span>
                 <span>2025</span>
                 <span>completed</span>
+            </div>
+            
+            <div>
+              <p>{item.shortDescription}</p>
             </div>
         </main>
     );

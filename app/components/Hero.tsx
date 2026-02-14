@@ -35,7 +35,7 @@ const Hero = () => {
         <h1 className="py-5 text-3xl font-bold leading-tight md:text-4xl">
           A <span className="text-secondary">Full Stack, </span>
           <span className="text-secondary">Shopify, </span> and
-          <span className="text-secondary">WordPress </span>
+          <span className="text-secondary"> WordPress </span>
           developer.
         </h1>
         
