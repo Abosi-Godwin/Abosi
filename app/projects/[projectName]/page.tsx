@@ -10,28 +10,49 @@ type Props = {
 
 const ProjectDetails = async ({ params }: Props) => {
     const { projectName } = await params;
-    
-    // Suggestion: Find by slug or lowercased title
-    const item = caseStudies.find(
-        data => data.title.toLowerCase() === projectName.toLowerCase() || data.slug === projectName
-    );
 
-    if (!item) return <main className="py-28 px-5 max-w-4xl mx-auto">Project not found</main>;
+    // Suggestion: Find by slug
+    const item = caseStudies.find(data => data.slug === projectName);
+
+    if (!item)
+        return (
+            <main className="py-28 px-5 max-w-4xl mx-auto">
+                Project not found
+            </main>
+        );
 
     return (
         <main className="py-28 px-5 max-w-5xl mx-auto space-y-20">
             {/* --- HERO SECTION --- */}
             <section className="space-y-6">
-                <Link href="/projects" className="text-sm hover:underline text-gray-500">← Back to Projects</Link>
+                <Link
+                    href="/projects"
+                    className="text-sm hover:underline text-gray-500"
+                >
+                    ← Back to Projects
+                </Link>
                 <div className="space-y-2">
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{item.title}</h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-400">{item.subtitle}</p>
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+                        {item.title}
+                    </h1>
+                    <p className="text-xl text-gray-600 dark:text-gray-400">
+                        {item.subtitle}
+                    </p>
                 </div>
 
                 <div className="flex flex-wrap gap-6 py-6 border-y border-gray-200 dark:border-gray-800 uppercase text-xs tracking-widest font-medium">
-                    <div><p className="text-gray-500">Category</p><p>{item.category}</p></div>
-                    <div><p className="text-gray-500">Year</p><p>{item.year}</p></div>
-                    <div><p className="text-gray-500">Status</p><p>{item.status}</p></div>
+                    <div>
+                        <p className="text-gray-500">Category</p>
+                        <p>{item.category}</p>
+                    </div>
+                    <div>
+                        <p className="text-gray-500">Year</p>
+                        <p>{item.year}</p>
+                    </div>
+                    <div>
+                        <p className="text-gray-500">Status</p>
+                        <p>{item.status}</p>
+                    </div>
                 </div>
             </section>
 
@@ -46,30 +67,47 @@ const ProjectDetails = async ({ params }: Props) => {
             {/* --- PROBLEM & SOLUTION --- */}
             <section className="grid md:grid-cols-2 gap-12 bg-gray-50 dark:bg-zinc-900 p-8 rounded-2xl">
                 <div className="space-y-4">
-                    <h3 className="text-red-500 font-bold uppercase tracking-wide text-sm">The Problem</h3>
+                    <h3 className="text-red-500 font-bold uppercase tracking-wide text-sm">
+                        The Problem
+                    </h3>
                     <p className="font-medium">{item.problem.summary}</p>
                     <ul className="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
-                        {item.problem.points.map((p, i) => <li key={i}>{p}</li>)}
+                        {item.problem.points.map((p, i) => (
+                            <li key={i}>{p}</li>
+                        ))}
                     </ul>
                 </div>
                 <div className="space-y-4">
-                    <h3 className="text-green-500 font-bold uppercase tracking-wide text-sm">The Solution</h3>
+                    <h3 className="text-green-500 font-bold uppercase tracking-wide text-sm">
+                        The Solution
+                    </h3>
                     <p className="font-medium">{item.solution.summary}</p>
                     <ul className="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
-                        {item.solution.points.map((s, i) => <li key={i}>{s}</li>)}
+                        {item.solution.points.map((s, i) => (
+                            <li key={i}>{s}</li>
+                        ))}
                     </ul>
                 </div>
             </section>
 
             {/* --- FEATURES --- */}
             <section className="space-y-10">
-                <h2 className="text-2xl font-semibold text-center">Core Features</h2>
+                <h2 className="text-2xl font-semibold text-center">
+                    Core Features
+                </h2>
                 <div className="grid md:grid-cols-2 gap-6">
                     {item.features.map((feature, i) => (
-                        <div key={i} className="border border-gray-200 dark:border-gray-800 p-6 rounded-xl hover:shadow-md transition-shadow">
-                            <h4 className="font-bold text-lg mb-3">{feature.title}</h4>
+                        <div
+                            key={i}
+                            className="border border-gray-200 dark:border-gray-800 p-6 rounded-xl hover:shadow-md transition-shadow"
+                        >
+                            <h4 className="font-bold text-lg mb-3">
+                                {feature.title}
+                            </h4>
                             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                                {feature.details.map((detail, idx) => <li key={idx}>• {detail}</li>)}
+                                {feature.details.map((detail, idx) => (
+                                    <li key={idx}>• {detail}</li>
+                                ))}
                             </ul>
                         </div>
                     ))}
@@ -83,8 +121,12 @@ const ProjectDetails = async ({ params }: Props) => {
                     <div className="space-y-6">
                         {item.uxDecisions.map((ux, i) => (
                             <div key={i}>
-                                <p className="font-bold italic">"{ux.decision}"</p>
-                                <p className="text-sm text-gray-600 dark:text-gray-400">{ux.reason}</p>
+                                <p className="font-bold italic">
+                                    "{ux.decision}"
+                                </p>
+                                <p className="text-sm text-gray-600 dark:text-gray-400">
+                                    {ux.reason}
+                                </p>
                             </div>
                         ))}
                     </div>
@@ -92,16 +134,23 @@ const ProjectDetails = async ({ params }: Props) => {
                 <div>
                     <h2 className="text-2xl font-semibold mb-6">Tech Stack</h2>
                     <div className="flex flex-wrap gap-2">
-                        {Object.values(item.techStack).flat().map((tech, i) => (
-                            <span key={i} className="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded-full text-xs">
-                                {tech}
-                            </span>
-                        ))}
+                        {Object.values(item.techStack)
+                            .flat()
+                            .map((tech, i) => (
+                                <span
+                                    key={i}
+                                    className="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded-full text-xs"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
                     </div>
                     <div className="mt-10">
                         <h3 className="font-bold mb-3">Key Learnings</h3>
                         <ul className="text-sm space-y-2 text-gray-600 dark:text-gray-400">
-                            {item.challengesAndLearnings.map((l, i) => <li key={i}>→ {l}</li>)}
+                            {item.challengesAndLearnings.map((l, i) => (
+                                <li key={i}>→ {l}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>

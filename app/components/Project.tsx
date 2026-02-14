@@ -32,7 +32,6 @@ const Project = ({ data }: ProjectProps) => {
 
             {/* Content */}
             <div className="px-2 py-4">
-              
                 <h1 className="text-xl font-bold transition-colors group-hover:text-secondary">
                     {data.title}
                 </h1>

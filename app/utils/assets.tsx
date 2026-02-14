@@ -152,7 +152,7 @@ export const projects: ProjectsProps[] = [
     },
     {
         id: 2,
-        slug: "trexpenser",
+        slug: "trexpenser-expense-savings-tracker",
         title: "Trexpenser — Personal Finance Tracker",
         shortDescription:
             "A modern expense tracking app helping users manage income, expenses, savings goals, and spending insights.",
