@@ -16,12 +16,11 @@ export default function NotFound() {
                 </h1>
                 {/* Description */}
                 <p className="text-slate-600 mb-8 leading-relaxed">
-                    The page you’re looking for doesn’t exist or may have
-                    been moved. Let’s get you back on track.
+                    The page you’re looking for doesn’t exist or may have been
+                    moved. Let’s get you back on track.
                 </p>
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                    
                     <Link
                         href="/"
                         className="inline-flex items-center justify-center rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
