@@ -1,8 +1,6 @@
 import Projects from "../components/Projects";
 
-interface Props {}
-
-const Projects = (props: Props) => {
+const ProjectsPage = () => {
     return (
         <div>
             <Projects />
@@ -10,4 +8,4 @@ const Projects = (props: Props) => {
     );
 };
 
-export default Projects;
+export default ProjectsPage;
