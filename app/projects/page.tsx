@@ -1,15 +1,13 @@
+import Projects from "../components/Projects";
 
-
-interface Props {
-  
-}
+interface Props {}
 
 const Projects = (props: Props) => {
-  return (
-    <div>
-      
-    </div>
-  );
+    return (
+        <div>
+            <Projects />
+        </div>
+    );
 };
 
 export default Projects;

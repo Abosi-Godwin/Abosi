@@ -1,11 +1,11 @@
- import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { caseStudies } from "../../utils/assets";
 
 // Updated type to handle Promise
-type Props = { 
-    params: Promise<{ projectName: string }>; 
+type Props = {
+    params: Promise<{ projectName: string }>;
 };
 
 import SectionTitle from "./SectionTitle";
@@ -140,16 +140,14 @@ const ProjectDetails = async ({ params }: Props) => {
                                         {group}
                                     </p>
                                     <div className="flex flex-wrap gap-2">
-                                        {(techs as string[]).map(
-                                            (tech, i) => (
-                                                <span
-                                                    key={i}
-                                                    className="px-3 py-1 bg-gray-200 rounded-full text-xs"
-                                                >
-                                                    {tech}
-                                                </span>
-                                            )
-                                        )}
+                                        {(techs as string[]).map((tech, i) => (
+                                            <span
+                                                key={i}
+                                                className="px-3 py-1 bg-gray-200 rounded-full text-xs"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
                             )
