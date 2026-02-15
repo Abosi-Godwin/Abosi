@@ -4,8 +4,8 @@ const MobileNav = () => {
             <a
                 href="/Abosi-Godwin-Resume.pdf"
                 download
-                className="w-full text-center rounded-xl bg-purple-600
-        text-white font-semibold py-2.5 px-4
+                className="w-full text-center rounded-xl bg-secondary
+        text-white font-semibold py-1.5 px-2
         hover:bg-purple-700 active:scale-95
         transition-all duration-200"
             >
