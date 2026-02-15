@@ -4,7 +4,7 @@ import Project from "./Project";
 
 const Projects = () => {
     return (
-        <div>
+        <div className="py-8 px-4">
             <Heading text="Featured Projects" />
             <p>Real projects I’ve designed, developed, and shipped.</p>
 
