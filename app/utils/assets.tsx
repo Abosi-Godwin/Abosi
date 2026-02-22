@@ -142,7 +142,7 @@ export const softSkills: SkillItem[] = [
 export const projects: ProjectsProps[] = [
     {
         id: 1,
-        slug: "leeslagos",
+        slug: "leeslagos-fashion-ecommerce",
         title: "LeesLagos — Cosmetics E-commerce Store",
         shortDescription:
             "A beautifully designed cosmetics e-commerce website with a complete product catalogue and smooth shopping experience.",
@@ -305,8 +305,8 @@ export const caseStudies: CaseStudy[] = [
         },
 
         links: {
-            live: null, // add when available
-            github: null // add when available
+            live: "https://trexpenser.vercel.app/",
+            github: "https://github.com/Abosi-Godwin/Trexpenser.git"
         },
 
         cta: ["View Live App", "View Source Code", "Read Other Case Studies"],
@@ -321,144 +321,145 @@ export const caseStudies: CaseStudy[] = [
             "Product Design",
             "State Management"
         ]
-    },{
-    id: "leeslagos",
-    slug: "leeslagos-fashion-ecommerce",
-    title: "LeesLagos",
-    subtitle: "Modern Fashion & Lifestyle Store",
-    category: "E-commerce Website",
-    status: "Completed",
-    year: "2024",
+    },
+    {
+        id: "leeslagos",
+        slug: "leeslagos-fashion-ecommerce",
+        title: "LeesLagos",
+        subtitle: "Modern Fashion & Lifestyle Store",
+        category: "E-commerce Website",
+        status: "Completed",
+        year: "2024",
 
-    shortDescription:
-        "LeesLagos is a modern fashion e-commerce platform designed to showcase and sell stylish clothing with a clean, conversion-focused shopping experience.",
+        shortDescription:
+            "LeesLagos is a modern fashion e-commerce platform designed to showcase and sell stylish clothing with a clean, conversion-focused shopping experience.",
 
-    overview:
-        "LeesLagos is a fashion and lifestyle e-commerce website built to help a growing brand establish a strong online presence and convert visitors into buyers. The platform focuses on product clarity, smooth navigation, and a mobile-first shopping flow. Instead of overwhelming users with clutter, the experience emphasizes visual appeal, fast browsing, and frictionless purchasing — especially for mobile shoppers.",
+        overview:
+            "LeesLagos is a fashion and lifestyle e-commerce website built to help a growing brand establish a strong online presence and convert visitors into buyers. The platform focuses on product clarity, smooth navigation, and a mobile-first shopping flow. Instead of overwhelming users with clutter, the experience emphasizes visual appeal, fast browsing, and frictionless purchasing — especially for mobile shoppers.",
 
-    problem: {
-        summary:
-            "Many small fashion brands struggle with presenting their products professionally online and converting social media traffic into actual sales.",
-        points: [
-            "Poor product presentation reduces buyer trust",
-            "Cluttered layouts distract users from purchasing",
-            "Mobile shopping experience is often neglected",
-            "Lack of clear product structure hurts discoverability"
+        problem: {
+            summary:
+                "Many small fashion brands struggle with presenting their products professionally online and converting social media traffic into actual sales.",
+            points: [
+                "Poor product presentation reduces buyer trust",
+                "Cluttered layouts distract users from purchasing",
+                "Mobile shopping experience is often neglected",
+                "Lack of clear product structure hurts discoverability"
+            ]
+        },
+
+        solution: {
+            summary:
+                "LeesLagos provides a clean, mobile-first storefront optimized for product discovery and conversion.",
+            points: [
+                "Visually focused product layout",
+                "Clear navigation and product categorization",
+                "Mobile-optimized shopping experience",
+                "Conversion-focused product pages",
+                "Simple and scalable store structure"
+            ]
+        },
+
+        features: [
+            {
+                title: "Product Catalog",
+                details: [
+                    "Well-structured product collections",
+                    "Clean product cards with key information",
+                    "Category-based product filtering",
+                    "Scalable structure for future inventory growth"
+                ]
+            },
+            {
+                title: "Product Details Experience",
+                details: [
+                    "High-visibility product imagery",
+                    "Clear pricing and product descriptions",
+                    "Size and variant selection support",
+                    "Focused call-to-action for purchases"
+                ]
+            },
+            {
+                title: "Mobile-First Shopping",
+                details: [
+                    "Responsive layout across devices",
+                    "Thumb-friendly navigation",
+                    "Optimized spacing for small screens",
+                    "Fast-loading product views"
+                ]
+            },
+            {
+                title: "Brand Presentation",
+                details: [
+                    "Consistent visual identity",
+                    "Clean typography and spacing system",
+                    "Modern fashion-focused aesthetic",
+                    "Designed to build brand credibility"
+                ]
+            }
+        ],
+
+        uxDecisions: [
+            {
+                decision: "Visual-first product layout",
+                reason: "Fashion buyers rely heavily on imagery before making purchase decisions."
+            },
+            {
+                decision: "Minimal navigation structure",
+                reason: "Reduces friction and helps users reach products faster."
+            },
+            {
+                decision: "Mobile-first design approach",
+                reason: "Most traffic for fashion brands comes from mobile users."
+            },
+            {
+                decision: "Conversion-focused product pages",
+                reason: "Keeps users focused on purchasing rather than wandering."
+            }
+        ],
+
+        techStack: {
+            frontend: ["React", "Next.js"],
+            styling: ["Tailwind CSS"],
+            stateManagement: ["Context API"],
+            backend: ["Firebase"],
+            deployment: ["Vercel"]
+        },
+
+        challengesAndLearnings: [
+            "Designing an e-commerce layout that balances aesthetics and performance",
+            "Optimizing responsive behavior across multiple screen sizes",
+            "Structuring product data for scalability",
+            "Maintaining visual consistency across the storefront"
+        ],
+
+        outcomes: {
+            summary:
+                "LeesLagos successfully delivers a clean, modern fashion storefront that strengthens brand credibility and improves the online shopping experience.",
+            highlights: [
+                "Demonstrates strong e-commerce UX thinking",
+                "Shows ability to design for conversion",
+                "Balances visual design with performance",
+                "Creates a scalable foundation for future growth"
+            ]
+        },
+
+        links: {
+            live: "https://leeslagos.vercel.app/",
+            github: "https://github.com/Abosi-Godwin/leeslagos.git"
+        },
+
+        cta: ["View Live Store", "View Source Code", "Read Other Case Studies"],
+
+        tags: [
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+            "E-commerce",
+            "Fashion Store",
+            "Product Design",
+            "Responsive Design",
+            "Frontend Development"
         ]
-    },
-
-    solution: {
-        summary:
-            "LeesLagos provides a clean, mobile-first storefront optimized for product discovery and conversion.",
-        points: [
-            "Visually focused product layout",
-            "Clear navigation and product categorization",
-            "Mobile-optimized shopping experience",
-            "Conversion-focused product pages",
-            "Simple and scalable store structure"
-        ]
-    },
-
-    features: [
-        {
-            title: "Product Catalog",
-            details: [
-                "Well-structured product collections",
-                "Clean product cards with key information",
-                "Category-based product filtering",
-                "Scalable structure for future inventory growth"
-            ]
-        },
-        {
-            title: "Product Details Experience",
-            details: [
-                "High-visibility product imagery",
-                "Clear pricing and product descriptions",
-                "Size and variant selection support",
-                "Focused call-to-action for purchases"
-            ]
-        },
-        {
-            title: "Mobile-First Shopping",
-            details: [
-                "Responsive layout across devices",
-                "Thumb-friendly navigation",
-                "Optimized spacing for small screens",
-                "Fast-loading product views"
-            ]
-        },
-        {
-            title: "Brand Presentation",
-            details: [
-                "Consistent visual identity",
-                "Clean typography and spacing system",
-                "Modern fashion-focused aesthetic",
-                "Designed to build brand credibility"
-            ]
-        }
-    ],
-
-    uxDecisions: [
-        {
-            decision: "Visual-first product layout",
-            reason: "Fashion buyers rely heavily on imagery before making purchase decisions."
-        },
-        {
-            decision: "Minimal navigation structure",
-            reason: "Reduces friction and helps users reach products faster."
-        },
-        {
-            decision: "Mobile-first design approach",
-            reason: "Most traffic for fashion brands comes from mobile users."
-        },
-        {
-            decision: "Conversion-focused product pages",
-            reason: "Keeps users focused on purchasing rather than wandering."
-        }
-    ],
-
-    techStack: {
-        frontend: ["React", "Next.js"],
-        styling: ["Tailwind CSS"],
-        stateManagement: ["Context API"],
-        backend: ["Firebase"],
-        deployment: ["Vercel"]
-    },
-
-    challengesAndLearnings: [
-        "Designing an e-commerce layout that balances aesthetics and performance",
-        "Optimizing responsive behavior across multiple screen sizes",
-        "Structuring product data for scalability",
-        "Maintaining visual consistency across the storefront"
-    ],
-
-    outcomes: {
-        summary:
-            "LeesLagos successfully delivers a clean, modern fashion storefront that strengthens brand credibility and improves the online shopping experience.",
-        highlights: [
-            "Demonstrates strong e-commerce UX thinking",
-            "Shows ability to design for conversion",
-            "Balances visual design with performance",
-            "Creates a scalable foundation for future growth"
-        ]
-    },
-
-    links: {
-        live: null, // add when available
-        github: null // add when available
-    },
-
-    cta: ["View Live Store", "View Source Code", "Read Other Case Studies"],
-
-    tags: [
-        "Next.js",
-        "React",
-        "Tailwind CSS",
-        "E-commerce",
-        "Fashion Store",
-        "Product Design",
-        "Responsive Design",
-        "Frontend Development"
-    ]
-}
+    }
 ];
