@@ -48,9 +48,9 @@ const Hero = () => {
           <button className="bg-secondary rounded-md px-6 py-2 font-bold capitalize text-white transition-transform hover:scale-105 active:scale-95">
             Hire me
           </button>
-          <button className="rounded-md border-2 border-black/60 px-6 py-2 font-bold capitalize text-black/70 transition-colors hover:bg-black/5">
+          <Link href="/projects" className="rounded-md border-2 border-black/60 px-6 py-2 font-bold capitalize text-black/70 transition-colors hover:bg-black/5">
             View Projects
-          </button>
+          </Link>
         </div>
       </div>
     </section>
