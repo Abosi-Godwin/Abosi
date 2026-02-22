@@ -8,7 +8,7 @@ const Projects = () => {
             <Heading text="Featured Projects" />
             <p>Real projects I’ve designed, developed, and shipped.</p>
 
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-5 pt-5 md:grid-cols-3">
                 {projects.map(project => (
                     <Project key={project.id} data={project} />
                 ))}
