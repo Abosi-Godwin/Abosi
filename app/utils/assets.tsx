@@ -93,7 +93,7 @@ export const coreSkills: SkillItem[] = [
 
     { title: "React 19", icon: FaReact },
 
-    { title: "Nextjs 6", icon: RiNextjsFill },
+    { title: "Nextjs 16", icon: RiNextjsFill },
 
     { title: "TailwindCSS", icon: RiTailwindCssFill }
 ];
