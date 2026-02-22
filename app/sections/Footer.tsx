@@ -1,3 +1,7 @@
+import { footerSocials } from '../utils/assets';
+
+const currentYear = new Date().getFullYear();
+
 const Footer = () => {
     return (
         <footer className="w-full py-8">
@@ -9,7 +13,7 @@ const Footer = () => {
                 </p>
 
                 <div className="flex items-center justify-center gap-4">
-                    {socials.map(social => {
+                    {footerSocials.map(social => {
                         const Icon = social.icon;
 
                         return (
@@ -33,3 +37,5 @@ const Footer = () => {
         </footer>
     );
 };
+
+export default Footer;

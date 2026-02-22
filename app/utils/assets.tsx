@@ -7,7 +7,10 @@ import {
     FaWordpress,
     FaGitAlt,
     FaGithub,
-    FaFigma
+    FaFigma,
+    FaLinkedinIn,
+    FaInstagram,
+    FaTwitter,FaFacebookF
 } from "react-icons/fa6";
 
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
@@ -50,6 +53,24 @@ export const introInfo: IntroInfo[] = [
     {
         image: trexpenser,
         title: "Dashboard page"
+    }
+];
+export const footerSocials = [
+    {
+        url: "https://www.linkedin.com/in/abosigodwin",
+        name: "LinkedIn",
+        icon: FaLinkedinIn
+    },
+    { url: "https://x.com/AbosiGodwin", name: "Twitter", icon: FaTwitter },
+    {
+        url: "https://www.instagram.com/abosigodwin",
+        name: "Instagram",
+        icon: FaInstagram
+    },
+    {
+        url: "https://www.facebook.com/AbosiGodwinN",
+        name: "Facebook",
+        icon: FaFacebookF
     }
 ];
 
