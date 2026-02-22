@@ -1,69 +1,58 @@
 import Image from "next/image";
-import type { StaticImageData } from "next/image";
-import Link from "next/link"; // [!code ++]
-import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
-interface ProjectProps {
-    data: {
-        id: number;
-        slug: string;
-        title: string;
-        shortDescription: string;
-        thumbnail: StaticImageData;
-        tags: Array<string>;
-        liveUrl: string;
-    };
-}
+const Project = ({ data }) => {
+    const { title, shortDescription, thumbnail, tags, liveUrl } = data;
 
-const Project = ({ data }: ProjectProps) => {
     return (
-        <div className="group w-full rounded-md overflow-hidden shadow-xl shadow-gray-200">
-            {/* Image Container */}
-            <div className="relative h-52 w-full overflow-hidden cursor-pointer">
-                <Link href={`/projects/${data.slug}`}>
-                    <Image
-                        src={data.thumbnail}
-                        alt={data.title}
-                        fill
-                        className="object-cover transition duration-500 group-hover:scale-110"
-                    />
-                </Link>
+        <article className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            {/* image */}
+            <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                    src={thumbnail}
+                    alt={title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
             </div>
 
-            {/* Content */}
-            <div className="px-2 py-4">
-                <h1 className="text-xl font-bold transition-colors group-hover:text-secondary">
-                    {data.title}
-                </h1>
+            {/* content */}
+            <div className="p-5 flex flex-col gap-3">
+                {/* title */}
+                <h3 className="text-lg font-semibold text-gray-900 line-clamp-2">
+                    {title}
+                </h3>
 
-                <ul className="flex flex-wrap gap-2 pb-4 pt-2">
-                    {data.tags.map(tag => (
-                        <li
-                            key={tag}
-                            className="rounded-md bg-gray-100 px-1.5 py-0.5 text-sm"
-                        >
-                            {tag}
-                        </li>
-                    ))}
-                </ul>
-
-                <p
-                    className="pb-4 tracking-tight text-gray-600 leading-relaxed
-                text-gray-700"
-                >
-                    {data.shortDescription}
+                {/* description */}
+                <p className="text-sm text-gray-600 line-clamp-3">
+                    {shortDescription}
                 </p>
 
-                {/* Button */}
-                <Link
-                    href={`/projects/${data.slug}`}
-                    className="bg-secondary flex w-fit items-center justify-center gap-2 rounded-md px-4 py-2 font-extrabold text-white transition-all duration-300 hover:brightness-110"
-                >
-                    Case study
-                    <FaArrowRightLong className="transition-all duration-300 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0" />
-                </Link>
+                {/* tags */}
+                <div className="flex flex-wrap gap-2 pt-1">
+                    {tags.map(tag => (
+                        <span
+                            key={tag}
+                            className="text-xs font-medium px-2.5 py-1 rounded-full bg-gray-100 text-gray-700"
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+
+                {/* CTA */}
+                <div className="pt-3 mt-auto flex items-center justify-between">
+                    <Link
+                        href={liveUrl}
+                        target="_blank"
+                        className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                    >
+                        View Live →
+                    </Link>
+                </div>
             </div>
-        </div>
+        </article>
     );
 };
 
