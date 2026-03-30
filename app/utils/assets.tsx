@@ -10,21 +10,12 @@ import {
     FaFigma,
     FaLinkedinIn,
     FaInstagram,
-    FaTwitter,FaFacebookF
+    FaTwitter,
+    FaFacebookF
 } from "react-icons/fa6";
 
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiSupabase, SiVercel } from "react-icons/si";
-
-import {
-    LuBrain,
-    LuSearch,
-    LuMessagesSquare,
-    LuClock3,
-    LuRefreshCw,
-    LuUsers,
-    LuSparkles
-} from "react-icons/lu";
 
 import {
     SkillItem,
@@ -35,26 +26,19 @@ import {
 } from "./types";
 
 import myImage from "../../public/relaxe.jpg";
+
 import trexpenser from "../../public/trexpenser.png";
+import leeslagosThumbnail from "../../public/leeslagos-thumb.jpeg";
+import trexpenserThumbnail from "../../public/visyond-thumb.jpeg";
+import chirpThumbnail from "../../public/softp-thumb.jpeg";
 
 export const introInfo: IntroInfo[] = [
-    {
-        image: myImage,
-        title: "Landing page"
-    },
-    {
-        image: trexpenser,
-        title: "Sign up page"
-    },
-    {
-        image: myImage,
-        title: "login page"
-    },
-    {
-        image: trexpenser,
-        title: "Dashboard page"
-    }
+    { image: trexpenserThumbnail, title: "Landing page" },
+    { image: trexpenser, title: "Sign up page" },
+    { image: trexpenserThumbnail, title: "Login page" },
+    { image: trexpenser, title: "Dashboard page" }
 ];
+
 export const footerSocials = [
     {
         url: "https://www.linkedin.com/in/abosigodwin",
@@ -75,7 +59,7 @@ export const footerSocials = [
 ];
 
 export const projectHighlight: HighlightProps = [
-    " Carefully designed financial UX for effortless daily use",
+    "Carefully designed financial UX for effortless daily use",
     "Savings goals with manual and automatic contribution options",
     "Visual insights using charts for income, expenses, and progress",
     "Fully built with React + Tailwind and optimized for mobile",
@@ -84,82 +68,25 @@ export const projectHighlight: HighlightProps = [
 
 export const coreSkills: SkillItem[] = [
     { title: "HTML5", icon: FaHtml5 },
-
     { title: "CSS3", icon: FaCss3Alt },
-
     { title: "JavaScript (ES6+)", icon: FaSquareJs },
-
     { title: "TypeScript", icon: SiTypescript },
-
     { title: "React 19", icon: FaReact },
-
-    { title: "Nextjs 16", icon: RiNextjsFill },
-
+    { title: "Next.js 16", icon: RiNextjsFill },
     { title: "TailwindCSS", icon: RiTailwindCssFill }
 ];
 
 export const tools: SkillItem[] = [
-    {
-        title: "Shopify",
-        icon: FaShopify
-    },
-    {
-        title: "WordPress",
-        icon: FaWordpress
-    },
-    {
-        title: "Supabase",
-        icon: SiSupabase
-    },
-    {
-        title: "Git",
-        icon: FaGitAlt
-    },
-    {
-        title: "GitHub",
-        icon: FaGithub
-    },
-    {
-        title: "Vercel",
-        icon: SiVercel
-    },
-    {
-        title: "Figma",
-        icon: FaFigma
-    }
+    { title: "Shopify", icon: FaShopify },
+    { title: "WordPress", icon: FaWordpress },
+    { title: "Supabase", icon: SiSupabase },
+    { title: "Git", icon: FaGitAlt },
+    { title: "GitHub", icon: FaGithub },
+    { title: "Vercel", icon: SiVercel },
+    { title: "Figma", icon: FaFigma }
 ];
 
-export const softSkills: SkillItem[] = [
-    {
-        title: "Problem-Solving",
-        icon: LuBrain
-    },
-    {
-        title: "Attention to Detail",
-        icon: LuSearch
-    },
-    {
-        title: "Communication",
-        icon: LuMessagesSquare
-    },
-    {
-        title: "Time Management",
-        icon: LuClock3
-    },
-    {
-        title: "Adaptability",
-        icon: LuRefreshCw
-    },
-    {
-        title: "Team Collaboration",
-        icon: LuUsers
-    },
-    {
-        title: "Creativity",
-        icon: LuSparkles
-    }
-];
-
+// Featured = real client/shipped work shown on homepage
 export const projects: ProjectsProps[] = [
     {
         id: 1,
@@ -167,9 +94,9 @@ export const projects: ProjectsProps[] = [
         title: "LeesLagos — Cosmetics E-commerce Store",
         shortDescription:
             "A beautifully designed cosmetics e-commerce website with a complete product catalogue and smooth shopping experience.",
-        thumbnail: trexpenser,
+        thumbnail: leeslagosThumbnail,
         tags: ["React", "TailwindCSS", "E-commerce", "Frontend"],
-        liveUrl: "https://your-live-link.com"
+        liveUrl: "https://leeslagos.vercel.app"
     },
     {
         id: 2,
@@ -177,19 +104,9 @@ export const projects: ProjectsProps[] = [
         title: "Trexpenser — Personal Finance Tracker",
         shortDescription:
             "A modern expense tracking app helping users manage income, expenses, savings goals, and spending insights.",
-        thumbnail: trexpenser,
+        thumbnail: trexpenserThumbnail,
         tags: ["React", "TailwindCSS", "Charts", "Finance"],
         liveUrl: "https://trexpenser.vercel.app"
-    },
-    {
-        id: 3,
-        slug: "chirp-landing-page",
-        title: "Chirp Landing Page — Frontend Mentor",
-        shortDescription:
-            "A pixel-perfect recreation of the Chirp landing page challenge using clean HTML and CSS.",
-        thumbnail: trexpenser,
-        tags: ["HTML", "CSS", "Frontend Mentor", "Responsive"],
-        liveUrl: "https://your-live-link.com"
     },
     {
         id: 4,
@@ -197,8 +114,22 @@ export const projects: ProjectsProps[] = [
         title: "Elvanex — Corporate Website",
         shortDescription:
             "A modern corporate website built with Next.js, optimized for performance, responsiveness, and SEO.",
-        thumbnail: trexpenser,
+        thumbnail: trexpenser, // TODO: swap with elvanex-thumb.png when ready
         tags: ["Next.js", "TailwindCSS", "SEO", "Corporate Website"],
+        liveUrl: "https://your-live-link.com"
+    }
+];
+
+// Practice = learning exercises, shown separately (not on homepage Featured)
+export const practiceProjects: ProjectsProps[] = [
+    {
+        id: 3,
+        slug: "chirp-landing-page",
+        title: "Chirp Landing Page — Frontend Mentor",
+        shortDescription:
+            "A pixel-perfect recreation of the Chirp landing page challenge using clean HTML and CSS.",
+        thumbnail: chirpThumbnail,
+        tags: ["HTML", "CSS", "Frontend Mentor", "Responsive"],
         liveUrl: "https://your-live-link.com"
     }
 ];

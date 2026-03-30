@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         "Portfolio of Abosi Godwin — building modern, responsive websites using Next.js, React, and TailwindCSS.",
     metadataBase: new URL("https://abosi.vercel.app"),
     alternates: {
-        canonical: "/"
+        canonical: "https://abosi.vercel.app"
     },
     keywords: [
         "Abosi Godwin",
@@ -29,6 +29,16 @@ export const metadata: Metadata = {
         "Codewars Abosi Godwin"
     ],
     authors: [{ name: "Abosi Godwin" }],
+    category: "technology",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large"
+        }
+    },
     openGraph: {
         title: "Abosi Godwin | Portfolio",
         description: "Frontend, Shopify & WordPress Developer.",
@@ -43,6 +53,15 @@ export const metadata: Metadata = {
                 alt: "Abosi Godwin Portfolio Preview"
             }
         ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        site: "@AbosiGodwin",
+        creator: "@AbosiGodwin",
+        title: "Abosi Godwin | Frontend, Shopify & WordPress Developer",
+        description:
+            "Portfolio of Abosi Godwin — building modern, responsive websites.",
+        images: ["https://abosi.vercel.app/Abosi.png"]
     },
     verification: {
         google: "8wKxFBoxKbThGGJsFMXBoid6P9uWONt00GcfrWKw0BU"
@@ -65,11 +84,38 @@ export default function RootLayout({
                 publisher: { "@id": "https://abosi.vercel.app/#person" }
             },
             {
+                "@type": "WebPage",
+                "@id": "https://abosi.vercel.app/#webpage",
+                url: "https://abosi.vercel.app",
+                name: "Abosi Godwin | Frontend, Shopify & WordPress Developer",
+                isPartOf: { "@id": "https://abosi.vercel.app/#website" },
+                about: { "@id": "https://abosi.vercel.app/#person" },
+                description:
+                    "Portfolio of Abosi Godwin — Frontend, Shopify & WordPress Developer."
+            },
+            {
                 "@type": "Person",
                 "@id": "https://abosi.vercel.app/#person",
                 name: "Abosi Godwin",
                 url: "https://abosi.vercel.app",
                 jobTitle: "Frontend, Shopify & WordPress Developer",
+                description:
+                    "Frontend developer specializing in Next.js, React, Shopify, and WordPress development.",
+                image: "https://abosi.vercel.app/Abosi.png",
+                knowsAbout: [
+                    "Next.js",
+                    "React",
+                    "HTML",
+                    "HTML5",
+                    "CSS",
+                    "CSS3",
+                    "TailwindCSS",
+                    "Shopify Development",
+                    "WordPress Development",
+                    "Frontend Development",
+                    "JavaScript",
+                    "TypeScript"
+                ],
                 sameAs: [
                     "https://github.com/abosi-godwin",
                     "https://abosi-godwin.github.io/",
@@ -88,13 +134,11 @@ export default function RootLayout({
 
     return (
         <html lang="en" className={nunito.variable}>
-            <head>
+            <body className="font-sans">
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
-            </head>
-            <body className="font-sans">
                 <Navbar />
                 {children}
                 <Footer />

@@ -40,7 +40,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-gray-700">
-          I build unique, modern, and responsive websites that help brands stand out online.
+         I build high-conversion Shopify & WordPress stores and performance-driven React & Next.js applications.
         </p>
 
         {/* Action Buttons */}

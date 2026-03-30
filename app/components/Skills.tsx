@@ -1,6 +1,6 @@
 import SkillsList from "./SkillsList";
 import Heading from "./Heading";
-import { coreSkills, tools, softSkills } from "../utils/assets";
+import { coreSkills, tools } from "../utils/assets";
 
 const Skills = () => {
     return (
@@ -12,7 +12,6 @@ const Skills = () => {
             >
                 <SkillsList title="Core Skills" items={coreSkills} />
                 <SkillsList title="Tools" items={tools} />
-                <SkillsList title="Soft Skills" items={softSkills} />
             </div>
         </div>
     );
