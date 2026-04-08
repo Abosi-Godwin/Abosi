@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,7 +58,10 @@ const Hero = () => {
 
                 {/* Buttons */}
                 <div className="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
-                    <button onClick={scrollToContact} className="rounded-md bg-secondary px-7 py-2.5 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105 active:scale-95">
+                    <button
+                        onClick={scrollToContact}
+                        className="rounded-md bg-secondary px-7 py-2.5 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105 active:scale-95"
+                    >
                         Hire Me
                     </button>
                     <Link
