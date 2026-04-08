@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { ContactEmail } from "../../components/ContactEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -15,7 +16,7 @@ export async function POST(req: Request) {
         to: "bbnl6060@gmail.com",
         replyTo: email,
         subject: `New message from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        react: ContactEmail({ name, email, message })
     });
 
     if (error) {
