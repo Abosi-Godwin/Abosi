@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa6";
+import { FaLinkedinIn, FaGithub, FaTwitter, FaUpwork } from "react-icons/fa6";
 import Heading from "../components/Heading";
 
 type FormState = "idle" | "loading" | "success" | "error";
@@ -45,7 +45,6 @@ const Contact = () => {
     return (
         <section className="py-20 px-4" id="contact">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-
                 {/* Left — copy */}
                 <motion.div
                     initial={{ opacity: 0, x: -24 }}
@@ -89,6 +88,14 @@ const Contact = () => {
                                 className="p-3 rounded-xl border border-gray-200 hover:border-primary hover:text-primary transition-colors"
                             >
                                 <FaTwitter size={18} />
+                            </a>
+                            <a
+                                href="https://www.upwork.com/freelancers/~010c925ad55e60618b"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-xl border border-gray-200 hover:border-primary hover:text-primary transition-colors"
+                            >
+                                <FaUpwork size={18} />
                             </a>
                         </div>
                     </div>
