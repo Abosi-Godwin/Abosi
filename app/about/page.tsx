@@ -87,8 +87,7 @@ export default function AboutPage() {
                 hasOccupation: {
                     "@type": "Occupation",
                     name: "Frontend Developer",
-                    skills:
-                        "Next.js, React, Shopify, WordPress, TailwindCSS, JavaScript, TypeScript"
+                    skills: "Next.js, React, Shopify, WordPress, TailwindCSS, JavaScript, TypeScript"
                 },
                 sameAs: [
                     "https://github.com/abosi-godwin",
@@ -101,9 +100,18 @@ export default function AboutPage() {
     };
 
     const skills = [
-        { category: "Frontend", items: ["React", "Next.js", "TypeScript", "TailwindCSS"] },
-        { category: "CMS & E-Commerce", items: ["Shopify", "WordPress", "Liquid", "WooCommerce"] },
-        { category: "Tools & Workflow", items: ["Git", "Figma", "Vercel", "REST APIs"] }
+        {
+            category: "Frontend",
+            items: ["React", "Next.js", "TypeScript", "TailwindCSS"]
+        },
+        {
+            category: "CMS & E-Commerce",
+            items: ["Shopify", "WordPress", "Liquid", "WooCommerce"]
+        },
+        {
+            category: "Tools & Workflow",
+            items: ["Git", "Figma", "Vercel", "REST APIs"]
+        }
     ];
 
     const stats = [
@@ -121,7 +129,6 @@ export default function AboutPage() {
             />
 
             <main className="min-h-screen bg-white text-gray-900">
-
                 {/* ── Hero ── */}
                 <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
                     <p className="text-sm font-semibold tracking-widest text-indigo-600 uppercase mb-4">
@@ -130,28 +137,35 @@ export default function AboutPage() {
 
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
                         Hi, I&apos;m{" "}
-                        <span className="text-indigo-600">Abosi Godwin</span> —<br />
-                        I build websites that{" "}
-                        <span className="italic font-light">work beautifully.</span>
+                        <span className="text-indigo-600">Abosi Godwin</span> —
+                        <br />I build websites that{" "}
+                        <span className="italic font-light">
+                            work beautifully.
+                        </span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed">
-                        A Frontend Developer with over 3 years of hands-on experience crafting
-                        modern, high-performance web experiences. I specialize in{" "}
+                        A Frontend Developer with over 3 years of hands-on
+                        experience crafting modern, high-performance web
+                        experiences. I specialize in{" "}
                         <strong className="text-gray-800">Next.js</strong>,{" "}
                         <strong className="text-gray-800">Shopify</strong>, and{" "}
-                        <strong className="text-gray-800">WordPress</strong> — turning ideas
-                        into pixel-perfect digital products.
+                        <strong className="text-gray-800">WordPress</strong> —
+                        turning ideas into pixel-perfect digital products.
                     </p>
                 </section>
 
                 {/* ── Stats ── */}
                 <section className="py-14 bg-indigo-600">
                     <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-                        {stats.map((stat) => (
+                        {stats.map(stat => (
                             <div key={stat.label}>
-                                <p className="text-4xl font-extrabold text-white">{stat.value}</p>
-                                <p className="text-indigo-200 text-sm mt-1 font-medium">{stat.label}</p>
+                                <p className="text-4xl font-extrabold text-white">
+                                    {stat.value}
+                                </p>
+                                <p className="text-indigo-200 text-sm mt-1 font-medium">
+                                    {stat.label}
+                                </p>
                             </div>
                         ))}
                     </div>
@@ -160,26 +174,33 @@ export default function AboutPage() {
                 {/* ── Story ── */}
                 <section className="py-24 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 className="text-3xl font-bold mb-6 text-gray-900">My Story</h2>
+                        <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                            My Story
+                        </h2>
                         <div className="space-y-4 text-gray-600 leading-relaxed">
                             <p>
-                                My journey into web development started with a simple curiosity —
-                                I wanted to understand how the websites I used every day were built.
-                                That curiosity quickly became a passion, and over the past 3+ years,
-                                I have grown into a developer who ships real products for real clients.
+                                My journey into web development started with a
+                                simple curiosity — I wanted to understand how
+                                the websites I used every day were built. That
+                                curiosity quickly became a passion, and over the
+                                past 3+ years, I have grown into a developer who
+                                ships real products for real clients.
                             </p>
                             <p>
-                                I started as a self-taught developer, learning through building. From
-                                my first static HTML page to deploying full-stack Next.js applications
-                                on Vercel, every project has taught me something new. Today, I work
-                                as a freelancer while actively pursuing full-time opportunities where
+                                I started as a self-taught developer, learning
+                                through building. From my first static HTML page
+                                to deploying full-stack Next.js applications on
+                                Vercel, every project has taught me something
+                                new. Today, I work as a freelancer while
+                                actively pursuing full-time opportunities where
                                 I can contribute to a great team.
                             </p>
                             <p>
-                                What drives me is the intersection of design and engineering — writing
-                                code that is not just functional, but elegant and maintainable. I care
-                                deeply about performance, accessibility, and delivering an experience
-                                that users love.
+                                What drives me is the intersection of design and
+                                engineering — writing code that is not just
+                                functional, but elegant and maintainable. I care
+                                deeply about performance, accessibility, and
+                                delivering an experience that users love.
                             </p>
                         </div>
                     </div>
@@ -195,8 +216,12 @@ export default function AboutPage() {
                         </div>
                         {/* Decorative badge */}
                         <div className="absolute -bottom-4 -left-4 bg-white border border-gray-100 shadow-lg rounded-xl px-5 py-3">
-                            <p className="text-xs text-gray-500 font-medium">Available for</p>
-                            <p className="text-sm font-bold text-indigo-600">Freelance & Full-time</p>
+                            <p className="text-xs text-gray-500 font-medium">
+                                Available for
+                            </p>
+                            <p className="text-sm font-bold text-indigo-600">
+                                Freelance & Full-time
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -204,10 +229,12 @@ export default function AboutPage() {
                 {/* ── What I Do ── */}
                 <section className="py-20 bg-gray-50 px-6">
                     <div className="max-w-5xl mx-auto">
-                        <h2 className="text-3xl font-bold mb-4 text-gray-900">What I Do</h2>
+                        <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                            What I Do
+                        </h2>
                         <p className="text-gray-500 mb-12 max-w-xl">
-                            I offer a focused set of services across three core areas — each one
-                            backed by real project experience.
+                            I offer a focused set of services across three core
+                            areas — each one backed by real project experience.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-8">
@@ -230,12 +257,14 @@ export default function AboutPage() {
                                     description:
                                         "Custom themes, plugins, and full site builds on WordPress. I create manageable, performant sites that clients can maintain with ease."
                                 }
-                            ].map((service) => (
+                            ].map(service => (
                                 <div
                                     key={service.title}
                                     className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-indigo-200 hover:shadow-md transition-all duration-300"
                                 >
-                                    <span className="text-3xl mb-4 block">{service.icon}</span>
+                                    <span className="text-3xl mb-4 block">
+                                        {service.icon}
+                                    </span>
                                     <h3 className="text-lg font-bold text-gray-900 mb-3">
                                         {service.title}
                                     </h3>
@@ -250,19 +279,22 @@ export default function AboutPage() {
 
                 {/* ── Skills ── */}
                 <section className="py-24 px-6 max-w-5xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">Skills & Tools</h2>
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                        Skills & Tools
+                    </h2>
                     <p className="text-gray-500 mb-12 max-w-xl">
-                        The technologies I work with day-to-day to deliver quality products.
+                        The technologies I work with day-to-day to deliver
+                        quality products.
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-10">
-                        {skills.map((group) => (
+                        {skills.map(group => (
                             <div key={group.category}>
                                 <h3 className="text-xs font-semibold tracking-widest text-indigo-500 uppercase mb-4">
                                     {group.category}
                                 </h3>
                                 <ul className="space-y-3">
-                                    {group.items.map((item) => (
+                                    {group.items.map(item => (
                                         <li
                                             key={item}
                                             className="flex items-center gap-3 text-gray-700 font-medium"
@@ -302,7 +334,7 @@ export default function AboutPage() {
                                     q: "How can I hire Abosi Godwin?",
                                     a: "You can reach out through the contact form on his portfolio at abosi.vercel.app, or connect with him directly on LinkedIn."
                                 }
-                            ].map((faq) => (
+                            ].map(faq => (
                                 <div
                                     key={faq.q}
                                     className="border-b border-gray-200 pb-8"
@@ -335,8 +367,8 @@ export default function AboutPage() {
                         Let&apos;s build something great together.
                     </h2>
                     <p className="text-gray-500 mb-10">
-                        Whether you have a project in mind, a role to fill, or just want to
-                        connect — my inbox is always open.
+                        Whether you have a project in mind, a role to fill, or
+                        just want to connect — my inbox is always open.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
