@@ -1,4 +1,4 @@
- import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { ProjectsProps } from "../utils/types";
 
@@ -53,7 +53,7 @@ const Project = ({ data }: { data: ProjectsProps }) => {
                         Case Study →
                     </Link>
 
-                    {liveUrl && liveUrl !== "https://your-live-link.com" && (
+                    {liveUrl && (
                         <a
                             href={liveUrl}
                             target="_blank"

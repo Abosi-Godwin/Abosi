@@ -19,7 +19,7 @@ interface ProjectsProps {
     shortDescription: string;
     thumbnail: StaticImageData;
     tags: Array<string>;
-    liveUrl: string;
+    liveUrl?: string;
 }
 interface ProblemOrSolution {
     summary: string;

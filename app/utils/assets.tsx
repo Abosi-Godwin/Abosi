@@ -29,8 +29,13 @@ import myImage from "../../public/relaxe.jpg";
 
 import trexpenser from "../../public/trexpenser.png";
 import leeslagosThumbnail from "../../public/leeslagos-thumb.jpeg";
-import trexpenserThumbnail from "../../public/visyond-thumb.jpeg";
-import chirpThumbnail from "../../public/softp-thumb.jpeg";
+import trexpenserThumbnail from "../../public/trexpenser.png";
+import chirpThumbnail from "../../public/chirp.jpg";
+import bigTasteThumbnail from "../../public/bigtaste-thumb.jpeg";
+import visyonedThumbnail from "../../public/visyond-thumb.jpeg";
+import softpThumbnail from "../../public/softp-thumb.jpeg";
+import sollyThumbnail from "../../public/sollystore.jpeg";
+import elvanexThumbnail from "../../public/elvanex.jpg";
 
 export const introInfo: IntroInfo[] = [
     { image: trexpenserThumbnail, title: "Landing page" },
@@ -86,7 +91,6 @@ export const tools: SkillItem[] = [
     { title: "Figma", icon: FaFigma }
 ];
 
-// Featured = real client/shipped work shown on homepage
 export const projects: ProjectsProps[] = [
     {
         id: 1,
@@ -100,30 +104,19 @@ export const projects: ProjectsProps[] = [
     },
     {
         id: 2,
-        slug: "trexpenser-expense-savings-tracker",
-        title: "Trexpenser — Personal Finance Tracker",
+        slug: "softp-creative-portfolio",
+        title: "SOFT-P — Multidisciplinary Artist Portfolio",
         shortDescription:
-            "A modern expense tracking app helping users manage income, expenses, savings goals, and spending insights.",
-        thumbnail: trexpenserThumbnail,
-        tags: ["React", "TailwindCSS", "Charts", "Finance"],
-        liveUrl: "https://trexpenser.vercel.app"
-    },
-    {
-        id: 4,
-        slug: "elvanex",
-        title: "Elvanex — Corporate Website",
-        shortDescription:
-            "A modern corporate website built with Next.js, optimized for performance, responsiveness, and SEO.",
-        thumbnail: trexpenser, // TODO: swap with elvanex-thumb.png when ready
-        tags: ["Next.js", "TailwindCSS", "SEO", "Corporate Website"],
-        liveUrl: "https://your-live-link.com"
+            "A cinematic portfolio website for a Nigerian actor, music artist, and 2D animator, featuring Cloudinary media delivery, Framer Motion animations, and a Firebase-powered bookings system.",
+        thumbnail: softpThumbnail,
+        tags: ["Next.js", "TypeScript", "Framer Motion", "Firebase"],
+        liveUrl: "https://softp.vercel.app"
     }
 ];
 
-// Practice = learning exercises, shown separately (not on homepage Featured)
 export const practiceProjects: ProjectsProps[] = [
     {
-        id: 3,
+        id: 1,
         slug: "chirp-landing-page",
         title: "Chirp Landing Page — Frontend Mentor",
         shortDescription:
@@ -131,6 +124,48 @@ export const practiceProjects: ProjectsProps[] = [
         thumbnail: chirpThumbnail,
         tags: ["HTML", "CSS", "Frontend Mentor", "Responsive"],
         liveUrl: "https://your-live-link.com"
+    },
+
+    {
+        id: 2,
+        slug: "elvanex-corporate-website",
+        title: "Elvanex — Digital Marketing Corporate Website",
+        shortDescription:
+            "A modern corporate website for a digital marketing agency, built with Next.js and optimized for performance, SEO, and responsive design.",
+        thumbnail: elvanexThumbnail,
+        tags: ["Next.js", "TailwindCSS", "Corporate", "SEO"],
+        liveUrl: "https://elvanex.vercel.app"
+    },
+
+    {
+        id: 3,
+        slug: "solly-store-ecommerce",
+        title: "Solly Store — Full Stack E-commerce Store",
+        shortDescription:
+            "A full-featured e-commerce store with product catalogue, cart functionality, category filtering, and secure checkout across electronics, fashion, and accessories.",
+        thumbnail: sollyThumbnail,
+        tags: ["React", "TailwindCSS", "E-commerce", "Frontend"],
+        liveUrl: "https://solly-store.vercel.app"
+    },
+    {
+        id: 4,
+        slug: "visyoned-eye-care-agency",
+        title: "Visyoned — Premium Eye Care Agency Website",
+        shortDescription:
+            "A premium eye care agency website combining clinical excellence with modern aesthetics, designed to help users find stylish and personalized vision care solutions.",
+        thumbnail: visyonedThumbnail,
+        tags: ["Next.js", "TailwindCSS", "Healthcare", "Landing Page"],
+        liveUrl: "https://visyoned.vercel.app"
+    },
+    {
+        id: 5,
+        slug: "big-taste-restaurant-website",
+        title: "Big Taste — Restaurant & Food Ordering Website",
+        shortDescription:
+            "A clean and conversion-focused restaurant website for a local Nigerian food business, featuring a WhatsApp ordering system, full menu display, testimonials, and location details.",
+        thumbnail: bigTasteThumbnail,
+        tags: ["Next.js", "TailwindCSS", "Restaurant", "WhatsApp Integration"],
+        liveUrl: "https://big-taste.vercel.app"
     }
 ];
 

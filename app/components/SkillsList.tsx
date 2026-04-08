@@ -10,7 +10,7 @@ interface SkillsListProps {
 
 const SkillsList = ({ title, items }: SkillsListProps) => {
     return (
-        <div className="py-2">
+        <div className="py-2 w-full">
             <h2 className="text-xl font-bold pb-2 border-b border-gray-100">
                 {title}
             </h2>
@@ -20,11 +20,11 @@ const SkillsList = ({ title, items }: SkillsListProps) => {
                     return (
                         <li
                             key={item.title}
-                            className="flex gap-3 items-center uppercase p-2 
+                            className="flex gap-3 items-center uppercase p-2
+                            
                                        rounded-md odd:bg-gray-50 hover:bg-gray-100 
                                        transition-colors duration-200"
                         >
-                      
                             <Icon className="text-secondary text-lg" />
                             <span className="text-sm font-medium tracking-wide">
                                 {item.title}
