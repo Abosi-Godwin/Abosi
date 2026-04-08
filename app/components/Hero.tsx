@@ -1,10 +1,15 @@
- import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
+    const scrollToContact = () => {
+        document
+            .getElementById("contact")
+            ?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <section className="flex w-full flex-col items-center gap-8 px-5 pt-16 md:flex-row md:justify-between md:gap-0 md:pt-28 lg:px-16">
-
             {/* Image Block */}
             <div className="relative shrink-0">
                 {/* Available badge — outside the clipped circle */}
@@ -43,18 +48,17 @@ const Hero = () => {
                     I build high-performance{" "}
                     <strong className="text-gray-800">Next.js & React</strong>{" "}
                     apps and high-conversion{" "}
-                    <strong className="text-gray-800">Shopify & WordPress</strong>{" "}
+                    <strong className="text-gray-800">
+                        Shopify & WordPress
+                    </strong>{" "}
                     stores for growing businesses.
                 </p>
 
                 {/* Buttons */}
                 <div className="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
-                    <Link
-                        href="/#contact"
-                        className="rounded-md bg-secondary px-7 py-2.5 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105 active:scale-95"
-                    >
+                    <button onClick={scrollToContact} className="rounded-md bg-secondary px-7 py-2.5 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105 active:scale-95">
                         Hire Me
-                    </Link>
+                    </button>
                     <Link
                         href="/projects"
                         className="rounded-md border-2 border-gray-300 px-7 py-2.5 text-sm font-bold text-gray-700 transition-colors hover:border-secondary hover:text-secondary"
@@ -66,22 +70,29 @@ const Hero = () => {
                 {/* Stats */}
                 <div className="mt-6 flex justify-center gap-6 md:justify-start">
                     <div className="text-center md:text-left">
-                        <p className="text-xl font-extrabold text-gray-900">10+</p>
-                        <p className="text-xs text-gray-500">Projects Shipped</p>
+                        <p className="text-xl font-extrabold text-gray-900">
+                            10+
+                        </p>
+                        <p className="text-xs text-gray-500">
+                            Projects Shipped
+                        </p>
                     </div>
                     <div className="w-px bg-gray-200" />
                     <div className="text-center md:text-left">
-                        <p className="text-xl font-extrabold text-gray-900">8+</p>
+                        <p className="text-xl font-extrabold text-gray-900">
+                            8+
+                        </p>
                         <p className="text-xs text-gray-500">Happy Clients</p>
                     </div>
                     <div className="w-px bg-gray-200" />
                     <div className="text-center md:text-left">
-                        <p className="text-xl font-extrabold text-gray-900">4yr</p>
+                        <p className="text-xl font-extrabold text-gray-900">
+                            4yr
+                        </p>
                         <p className="text-xs text-gray-500">Experience</p>
                     </div>
                 </div>
             </div>
-
         </section>
     );
 };
