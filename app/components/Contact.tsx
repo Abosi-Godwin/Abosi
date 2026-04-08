@@ -17,7 +17,7 @@ const Contact = () => {
         setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
     };
 
-    const handleSubmit = async (e: React.MouseEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         if (!form.name || !form.email || !form.message) return;
@@ -109,60 +109,62 @@ const Contact = () => {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="space-y-4"
                 >
-                    {/* Name */}
-                    <div className="space-y-1.5">
-                        <label className="text-sm font-medium text-gray-700">
-                            Name
-                        </label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={form.name}
-                            onChange={handleChange}
-                            placeholder="Your name"
-                            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                        />
-                    </div>
+                    <form onSubmit={handleSubmit}>
+                        {/* Name */}
+                        <div className="space-y-1.5">
+                            <label className="text-sm font-medium text-gray-700">
+                                Name
+                            </label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={form.name}
+                                onChange={handleChange}
+                                placeholder="Your name"
+                                className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                            />
+                        </div>
 
-                    {/* Email */}
-                    <div className="space-y-1.5">
-                        <label className="text-sm font-medium text-gray-700">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={form.email}
-                            onChange={handleChange}
-                            placeholder="your@email.com"
-                            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                        />
-                    </div>
+                        {/* Email */}
+                        <div className="space-y-1.5">
+                            <label className="text-sm font-medium text-gray-700">
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={form.email}
+                                onChange={handleChange}
+                                placeholder="your@email.com"
+                                className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                            />
+                        </div>
 
-                    {/* Message */}
-                    <div className="space-y-1.5">
-                        <label className="text-sm font-medium text-gray-700">
-                            Message
-                        </label>
-                        <textarea
-                            name="message"
-                            value={form.message}
-                            onChange={handleChange}
-                            placeholder="Tell me about your project..."
-                            rows={5}
-                            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-                        />
-                    </div>
+                        {/* Message */}
+                        <div className="space-y-1.5">
+                            <label className="text-sm font-medium text-gray-700">
+                                Message
+                            </label>
+                            <textarea
+                                name="message"
+                                value={form.message}
+                                onChange={handleChange}
+                                placeholder="Tell me about your project..."
+                                rows={5}
+                                className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                            />
+                        </div>
 
-                    {/* Submit */}
-                    <button
-                        onClick={handleSubmit}
-                        disabled={status === "loading"}
-                        className="w-full py-3.5 rounded-xl bg-primary text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
-                    >
-                        {status === "loading" ? "Sending..." : "Send Message"}
-                    </button>
-
+                        {/* Submit */}
+                        <button type="submit"
+                            disabled={status === "loading"}
+                            className="w-full py-3.5 rounded-xl bg-primary text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
+                        >
+                            {status === "loading"
+                                ? "Sending..."
+                                : "Send Message"}
+                        </button>
+                    </form>
                     {/* Feedback */}
                     {status === "success" && (
                         <motion.p
