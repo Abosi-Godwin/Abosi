@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const links = ["Home", "About", "projects"];
+const links = ["Home", "About", "Projects"];
 
 const Navlinks = () => {
     return (

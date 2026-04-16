@@ -3,7 +3,7 @@ import Heading from "./Heading";
 const Bio = () => {
     return (
         <section className="max-w-3xl py-10 px-2.5 md:px-5">
-            <Heading text="Who am I?" />
+            <Heading text="About me" />
             
             {/* Improved hierarchy: Sub-heading stands out more */}
             <h2 className="text-lg md:text-xl tracking-tight font-medium text-secondary pb-6">

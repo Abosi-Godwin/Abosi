@@ -77,7 +77,7 @@ export const coreSkills: SkillItem[] = [
     { title: "JavaScript (ES6+)", icon: FaSquareJs },
     { title: "TypeScript", icon: SiTypescript },
     { title: "React 19", icon: FaReact },
-    { title: "Next.js 16", icon: RiNextjsFill },
+    { title: "Next.js 15", icon: RiNextjsFill },
     { title: "TailwindCSS", icon: RiTailwindCssFill }
 ];
 
@@ -239,9 +239,10 @@ export const caseStudies: CaseStudy[] = [
                 title: "Authentication & User Data",
                 details: [
                     "Secure authentication system",
+                    "Row level security",
                     "User-specific data isolation",
                     "Expenses, savings, and records scoped per user",
-                    "Real-time data updates using Firestore"
+                    "Real-time data updates using Supabase database"
                 ]
             }
         ],
@@ -269,7 +270,7 @@ export const caseStudies: CaseStudy[] = [
             frontend: ["React", "Next.js"],
             styling: ["Tailwind CSS"],
             stateManagement: ["Context API"],
-            backend: ["Firebase", "Firestore"],
+            backend: ["Supabase"],
             dataVisualization: ["Chart libraries"],
             deployment: ["Vercel"]
         },
@@ -302,8 +303,7 @@ export const caseStudies: CaseStudy[] = [
             "Next.js",
             "React",
             "Tailwind CSS",
-            "Firebase",
-            "Firestore",
+            "Supabase",
             "Finance App",
             "Product Design",
             "State Management"
@@ -316,7 +316,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Modern Fashion & Lifestyle Store",
         category: "E-commerce Website",
         status: "Completed",
-        year: "2024",
+        year: "2025",
 
         shortDescription:
             "LeesLagos is a modern fashion e-commerce platform designed to showcase and sell stylish clothing with a clean, conversion-focused shopping experience.",
@@ -406,7 +406,7 @@ export const caseStudies: CaseStudy[] = [
         ],
 
         techStack: {
-            frontend: ["React", "Next.js"],
+            frontend: ["ReactJs"],
             styling: ["Tailwind CSS"],
             stateManagement: ["Context API"],
             backend: ["Firebase"],
@@ -439,8 +439,8 @@ export const caseStudies: CaseStudy[] = [
         cta: ["View Live Store", "View Source Code", "Read Other Case Studies"],
 
         tags: [
-            "Next.js",
             "React",
+            "Firebase",
             "Tailwind CSS",
             "E-commerce",
             "Fashion Store",

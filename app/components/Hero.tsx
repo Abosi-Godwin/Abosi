@@ -47,17 +47,18 @@ const Hero = () => {
                 </h1>
 
                 <p className="mt-3 text-sm leading-relaxed text-gray-600 md:text-base">
-                    I build high-performance{" "}
+                    I build fast, conversion-ready websites for growing
+                    businesses — from custom{" "}
                     <strong className="text-gray-800">Next.js & React</strong>{" "}
-                    apps and high-conversion{" "}
+                    apps to polished{" "}
                     <strong className="text-gray-800">
                         Shopify & WordPress
                     </strong>{" "}
-                    stores for growing businesses.
+                    stores that turn visitors into customers.
                 </p>
 
                 {/* Buttons */}
-                <div className="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
+                <div className="mt-6 flex flex-wrap justify-between gap-3 md:justify-start">
                     <button
                         onClick={scrollToContact}
                         className="rounded-md bg-secondary px-7 py-2.5 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105 active:scale-95"
