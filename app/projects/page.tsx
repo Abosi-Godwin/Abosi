@@ -111,7 +111,7 @@ const ProjectsPage = () => {
                         </p>
                     </div>
 
-                    <div className="mt-6 flex flex-wrap gap-6 text-sm text-gray-500">
+                    <div className="mt-6 flex flex-wrap gap-3 text-sm text-gray-500">
                         <span className="flex items-center gap-2">
                             <LuZap className="text-primary" /> Fast-loading,
                             optimized builds

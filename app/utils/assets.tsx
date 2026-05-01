@@ -94,7 +94,7 @@ export const tools: SkillItem[] = [
 export const projects: ProjectsProps[] = [
     {
         id: 1,
-        slug: "trexpenser-finance-tracker",
+        slug: "trexpenser-expense-savings-tracker",
         title: "Trexpenser — Personal Finance & Savings Manager",
         shortDescription:
             "A smart personal finance application that helps users track income, manage expenses, and build savings goals with structured financial insights and progress tracking.",
@@ -106,8 +106,8 @@ export const projects: ProjectsProps[] = [
         id: 2,
         slug: "leeslagos-fashion-ecommerce",
         title: "LeesLagos — Cosmetics E-commerce Store",
-      shortDescription:
-    "A full-stack finance management system designed to help users control spending, automate savings behavior, and make better financial decisions through real-time tracking and structured goal systems.",
+        shortDescription:
+            "A full-stack finance management system designed to help users control spending, automate savings behavior, and make better financial decisions through real-time tracking and structured goal systems.",
         thumbnail: leeslagosThumbnail,
         tags: ["React", "TailwindCSS", "E-commerce", "Frontend"],
         liveUrl: "https://leeslagos.vercel.app"
@@ -121,6 +121,16 @@ export const projects: ProjectsProps[] = [
         thumbnail: softpThumbnail,
         tags: ["Next.js", "TypeScript", "Framer Motion", "Firebase"],
         liveUrl: "https://softp.vercel.app"
+    },
+    {
+        id: 4,
+        slug: "sureplug-autos-motor-parts",
+        title: "SurePlug Autos — Motor Parts & Services",
+        shortDescription:
+            "A high-performance landing page for a Nigerian auto parts business, built to drive inquiries and establish brand credibility with a fast, modern web presence.",
+        thumbnail: sureplugThumbnail,
+        tags: ["Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        liveUrl: "https://sureplug-autos.vercel.app"
     }
 ];
 
@@ -457,6 +467,284 @@ export const caseStudies: CaseStudy[] = [
             "Product Design",
             "Responsive Design",
             "Frontend Development"
+        ]
+    },
+    {
+        id: "sureplug-autos",
+        slug: "sureplug-autos-motor-parts",
+        title: "SurePlug Autos",
+        subtitle: "Motor Parts & Auto Services Landing Page",
+        category: "Business Website",
+        status: "Completed",
+        year: "2025",
+
+        shortDescription:
+            "A high-performance landing page for a Nigerian auto parts business, built to drive inquiries and establish brand credibility with a fast, modern web presence.",
+
+        overview:
+            "SurePlug Autos is a landing page built for a Nigerian motor parts and auto services business. The goal was simple but important: give a local business a professional digital presence that builds trust with potential customers, communicates services clearly, and drives real inquiries. Most auto businesses in Nigeria rely entirely on word of mouth and social media — SurePlug needed a web presence that would set them apart and hold up on any device.",
+
+        problem: {
+            summary:
+                "Local auto businesses in Nigeria lack credible web presence, making it hard for potential customers to find, trust, or contact them online.",
+            points: [
+                "No professional website to establish credibility",
+                "Customers can't easily discover or verify the business online",
+                "Services and contact information are scattered across social platforms",
+                "Competitors with websites win trust by default"
+            ]
+        },
+
+        solution: {
+            summary:
+                "A fast, focused landing page that communicates trust, lists services clearly, and makes it effortless for customers to get in touch.",
+            points: [
+                "Clean hero section with a strong value proposition",
+                "Clear services breakdown for easy scanning",
+                "Prominent contact and inquiry CTAs throughout",
+                "Optimized for mobile where most Nigerian users browse",
+                "Framer Motion animations for a premium brand feel"
+            ]
+        },
+
+        features: [
+            {
+                title: "Hero & Brand Introduction",
+                details: [
+                    "Strong headline communicating the business value immediately",
+                    "Animated entrance using Framer Motion",
+                    "Primary CTA driving users to contact or inquire",
+                    "Mobile-optimized layout above the fold"
+                ]
+            },
+            {
+                title: "Services Section",
+                details: [
+                    "Clear breakdown of auto parts and service offerings",
+                    "Icon-supported service cards for fast scanning",
+                    "Designed to answer customer questions without a call",
+                    "Structured for easy content updates"
+                ]
+            },
+            {
+                title: "Trust & Credibility Layer",
+                details: [
+                    "Business positioning copy that builds confidence",
+                    "Consistent visual identity across all sections",
+                    "Professional typography and spacing system",
+                    "Designed to compete with larger, established brands"
+                ]
+            },
+            {
+                title: "Contact & Inquiry Flow",
+                details: [
+                    "Multiple contact touchpoints across the page",
+                    "WhatsApp CTA for the Nigerian market",
+                    "Clear call-to-action hierarchy",
+                    "Frictionless path from landing to inquiry"
+                ]
+            }
+        ],
+
+        uxDecisions: [
+            {
+                decision: "WhatsApp as primary contact CTA",
+                reason: "WhatsApp is the dominant business communication channel in Nigeria — it removes friction for the target audience."
+            },
+            {
+                decision: "Services over features",
+                reason: "Auto customers need to know what you offer, not how you operate. Services are front and center."
+            },
+            {
+                decision: "Minimal page sections",
+                reason: "A landing page should convert, not educate. Every section earns its place by moving the user toward contact."
+            },
+            {
+                decision: "Framer Motion for animations",
+                reason: "Subtle entrance animations elevate the perceived quality of the brand without hurting performance."
+            }
+        ],
+
+        techStack: {
+            frontend: ["Next.js 15", "TypeScript"],
+            styling: ["Tailwind CSS v4"],
+            animation: ["Framer Motion v12"],
+            deployment: ["Vercel"]
+        },
+
+        challengesAndLearnings: [
+            "Designing for a Nigerian audience with varied device capabilities and connection speeds",
+            "Balancing animation richness with page performance on mobile",
+            "Communicating business credibility through design alone without relying on reviews or social proof",
+            "Working with Tailwind CSS v4 and its new configuration approach"
+        ],
+
+        outcomes: {
+            summary:
+                "SurePlug Autos now has a professional web presence that sets them apart from competitors and gives customers a trustworthy first impression.",
+            highlights: [
+                "Demonstrates ability to build for real Nigerian SME clients",
+                "Shows conversion-focused landing page thinking",
+                "Built with the latest Next.js 15 and Tailwind v4 stack"
+            ]
+        },
+
+        links: {
+            live: "https://sureplugautos.vercel.app/",
+            github: null
+        },
+
+        cta: ["View Live Site", "Read Other Case Studies"],
+
+        tags: [
+            "Next.js 15",
+            "TypeScript",
+            "Tailwind CSS v4",
+            "Framer Motion",
+            "Business Website",
+            "Nigerian SME",
+            "Landing Page"
+        ]
+    },
+
+    {
+        id: "softp",
+        slug: "softp-creative-portfolio",
+        title: "SOFT-P",
+        subtitle: "Multidisciplinary Artist Portfolio",
+        category: "Portfolio Website",
+        status: "Completed",
+        year: "2026",
+
+        shortDescription:
+            "A cinematic portfolio website for a Nigerian actor, music artist, and 2D animator — featuring Cloudinary media delivery, Framer Motion animations, and a Firebase-powered bookings system.",
+
+        overview:
+            "SOFT-P is a personal portfolio website built for Paulinus Odinaka — a Theatre Arts graduate working across acting, music, and 2D animation. The challenge was creating a single digital space that could hold three distinct creative disciplines without feeling cluttered or unfocused. The result is a cinematic, media-rich experience that presents each craft with the weight it deserves, while giving industry contacts a clear path to book or collaborate.",
+
+        problem: {
+            summary:
+                "Creative professionals with multiple disciplines struggle to present all their work in one place without diluting their identity or confusing visitors.",
+            points: [
+                "Acting, music, and animation require very different presentation formats",
+                "No central booking or contact system for industry inquiries",
+                "Social media profiles fragment the portfolio across platforms",
+                "Lack of a professional web presence limits industry opportunities"
+            ]
+        },
+
+        solution: {
+            summary:
+                "A unified cinematic portfolio that gives each discipline its own space while maintaining a consistent brand identity and a clear path to bookings.",
+            points: [
+                "Discipline-specific sections with tailored media presentation",
+                "Cloudinary for optimized video and image delivery",
+                "Firebase-powered bookings system for industry inquiries",
+                "Framer Motion for cinematic transitions between sections",
+                "Single cohesive identity across all three creative areas"
+            ]
+        },
+
+        features: [
+            {
+                title: "Cinematic Hero & Brand Identity",
+                details: [
+                    "Full-screen hero with atmospheric design",
+                    "Framer Motion entrance animations for dramatic effect",
+                    "Strong visual identity that reflects the artist's persona",
+                    "Immediate communication of multidisciplinary range"
+                ]
+            },
+            {
+                title: "Acting Showcase",
+                details: [
+                    "Performance reels delivered via Cloudinary",
+                    "Credits and production history display",
+                    "Optimized video loading for smooth playback",
+                    "Designed for casting directors and producers"
+                ]
+            },
+            {
+                title: "Music Section",
+                details: [
+                    "Audio and visual media integration",
+                    "Discography and release presentation",
+                    "Cloudinary-powered media delivery",
+                    "Clean layout that keeps focus on the music"
+                ]
+            },
+            {
+                title: "Bookings System",
+                details: [
+                    "Firebase-powered inquiry and bookings form",
+                    "Real-time form submissions stored in Firestore",
+                    "Clear categorization by discipline for context",
+                    "Professional booking flow for industry contacts"
+                ]
+            }
+        ],
+
+        uxDecisions: [
+            {
+                decision: "Cinematic pacing over fast navigation",
+                reason: "Creative portfolios should feel like an experience, not a resume. Slower transitions build atmosphere and respect."
+            },
+            {
+                decision: "Cloudinary for all media",
+                reason: "Video and image assets for a creative portfolio are large. Cloudinary handles optimization and delivery so performance doesn't suffer."
+            },
+            {
+                decision: "Unified identity across disciplines",
+                reason: "Separating three disciplines into different sites would dilute the personal brand. One cohesive site tells a fuller story."
+            },
+            {
+                decision: "Firebase for bookings over a third-party form tool",
+                reason: "Storing submissions in Firestore gives the client direct ownership of their inquiry data without depending on external SaaS tools."
+            }
+        ],
+
+        techStack: {
+            frontend: ["Next.js", "TypeScript"],
+            styling: ["Tailwind CSS"],
+            animation: ["Framer Motion"],
+            media: ["Cloudinary"],
+            backend: ["Firebase", "Firestore"],
+            deployment: ["Vercel"]
+        },
+
+        challengesAndLearnings: [
+            "Designing a unified visual identity that works across three very different creative disciplines",
+            "Optimizing video delivery for users on slower Nigerian mobile connections",
+            "Building a bookings flow that feels professional without overcomplicating the UX",
+            "Managing Cloudinary asset organization for a media-heavy site"
+        ],
+
+        outcomes: {
+            summary:
+                "SOFT-P gives Paulinus Odinaka a professional, cinematic home for his entire creative body of work — one URL that represents everything he does.",
+            highlights: [
+                "Demonstrates ability to build client sites beyond standard business pages",
+                "Shows media-heavy architecture with Cloudinary and Firebase",
+                "Proves design range — from finance apps to creative portfolios"
+            ]
+        },
+
+        links: {
+            live: "https://softp.vercel.app",
+            github: null
+        },
+
+        cta: ["View Live Portfolio", "Read Other Case Studies"],
+
+        tags: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Firebase",
+            "Cloudinary",
+            "Creative Portfolio",
+            "Client Project"
         ]
     }
 ];

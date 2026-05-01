@@ -123,7 +123,22 @@ export default function AboutPage() {
             />
 
             <main className="min-h-screen bg-white text-gray-900">
-
+  {/* Breadcrumb */}
+                    <nav
+                        aria-label="Breadcrumb"
+                        className="pt-10 mb-6 flex items-center gap-2 text-sm text-gray-400"
+                    >
+                        <Link
+                            href="/"
+                            className="hover:text-primary transition-colors"
+                        >
+                            Home
+                        </Link>
+                        <span>/</span>
+                        <span className="text-gray-600 font-medium">
+                            About
+                        </span>
+                    </nav>
                 {/* ── Hero ── */}
                 <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
                     <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-4">
