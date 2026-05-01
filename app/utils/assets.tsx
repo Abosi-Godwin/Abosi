@@ -36,6 +36,7 @@ import visyonedThumbnail from "../../public/visyond-thumb.jpeg";
 import softpThumbnail from "../../public/softp-thumb.jpeg";
 import sollyThumbnail from "../../public/sollystore.jpeg";
 import elvanexThumbnail from "../../public/elvanex.jpg";
+import sureplugThumbnail from "../../public/sureplugautos.png";
 
 export const introInfo: IntroInfo[] = [
     { image: trexpenserThumbnail, title: "Landing page" },
