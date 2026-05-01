@@ -1,16 +1,16 @@
-import { Metadata } from "next";
+ import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About Abosi Godwin | Frontend, Shopify & WordPress Developer",
+    title: "About Abosi Godwin | Full-Stack Developer",
     description:
-        "Learn about Abosi Godwin — a Frontend developer with 3–5 years of experience specializing in Next.js, React, Shopify, and WordPress. Available for freelance and full-time opportunities worldwide.",
+        "Learn about Abosi Godwin — a self-taught Full-Stack Developer specializing in Next.js, React, TypeScript, and Supabase. Available for freelance and full-time opportunities worldwide.",
     alternates: {
         canonical: "https://abosi.vercel.app/about"
     },
     openGraph: {
-        title: "About Abosi Godwin | Frontend, Shopify & WordPress Developer",
+        title: "About Abosi Godwin | Full-Stack Developer",
         description:
-            "Frontend developer with 3–5 years of experience in Next.js, React, Shopify & WordPress. Freelancer, open to full-time roles.",
+            "Full-Stack Developer specializing in Next.js, React, TypeScript & Supabase. Freelancer, open to full-time roles.",
         url: "https://abosi.vercel.app/about",
         siteName: "Abosi Godwin",
         type: "profile",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
                 url: "https://abosi.vercel.app/Abosi.png",
                 width: 1200,
                 height: 630,
-                alt: "Abosi Godwin — Frontend Developer"
+                alt: "Abosi Godwin — Full-Stack Developer"
             }
         ]
     }
@@ -33,11 +33,11 @@ export default function AboutPage() {
                 "@type": "WebPage",
                 "@id": "https://abosi.vercel.app/about#webpage",
                 url: "https://abosi.vercel.app/about",
-                name: "About Abosi Godwin | Frontend, Shopify & WordPress Developer",
+                name: "About Abosi Godwin | Full-Stack Developer",
                 isPartOf: { "@id": "https://abosi.vercel.app/#website" },
                 about: { "@id": "https://abosi.vercel.app/#person" },
                 description:
-                    "Learn about Abosi Godwin, a Frontend developer with 3–5 years of experience in Next.js, React, Shopify, and WordPress.",
+                    "Learn about Abosi Godwin, a self-taught Full-Stack Developer specializing in Next.js, React, TypeScript, and Supabase.",
                 breadcrumb: {
                     "@id": "https://abosi.vercel.app/about#breadcrumb"
                 }
@@ -65,9 +65,9 @@ export default function AboutPage() {
                 "@id": "https://abosi.vercel.app/#person",
                 name: "Abosi Godwin",
                 url: "https://abosi.vercel.app",
-                jobTitle: "Frontend, Shopify & WordPress Developer",
+                jobTitle: "Full-Stack Developer",
                 description:
-                    "Frontend developer with 3–5 years of experience specializing in Next.js, React, Shopify, and WordPress. Available for freelance projects and full-time opportunities worldwide.",
+                    "Self-taught Full-Stack Developer specializing in Next.js, React, TypeScript, and Supabase. Available for freelance projects and full-time opportunities worldwide.",
                 image: {
                     "@type": "ImageObject",
                     url: "https://abosi.vercel.app/Abosi.png",
@@ -75,19 +75,13 @@ export default function AboutPage() {
                     height: 800
                 },
                 knowsAbout: [
-                    "Next.js",
-                    "React",
-                    "TailwindCSS",
-                    "Shopify Development",
-                    "WordPress Development",
-                    "Frontend Development",
-                    "JavaScript",
-                    "TypeScript"
+                    "Next.js", "React", "TypeScript", "TailwindCSS",
+                    "Supabase", "Full-Stack Development", "JavaScript", "Framer Motion"
                 ],
                 hasOccupation: {
                     "@type": "Occupation",
-                    name: "Frontend Developer",
-                    skills: "Next.js, React, Shopify, WordPress, TailwindCSS, JavaScript, TypeScript"
+                    name: "Full-Stack Developer",
+                    skills: "Next.js, React, TypeScript, Supabase, TailwindCSS, JavaScript"
                 },
                 sameAs: [
                     "https://github.com/abosi-godwin",
@@ -102,22 +96,22 @@ export default function AboutPage() {
     const skills = [
         {
             category: "Frontend",
-            items: ["React", "Next.js", "TypeScript", "TailwindCSS"]
+            items: ["React 19", "Next.js 16", "TypeScript", "TailwindCSS"]
         },
         {
-            category: "CMS & E-Commerce",
-            items: ["Shopify", "WordPress", "Liquid", "WooCommerce"]
+            category: "Backend & Database",
+            items: ["Supabase", "PostgreSQL", "REST APIs", "Resend"]
         },
         {
             category: "Tools & Workflow",
-            items: ["Git", "Figma", "Vercel", "REST APIs"]
+            items: ["Git", "Figma", "Vercel", "Framer Motion"]
         }
     ];
 
     const stats = [
         { value: "3+", label: "Years of Experience" },
         { value: "20+", label: "Projects Delivered" },
-        { value: "3", label: "Specializations" },
+        { value: "Full-Stack", label: "Specialization" },
         { value: "100%", label: "Client Satisfaction" }
     ];
 
@@ -129,41 +123,42 @@ export default function AboutPage() {
             />
 
             <main className="min-h-screen bg-white text-gray-900">
+
                 {/* ── Hero ── */}
                 <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
-                    <p className="text-sm font-semibold tracking-widest text-indigo-600 uppercase mb-4">
+                    <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-4">
                         About Me
                     </p>
-
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
                         Hi, I&apos;m{" "}
-                        <span className="text-indigo-600">Abosi Godwin</span> —
-                        <br />I build websites that{" "}
+                        <span className="text-primary">Abosi Godwin</span> —
+                        <br />I build products that{" "}
                         <span className="italic font-light">
-                            work beautifully.
+                            work end to end.
                         </span>
                     </h1>
-
                     <p className="text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed">
-                        A Frontend Developer with over 3 years of hands-on
-                        experience crafting modern, high-performance web
-                        experiences. I specialize in{" "}
+                        A self-taught Full-Stack Developer with 3+ years of
+                        hands-on experience shipping modern web products. I
+                        specialize in{" "}
                         <strong className="text-gray-800">Next.js</strong>,{" "}
-                        <strong className="text-gray-800">Shopify</strong>, and{" "}
-                        <strong className="text-gray-800">WordPress</strong> —
-                        turning ideas into pixel-perfect digital products.
+                        <strong className="text-gray-800">React</strong>,{" "}
+                        <strong className="text-gray-800">TypeScript</strong>,
+                        and{" "}
+                        <strong className="text-gray-800">Supabase</strong> —
+                        from pixel-perfect UIs to production-ready backends.
                     </p>
                 </section>
 
                 {/* ── Stats ── */}
-                <section className="py-14 bg-indigo-600">
+                <section className="py-14 bg-primary">
                     <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
                         {stats.map(stat => (
                             <div key={stat.label}>
                                 <p className="text-4xl font-extrabold text-white">
                                     {stat.value}
                                 </p>
-                                <p className="text-indigo-200 text-sm mt-1 font-medium">
+                                <p className="text-light text-sm mt-1 font-medium">
                                     {stat.label}
                                 </p>
                             </div>
@@ -179,47 +174,43 @@ export default function AboutPage() {
                         </h2>
                         <div className="space-y-4 text-gray-600 leading-relaxed">
                             <p>
-                                My journey into web development started with a
-                                simple curiosity — I wanted to understand how
-                                the websites I used every day were built. That
-                                curiosity quickly became a passion, and over the
-                                past 3+ years, I have grown into a developer who
-                                ships real products for real clients.
+                                I didn&apos;t learn to code in a classroom. I
+                                learned by building — breaking things, reading
+                                docs at midnight, and shipping projects that
+                                pushed me past what I knew. That self-taught
+                                discipline is now my strongest asset.
                             </p>
                             <p>
-                                I started as a self-taught developer, learning
-                                through building. From my first static HTML page
-                                to deploying full-stack Next.js applications on
-                                Vercel, every project has taught me something
-                                new. Today, I work as a freelancer while
-                                actively pursuing full-time opportunities where
-                                I can contribute to a great team.
+                                Before development, I managed a cosmetics retail
+                                operation — which gave me a sharp eye for how
+                                real businesses actually work. I understand
+                                clients not just as a developer, but as someone
+                                who has sat on the other side of the table.
+                                That perspective shapes every product I build.
                             </p>
                             <p>
-                                What drives me is the intersection of design and
-                                engineering — writing code that is not just
-                                functional, but elegant and maintainable. I care
-                                deeply about performance, accessibility, and
-                                delivering an experience that users love.
+                                Today I work as a freelancer building full-stack
+                                web products while developing my own SaaS,
+                                Trexpenser. My goal is simple: write software
+                                that solves real problems and holds up in
+                                production.
                             </p>
                         </div>
                     </div>
 
-                    {/* Image placeholder — swap with your actual image */}
                     <div className="relative">
-                        <div className="w-full aspect-square rounded-2xl bg-indigo-50 overflow-hidden border border-indigo-100 flex items-center justify-center">
+                        <div className="w-full aspect-square rounded-2xl bg-purple-50 overflow-hidden border border-purple-100 flex items-center justify-center">
                             <img
                                 src="/Abosi.png"
-                                alt="Abosi Godwin — Frontend Developer"
+                                alt="Abosi Godwin — Full-Stack Developer"
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        {/* Decorative badge */}
                         <div className="absolute -bottom-4 -left-4 bg-white border border-gray-100 shadow-lg rounded-xl px-5 py-3">
                             <p className="text-xs text-gray-500 font-medium">
                                 Available for
                             </p>
-                            <p className="text-sm font-bold text-indigo-600">
+                            <p className="text-sm font-bold text-primary">
                                 Freelance & Full-time
                             </p>
                         </div>
@@ -233,8 +224,9 @@ export default function AboutPage() {
                             What I Do
                         </h2>
                         <p className="text-gray-500 mb-12 max-w-xl">
-                            I offer a focused set of services across three core
-                            areas — each one backed by real project experience.
+                            I cover the full product stack — from UI to
+                            database — so you don&apos;t need to hire three
+                            people to ship one idea.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-8">
@@ -243,24 +235,24 @@ export default function AboutPage() {
                                     icon: "⚛️",
                                     title: "Frontend Development",
                                     description:
-                                        "Building fast, responsive, and accessible web applications using React and Next.js. From landing pages to complex SPAs, I write clean, scalable code."
+                                        "Fast, responsive, accessible UIs with React and Next.js. From landing pages to complex dashboards, I write clean, scalable code that performs."
                                 },
                                 {
-                                    icon: "🛍️",
-                                    title: "Shopify Development",
+                                    icon: "🗄️",
+                                    title: "Backend & Database",
                                     description:
-                                        "Custom Shopify theme development, Liquid templating, and store optimization. I build storefronts that convert visitors into customers."
+                                        "Auth, APIs, and database design with Supabase and PostgreSQL. I build secure, well-structured backends that power real products."
                                 },
                                 {
-                                    icon: "🌐",
-                                    title: "WordPress Development",
+                                    icon: "🚀",
+                                    title: "SaaS & Product Building",
                                     description:
-                                        "Custom themes, plugins, and full site builds on WordPress. I create manageable, performant sites that clients can maintain with ease."
+                                        "I don't just write code — I think in products. I've shipped Trexpenser end-to-end and understand what it takes to build something people actually use."
                                 }
                             ].map(service => (
                                 <div
                                     key={service.title}
-                                    className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-indigo-200 hover:shadow-md transition-all duration-300"
+                                    className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-primary hover:shadow-md transition-all duration-300"
                                 >
                                     <span className="text-3xl mb-4 block">
                                         {service.icon}
@@ -283,14 +275,13 @@ export default function AboutPage() {
                         Skills & Tools
                     </h2>
                     <p className="text-gray-500 mb-12 max-w-xl">
-                        The technologies I work with day-to-day to deliver
-                        quality products.
+                        The technologies I use daily to ship production-ready products.
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-10">
                         {skills.map(group => (
                             <div key={group.category}>
-                                <h3 className="text-xs font-semibold tracking-widest text-indigo-500 uppercase mb-4">
+                                <h3 className="text-xs font-semibold tracking-widest text-primary uppercase mb-4">
                                     {group.category}
                                 </h3>
                                 <ul className="space-y-3">
@@ -299,7 +290,7 @@ export default function AboutPage() {
                                             key={item}
                                             className="flex items-center gap-3 text-gray-700 font-medium"
                                         >
-                                            <span className="w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0" />
+                                            <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                                             {item}
                                         </li>
                                     ))}
@@ -309,7 +300,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* ── FAQ (for AI Overview) ── */}
+                {/* ── FAQ ── */}
                 <section className="py-20 bg-gray-50 px-6">
                     <div className="max-w-3xl mx-auto">
                         <h2 className="text-3xl font-bold mb-12 text-gray-900">
@@ -320,19 +311,19 @@ export default function AboutPage() {
                             {[
                                 {
                                     q: "Who is Abosi Godwin?",
-                                    a: "Abosi Godwin is a Frontend, Shopify, and WordPress Developer with over 3 years of professional experience building modern, responsive websites and web applications."
+                                    a: "Abosi Godwin is a self-taught Full-Stack Developer with 3+ years of experience building modern web products using Next.js, React, TypeScript, and Supabase."
                                 },
                                 {
-                                    q: "What technologies does Abosi Godwin specialize in?",
-                                    a: "Abosi specializes in Next.js, React, TailwindCSS, TypeScript, Shopify (Liquid), and WordPress — delivering high-performance web solutions for businesses and individuals."
+                                    q: "What does Abosi Godwin specialize in?",
+                                    a: "Abosi specializes in full-stack web development — frontend UIs with React and Next.js, backend logic and databases with Supabase, and shipping complete SaaS products."
                                 },
                                 {
                                     q: "Is Abosi Godwin available for freelance work?",
-                                    a: "Yes, Abosi is available for freelance projects worldwide. He is also open to full-time and internship opportunities with product teams and agencies."
+                                    a: "Yes. Abosi is available for freelance projects worldwide and is open to full-time opportunities with product teams and engineering organizations."
                                 },
                                 {
                                     q: "How can I hire Abosi Godwin?",
-                                    a: "You can reach out through the contact form on his portfolio at abosi.vercel.app, or connect with him directly on LinkedIn."
+                                    a: "Reach out through the contact form at abosi.vercel.app or connect directly on LinkedIn. He typically responds within 24 hours."
                                 }
                             ].map(faq => (
                                 <div
@@ -367,13 +358,13 @@ export default function AboutPage() {
                         Let&apos;s build something great together.
                     </h2>
                     <p className="text-gray-500 mb-10">
-                        Whether you have a project in mind, a role to fill, or
+                        Whether you have a product to ship, a role to fill, or
                         just want to connect — my inbox is always open.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href="mailto:your@email.com"
-                            className="bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-indigo-700 transition-colors"
+                            href="/#contact"
+                            className="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
                         >
                             Get In Touch
                         </a>
@@ -381,7 +372,7 @@ export default function AboutPage() {
                             href="https://linkedin.com/in/AbosiGodwin"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="border border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-indigo-300 hover:text-indigo-600 transition-colors"
+                            className="border border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-primary hover:text-primary transition-colors"
                         >
                             View LinkedIn
                         </a>

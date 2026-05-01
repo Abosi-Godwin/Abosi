@@ -94,16 +94,26 @@ export const tools: SkillItem[] = [
 export const projects: ProjectsProps[] = [
     {
         id: 1,
+        slug: "trexpenser-finance-tracker",
+        title: "Trexpenser — Personal Finance & Savings Manager",
+        shortDescription:
+            "A smart personal finance application that helps users track income, manage expenses, and build savings goals with structured financial insights and progress tracking.",
+        thumbnail: trexpenserThumbnail,
+        tags: ["React", "Next.js", "Firebase", "Finance App", "Full-Stack"],
+        liveUrl: "https://trexpenser.vercel.app"
+    },
+    {
+        id: 2,
         slug: "leeslagos-fashion-ecommerce",
         title: "LeesLagos — Cosmetics E-commerce Store",
-        shortDescription:
-            "A beautifully designed cosmetics e-commerce website with a complete product catalogue and smooth shopping experience.",
+      shortDescription:
+    "A full-stack finance management system designed to help users control spending, automate savings behavior, and make better financial decisions through real-time tracking and structured goal systems.",
         thumbnail: leeslagosThumbnail,
         tags: ["React", "TailwindCSS", "E-commerce", "Frontend"],
         liveUrl: "https://leeslagos.vercel.app"
     },
     {
-        id: 2,
+        id: 3,
         slug: "softp-creative-portfolio",
         title: "SOFT-P — Multidisciplinary Artist Portfolio",
         shortDescription:
@@ -123,7 +133,7 @@ export const practiceProjects: ProjectsProps[] = [
             "A pixel-perfect recreation of the Chirp landing page challenge using clean HTML and CSS.",
         thumbnail: chirpThumbnail,
         tags: ["HTML", "CSS", "Frontend Mentor", "Responsive"],
-        liveUrl: "https://your-live-link.com"
+        liveUrl: "https://abosi-godwin-chirp-website.netlify.app/"
     },
 
     {
