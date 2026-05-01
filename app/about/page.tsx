@@ -1,5 +1,5 @@
- import { Metadata } from "next";
-
+import { Metadata } from "next";
+import Link from "next/link";
 export const metadata: Metadata = {
     title: "About Abosi Godwin | Full-Stack Developer",
     description:
@@ -75,8 +75,14 @@ export default function AboutPage() {
                     height: 800
                 },
                 knowsAbout: [
-                    "Next.js", "React", "TypeScript", "TailwindCSS",
-                    "Supabase", "Full-Stack Development", "JavaScript", "Framer Motion"
+                    "Next.js",
+                    "React",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "Supabase",
+                    "Full-Stack Development",
+                    "JavaScript",
+                    "Framer Motion"
                 ],
                 hasOccupation: {
                     "@type": "Occupation",
@@ -123,22 +129,20 @@ export default function AboutPage() {
             />
 
             <main className="min-h-screen bg-white text-gray-900">
-  {/* Breadcrumb */}
-                    <nav
-                        aria-label="Breadcrumb"
-                        className="pt-10 mb-6 flex items-center gap-2 text-sm text-gray-400"
+                {/* Breadcrumb */}
+                <nav
+                    aria-label="Breadcrumb"
+                    className="pt-10 mb-6 flex items-center gap-2 text-sm text-gray-400"
+                >
+                    <Link
+                        href="/"
+                        className="hover:text-primary transition-colors"
                     >
-                        <Link
-                            href="/"
-                            className="hover:text-primary transition-colors"
-                        >
-                            Home
-                        </Link>
-                        <span>/</span>
-                        <span className="text-gray-600 font-medium">
-                            About
-                        </span>
-                    </nav>
+                        Home
+                    </Link>
+                    <span>/</span>
+                    <span className="text-gray-600 font-medium">About</span>
+                </nav>
                 {/* ── Hero ── */}
                 <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
                     <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-4">
@@ -159,9 +163,8 @@ export default function AboutPage() {
                         <strong className="text-gray-800">Next.js</strong>,{" "}
                         <strong className="text-gray-800">React</strong>,{" "}
                         <strong className="text-gray-800">TypeScript</strong>,
-                        and{" "}
-                        <strong className="text-gray-800">Supabase</strong> —
-                        from pixel-perfect UIs to production-ready backends.
+                        and <strong className="text-gray-800">Supabase</strong>{" "}
+                        — from pixel-perfect UIs to production-ready backends.
                     </p>
                 </section>
 
@@ -200,8 +203,8 @@ export default function AboutPage() {
                                 operation — which gave me a sharp eye for how
                                 real businesses actually work. I understand
                                 clients not just as a developer, but as someone
-                                who has sat on the other side of the table.
-                                That perspective shapes every product I build.
+                                who has sat on the other side of the table. That
+                                perspective shapes every product I build.
                             </p>
                             <p>
                                 Today I work as a freelancer building full-stack
@@ -239,9 +242,9 @@ export default function AboutPage() {
                             What I Do
                         </h2>
                         <p className="text-gray-500 mb-12 max-w-xl">
-                            I cover the full product stack — from UI to
-                            database — so you don&apos;t need to hire three
-                            people to ship one idea.
+                            I cover the full product stack — from UI to database
+                            — so you don&apos;t need to hire three people to
+                            ship one idea.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-8">
@@ -290,7 +293,8 @@ export default function AboutPage() {
                         Skills & Tools
                     </h2>
                     <p className="text-gray-500 mb-12 max-w-xl">
-                        The technologies I use daily to ship production-ready products.
+                        The technologies I use daily to ship production-ready
+                        products.
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-10">
