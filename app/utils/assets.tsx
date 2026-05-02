@@ -198,7 +198,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Personal Expense & Savings Tracker",
         category: "Web Application",
         status: "Completed",
-        year: "2024",
+        year: "2026",
 
         shortDescription:
             "Trexpenser is a personal finance web app that helps users track income, expenses, and savings goals with clarity and control.",
@@ -473,7 +473,7 @@ export const caseStudies: CaseStudy[] = [
     {
         id: "sureplug-autos",
         slug: "sureplug-autos-motor-parts",
-        title: "SurePlug Autos",
+        title: "SurePlugAutos",
         subtitle: "Motor Parts & Auto Services Landing Page",
         category: "Business Website",
         status: "Completed",
