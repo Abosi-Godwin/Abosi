@@ -156,9 +156,10 @@ const Contact = () => {
                         </div>
 
                         {/* Submit */}
-                        <button type="submit"
+                        <button
+                            type="submit"
                             disabled={status === "loading"}
-                            className="w-full py-3.5 rounded-xl bg-primary text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
+                            className="w-full py-3.5 rounded-xl bg-secondary text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
                         >
                             {status === "loading"
                                 ? "Sending..."

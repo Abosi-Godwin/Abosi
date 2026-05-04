@@ -73,7 +73,7 @@ const ProjectHighlight = () => {
                 <div className="mt-6 border-t border-gray-100 pt-6 px-1 flex items-center justify-between gap-4">
                     <Link
                         href={`/projects/trexpenser-expense-savings-tracker`}
-                        className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold tracking-wide text-white shadow-sm transition-all hover:opacity-90 hover:shadow-md active:scale-95"
+                        className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-xs font-semibold tracking-wide text-white shadow-sm transition-all hover:opacity-90 hover:shadow-md active:scale-95"
                     >
                         View Case Study
                         <span className="text-[10px]">→</span>

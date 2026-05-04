@@ -48,7 +48,7 @@ const Project = ({ data }: { data: ProjectsProps }) => {
                 <div className="pt-3 mt-auto flex items-center justify-between">
                     <Link
                         href={`/projects/${slug}`}
-                        className="text-sm font-semibold text-primary hover:opacity-80 transition-colors"
+                        className="text-sm font-semibold text-secondary hover:opacity-80 transition-colors"
                     >
                         Case Study →
                     </Link>

@@ -1,10 +1,9 @@
- import Heading from "./Heading";
+import Heading from "./Heading";
 
 const Bio = () => {
     return (
-        <section className="max-w-3xl py-10 px-2.5 md:px-5">
+        <section className="max-w-3xl py-12 px-2.5 md:px-5">
             <Heading text="About me" />
-
             <h2 className="text-lg md:text-xl tracking-tight font-medium text-secondary pb-6">
                 Full-Stack Developer based in Nigeria.
             </h2>
@@ -23,11 +22,10 @@ const Bio = () => {
                     problems for real users.
                 </p>
                 <p>
-                    Beyond client work, I build my own products. Trexpenser —
-                    a full-stack personal finance SaaS — is the clearest
-                    example of how I think: not just as a developer writing
-                    code, but as a builder who cares about the whole product
-                    experience.
+                    Beyond client work, I build my own products. Trexpenser — a
+                    full-stack personal finance SaaS — is the clearest example
+                    of how I think: not just as a developer writing code, but as
+                    a builder who cares about the whole product experience.
                 </p>
                 <p>
                     My focus is always on clarity, performance, and
