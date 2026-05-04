@@ -53,11 +53,6 @@ export const footerSocials = [
     },
     { url: "https://x.com/AbosiGodwin", name: "Twitter", icon: FaTwitter },
     {
-        url: "https://www.instagram.com/abosigodwin",
-        name: "Instagram",
-        icon: FaInstagram
-    },
-    {
         url: "https://www.facebook.com/AbosiGodwinN",
         name: "Facebook",
         icon: FaFacebookF
@@ -100,7 +95,14 @@ export const projects: ProjectsProps[] = [
         shortDescription:
             "A smart personal finance application that helps users track income, manage expenses, and build savings goals with structured financial insights and progress tracking.",
         thumbnail: trexpenserThumbnail,
-        tags: ["React", "Next.js", "Firebase", "Finance App", "Full-Stack"],
+        tags: [
+            "React",
+            "Next.js",
+            "Supabase",
+            "Finance App",
+            "Full-Stack",
+            "TailwindCSS"
+        ],
         liveUrl: "https://trexpenser.vercel.app"
     },
     {
@@ -110,7 +112,14 @@ export const projects: ProjectsProps[] = [
         shortDescription:
             "A full-stack finance management system designed to help users control spending, automate savings behavior, and make better financial decisions through real-time tracking and structured goal systems.",
         thumbnail: leeslagosThumbnail,
-        tags: ["React", "TailwindCSS", "E-commerce", "Frontend"],
+        tags: [
+            "React",
+            "TailwindCSS",
+            "E-commerce",
+            "Firebase",
+            "Firestore",
+            "Full-Stack"
+        ],
         liveUrl: "https://leeslagos.vercel.app"
     },
     {
@@ -120,7 +129,14 @@ export const projects: ProjectsProps[] = [
         shortDescription:
             "A cinematic portfolio website for a Nigerian actor, music artist, and 2D animator, featuring Cloudinary media delivery, Framer Motion animations, and a Firebase-powered bookings system.",
         thumbnail: softpThumbnail,
-        tags: ["Next.js", "TypeScript", "Framer Motion", "Firebase"],
+        tags: [
+            "Next.js",
+            "TypeScript",
+            "Cloudinary",
+            "Framer Motion",
+            "TailwindCSS",
+            "Firebase"
+        ],
         liveUrl: "https://softp.vercel.app"
     },
     {

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, A11y } from "swiper/modules";
 
-// Import Swiper styles // [!code ++]
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -48,13 +47,12 @@ const ProjectHighlight = () => {
                 </ul>
             </div>
 
-            {/* Column 2: Visuals (Spans 2 rows on desktop) */}
             <div className="md:row-span-1">
                 <div className="overflow-hidden rounded-xl border-8 border-gray-50 shadow-inner">
                     <Swiper
                         spaceBetween={10}
                         slidesPerView={1}
-                        className="h-64 md:h-96 w-full" // Increased height for better visibility
+                        className="h-64 md:h-96 w-full"
                         modules={[Pagination, A11y, Autoplay]}
                         pagination={{ clickable: true }}
                         autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -67,28 +65,28 @@ const ProjectHighlight = () => {
                     </Swiper>
                 </div>
 
-                {/* Tech Stack Footer */}
                 <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400">
                     <span>React</span> • <span>Supabase</span> •{" "}
                     <span>TailwindCSS</span> •<span>Context API</span> •{" "}
                     <span>Recharts</span> • <span>Framer Motion</span>
                 </div>
-                {/* CTA */}
-                <div className="py-10 px-5  mt-auto flex items-center justify-between">
+                <div className="mt-6 border-t border-gray-100 pt-6 px-1 flex items-center justify-between gap-4">
                     <Link
                         href={`/projects/trexpenser-expense-savings-tracker`}
-                        className="text-sm font-semibold text-primary hover:opacity-80 transition-colors"
+                        className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold tracking-wide text-white shadow-sm transition-all hover:opacity-90 hover:shadow-md active:scale-95"
                     >
-                        Case Study →
+                        View Case Study
+                        <span className="text-[10px]">→</span>
                     </Link>
 
                     <a
                         href="https://trexpenser.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-4 py-2.5 text-xs font-medium text-gray-500 transition-all hover:border-gray-400 hover:text-gray-700 active:scale-95"
                     >
-                        Live ↗
+                        Live Preview
+                        <span className="text-[10px] opacity-70">↗</span>
                     </a>
                 </div>
             </div>
