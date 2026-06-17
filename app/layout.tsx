@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Nunito } from "next/font/google";
+import Script from "next/script";
 import "./styles/globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./sections/Footer";
@@ -41,8 +42,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Abosi Godwin – Software Developer",
-        description:
-            "Building modern web applications with React and Next.js.",
+        description: "Building modern web applications with React and Next.js.",
         images: ["https://abosi.vercel.app/Abosi.png"]
     },
     verification: {
@@ -132,6 +132,11 @@ export default function RootLayout({
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+                <Script
+                    src="https://analytics.ahrefs.com/analytics.js"
+                    data-key="288BqJyc/4h+l3LpZouJPw"
+                    strategy="afterInteractive"
                 />
                 <Navbar />
                 {children}

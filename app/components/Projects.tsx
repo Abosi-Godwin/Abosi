@@ -5,7 +5,7 @@ import Heading from "./Heading";
 import Project from "./Project";
 
 const Projects = () => {
-    //const mainProjects = [...projects].shift();
+    
     return (
         <div className="py-8 px-4">
             <Heading text="Featured Projects" />
