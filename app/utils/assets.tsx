@@ -354,7 +354,8 @@ export const caseStudies: CaseStudy[] = [
         },
 
         links: {
-            live: "https://sproute-landing.vercel.app/"
+            live: "https://sproute-landing.vercel.app/",
+            github: "https://github.com/Abosi-Godwin/sproute.git"
         },
 
         cta: ["View Live App", "Read Other Case Studies"],
