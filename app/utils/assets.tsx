@@ -38,10 +38,10 @@ import sollyThumbnail from "../../public/sollystore.jpeg";
 import elvanexThumbnail from "../../public/elvanex.jpg";
 import sureplugThumbnail from "../../public/sureplugautos.png";
 
-import sprouteThumbnail from "../../public/sproute-thumb.jpeg";
-import sprouteDashboard from "../../public/sproute-dashboard.png";
-import sprouteOutreach from "../../public/sproute-outreach.png";
-import sprouteSearch from "../../public/sproute-search.png";
+import sprouteThumbnail from "../../public/sproute-thumb.png";
+import sprouteDashboard from "../../public/sproute-dashboard.jpg";
+import sprouteOutreach from "../../public/sproute-outreach.jpg";
+import sprouteSearch from "../../public/sproute-search.jpg";
 import sprouteLogin from "../../public/sproute-login.png";
 
 export const introInfo: IntroInfo[] = [
