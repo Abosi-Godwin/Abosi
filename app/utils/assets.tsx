@@ -45,7 +45,7 @@ import sprouteSearch from "../../public/sproute-search.jpg";
 import sprouteLogin from "../../public/sproute-login.png";
 
 export const introInfo: IntroInfo[] = [
-    { image: sprouteLanding, title: "Landing page" },
+    { image: sprouteThumbnail, title: "Landing page" },
     { image: sprouteDashboard, title: "Dashboard" },
     { image: sprouteOutreach, title: "Outreach flow" },
     { image: sprouteSearch, title: "Chat helper" },
