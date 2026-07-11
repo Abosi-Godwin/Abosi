@@ -21,8 +21,7 @@ const SkillsList = ({ title, items }: SkillsListProps) => {
                         <li
                             key={item.title}
                             className="flex gap-3 items-center uppercase p-2
-                            
-                                       rounded-md odd:bg-gray-50 hover:bg-gray-100 
+                                       rounded-md odd:bg-gray-50 hover:bg-gray-100
                                        transition-colors duration-200"
                         >
                             <Icon className="text-secondary text-lg" />

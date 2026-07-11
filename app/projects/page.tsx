@@ -1,19 +1,19 @@
 import { Metadata } from "next";
-import { LuZap, LuTrendingUp, LuWrench } from "react-icons/lu";
-import { projects, practiceProjects } from "../utils/assets";
+import { LuZap, LuTrendingUp, LuWrench, LuGithub } from "react-icons/lu";
+import { projects } from "../utils/assets";
 import Heading from "../components/Heading";
 import Project from "../components/Project";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Projects | Abosi Godwin — Full-Stack Developer",
+    title: "Projects | Abosi Godwin, Full-Stack Developer",
     description:
-        "Explore projects built by Abosi Godwin — full-stack web apps, e-commerce stores, and SaaS products using Next.js, React, TypeScript, and Supabase.",
+        "Explore projects built by Abosi Godwin, full-stack web apps, e-commerce stores, and SaaS products using Next.js, React, TypeScript, and Supabase.",
     alternates: {
         canonical: "https://abosi.vercel.app/projects"
     },
     openGraph: {
-        title: "Projects | Abosi Godwin — Full-Stack Developer",
+        title: "Projects | Abosi Godwin, Full-Stack Developer",
         description:
             "Full-stack web apps, e-commerce stores, and SaaS products by Abosi Godwin.",
         url: "https://abosi.vercel.app/projects",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Projects | Abosi Godwin — Full-Stack Developer",
+        title: "Projects | Abosi Godwin, Full-Stack Developer",
         description:
             "Full-stack web apps, e-commerce stores, and SaaS products by Abosi Godwin.",
         images: ["https://abosi.vercel.app/Abosi.png"]
@@ -73,7 +73,6 @@ const jsonLd = {
 
 const ProjectsPage = () => {
     const hasProjects = projects.length > 0;
-    const hasPractice = practiceProjects.length > 0;
 
     return (
         <>
@@ -106,7 +105,7 @@ const ProjectsPage = () => {
                         <Heading text="Featured Projects" />
                         <p className="mt-3 text-gray-600 max-w-2xl">
                             Full-stack web apps, SaaS products, and client
-                            builds — designed, developed, and shipped end to
+                            builds, designed, developed, and shipped end to
                             end.
                         </p>
                     </div>
@@ -141,19 +140,27 @@ const ProjectsPage = () => {
                         </div>
                     )}
 
-                    {/* Practice */}
-                    {hasPractice && (
-                        <div className="mt-14">
-                            <h2 className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-6">
-                                Practice & Challenges
-                            </h2>
-                            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-                                {practiceProjects.map(project => (
-                                    <Project key={project.id} data={project} />
-                                ))}
-                            </div>
-                        </div>
-                    )}
+                    {/* GitHub CTA */}
+                    <div className="mt-14 rounded-2xl border border-gray-100 bg-gray-50 px-6 py-10 text-center">
+                        <LuGithub className="mx-auto mb-3 text-3xl text-gray-700" />
+                        <h2 className="text-lg font-bold text-gray-900 mb-2">
+                            Want to see more?
+                        </h2>
+                        <p className="text-gray-500 mb-6 max-w-md mx-auto">
+                            These are the highlights. Smaller builds,
+                            experiments, and practice projects live on my
+                            GitHub.
+                        </p>
+                        <a
+                            href="https://github.com/Abosi-Godwin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block bg-gray-900 text-white px-7 py-3 rounded-full font-semibold hover:opacity-90 transition"
+                        >
+                            Visit GitHub
+                        </a>
+                    </div>
+
                     <div className="mt-20 text-center">
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">
                             Have a project in mind?

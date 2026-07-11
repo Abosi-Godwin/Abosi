@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "About Abosi Godwin | Full-Stack Developer",
     description:
-        "Learn about Abosi Godwin — a self-taught Full-Stack Developer specializing in Next.js, React, TypeScript, and Supabase. Available for freelance and full-time opportunities worldwide.",
+        "Learn about Abosi Godwin, a self-taught Full-Stack Developer specializing in Next.js, React, TypeScript, and Supabase. Available for freelance and full-time opportunities worldwide.",
     alternates: {
         canonical: "https://abosi.vercel.app/about"
     },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
                 url: "https://abosi.vercel.app/Abosi.png",
                 width: 1200,
                 height: 630,
-                alt: "Abosi Godwin — Full-Stack Developer"
+                alt: "Abosi Godwin, Full-Stack Developer"
             }
         ]
     }
@@ -90,7 +90,7 @@ export default function AboutPage() {
                     skills: "Next.js, React, TypeScript, Supabase, TailwindCSS, JavaScript"
                 },
                 sameAs: [
-                    "https://github.com/abosi-godwin",
+                    "https://github.com/Abosi-Godwin",
                     "https://linkedin.com/in/AbosiGodwin",
                     "https://twitter.com/AbosiGodwin",
                     "https://medium.com/@AbosiGodwin"
@@ -102,7 +102,7 @@ export default function AboutPage() {
     const skills = [
         {
             category: "Frontend",
-            items: ["React 19", "Next.js 16", "TypeScript", "TailwindCSS"]
+            items: ["React 19", "Next.js 15", "TypeScript", "TailwindCSS"]
         },
         {
             category: "Backend & Database",
@@ -110,7 +110,15 @@ export default function AboutPage() {
         },
         {
             category: "Tools & Workflow",
-            items: ["Git", "Figma", "Vercel", "Framer Motion"]
+            items: [
+                "TanStack Query",
+                "Zustand",
+                "Paystack",
+                "Git",
+                "Figma",
+                "Vercel",
+                "Framer Motion"
+            ]
         }
     ];
 
@@ -143,14 +151,14 @@ export default function AboutPage() {
                     <span>/</span>
                     <span className="text-gray-600 font-medium">About</span>
                 </nav>
-                {/* ── Hero ── */}
+                {/* Hero */}
                 <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
                     <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-4">
                         About Me
                     </p>
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
                         Hi, I&apos;m{" "}
-                        <span className="text-primary">Abosi Godwin</span> —
+                        <span className="text-primary">Abosi Godwin</span>.
                         <br />I build products that{" "}
                         <span className="italic font-light">
                             work end to end.
@@ -163,12 +171,12 @@ export default function AboutPage() {
                         <strong className="text-gray-800">Next.js</strong>,{" "}
                         <strong className="text-gray-800">React</strong>,{" "}
                         <strong className="text-gray-800">TypeScript</strong>,
-                        and <strong className="text-gray-800">Supabase</strong>{" "}
-                        — from pixel-perfect UIs to production-ready backends.
+                        and <strong className="text-gray-800">Supabase</strong>,
+                        from pixel-perfect UIs to production-ready backends.
                     </p>
                 </section>
 
-                {/* ── Stats ── */}
+                {/* Stats */}
                 <section className="py-14 bg-primary">
                     <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
                         {stats.map(stat => (
@@ -184,7 +192,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* ── Story ── */}
+                {/* Story */}
                 <section className="py-24 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <div>
                         <h2 className="text-3xl font-bold mb-6 text-gray-900">
@@ -193,14 +201,14 @@ export default function AboutPage() {
                         <div className="space-y-4 text-gray-600 leading-relaxed">
                             <p>
                                 I didn&apos;t learn to code in a classroom. I
-                                learned by building — breaking things, reading
+                                learned by building, breaking things, reading
                                 docs at midnight, and shipping projects that
                                 pushed me past what I knew. That self-taught
                                 discipline is now my strongest asset.
                             </p>
                             <p>
                                 Before development, I managed a cosmetics retail
-                                operation — which gave me a sharp eye for how
+                                operation, which gave me a sharp eye for how
                                 real businesses actually work. I understand
                                 clients not just as a developer, but as someone
                                 who has sat on the other side of the table. That
@@ -209,9 +217,10 @@ export default function AboutPage() {
                             <p>
                                 Today I work as a freelancer building full-stack
                                 web products while developing my own SaaS,
-                                Trexpenser. My goal is simple: write software
-                                that solves real problems and holds up in
-                                production.
+                                Sproute, an AI-powered WhatsApp lead prospecting
+                                tool for freelancers. My goal is simple: write
+                                software that solves real problems and holds up
+                                in production.
                             </p>
                         </div>
                     </div>
@@ -220,7 +229,7 @@ export default function AboutPage() {
                         <div className="w-full aspect-square rounded-2xl bg-purple-50 overflow-hidden border border-purple-100 flex items-center justify-center">
                             <img
                                 src="/Abosi.png"
-                                alt="Abosi Godwin — Full-Stack Developer"
+                                alt="Abosi Godwin, Full-Stack Developer"
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -235,16 +244,16 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* ── What I Do ── */}
+                {/* What I Do */}
                 <section className="py-20 bg-gray-50 px-6">
                     <div className="max-w-5xl mx-auto">
                         <h2 className="text-3xl font-bold mb-4 text-gray-900">
                             What I Do
                         </h2>
                         <p className="text-gray-500 mb-12 max-w-xl">
-                            I cover the full product stack — from UI to database
-                            — so you don&apos;t need to hire three people to
-                            ship one idea.
+                            I cover the full product stack, from UI to
+                            database, so you don&apos;t need to hire three
+                            people to ship one idea.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-8">
@@ -265,7 +274,7 @@ export default function AboutPage() {
                                     icon: "🚀",
                                     title: "SaaS & Product Building",
                                     description:
-                                        "I don't just write code — I think in products. I've shipped Trexpenser end-to-end and understand what it takes to build something people actually use."
+                                        "I don't just write code, I think in products. I've shipped Sproute end-to-end and understand what it takes to build something people actually use."
                                 }
                             ].map(service => (
                                 <div
@@ -287,7 +296,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* ── Skills ── */}
+                {/* Skills */}
                 <section className="py-24 px-6 max-w-5xl mx-auto">
                     <h2 className="text-3xl font-bold mb-4 text-gray-900">
                         Skills & Tools
@@ -319,7 +328,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* ── FAQ ── */}
+                {/* FAQ */}
                 <section className="py-20 bg-gray-50 px-6">
                     <div className="max-w-3xl mx-auto">
                         <h2 className="text-3xl font-bold mb-12 text-gray-900">
@@ -334,7 +343,7 @@ export default function AboutPage() {
                                 },
                                 {
                                     q: "What does Abosi Godwin specialize in?",
-                                    a: "Abosi specializes in full-stack web development — frontend UIs with React and Next.js, backend logic and databases with Supabase, and shipping complete SaaS products."
+                                    a: "Abosi specializes in full-stack web development, frontend UIs with React and Next.js, backend logic and databases with Supabase, and shipping complete SaaS products."
                                 },
                                 {
                                     q: "Is Abosi Godwin available for freelance work?",
@@ -371,14 +380,14 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* ── CTA ── */}
+                {/* CTA */}
                 <section className="py-24 px-6 text-center max-w-2xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
                         Let&apos;s build something great together.
                     </h2>
                     <p className="text-gray-500 mb-10">
                         Whether you have a product to ship, a role to fill, or
-                        just want to connect — my inbox is always open.
+                        just want to connect, my inbox is always open.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a

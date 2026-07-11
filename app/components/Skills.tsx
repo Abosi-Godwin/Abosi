@@ -1,6 +1,6 @@
 import SkillsList from "./SkillsList";
 import Heading from "./Heading";
-import { coreSkills, tools } from "../utils/assets";
+import { frontendSkills, backendSkills, ecommerceSkills } from "../utils/assets";
 
 const Skills = () => {
     return (
@@ -8,8 +8,9 @@ const Skills = () => {
             <Heading text="Skills" />
             <div className="w-full pt-2 md:pt-5 flex gap-4 flex-col items-start
             md:items-start justify-between md:flex-row md:gap-2">
-                <SkillsList title="Core Skills" items={coreSkills} />
-                <SkillsList title="Tools" items={tools} />
+                <SkillsList title="Frontend" items={frontendSkills} />
+                <SkillsList title="Backend" items={backendSkills} />
+                <SkillsList title="Ecommerce" items={ecommerceSkills} />
             </div>
         </div>
     );

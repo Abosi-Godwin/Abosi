@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa6";
 
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript, SiSupabase, SiVercel } from "react-icons/si";
+import { SiTypescript, SiSupabase, SiVercel, SiFirebase } from "react-icons/si";
 
 import {
     SkillItem,
@@ -38,11 +38,18 @@ import sollyThumbnail from "../../public/sollystore.jpeg";
 import elvanexThumbnail from "../../public/elvanex.jpg";
 import sureplugThumbnail from "../../public/sureplugautos.png";
 
+import sprouteThumbnail from "../../public/sproute-thumb.jpeg";
+import sprouteDashboard from "../../public/sproute-dashboard.png";
+import sprouteOutreach from "../../public/sproute-outreach.png";
+import sprouteSearch from "../../public/sproute-search.png";
+import sprouteLogin from "../../public/sproute-login.png";
+
 export const introInfo: IntroInfo[] = [
-    { image: trexpenserThumbnail, title: "Landing page" },
-    { image: trexpenser, title: "Sign up page" },
-    { image: trexpenserThumbnail, title: "Login page" },
-    { image: trexpenser, title: "Dashboard page" }
+    { image: sprouteLanding, title: "Landing page" },
+    { image: sprouteDashboard, title: "Dashboard" },
+    { image: sprouteOutreach, title: "Outreach flow" },
+    { image: sprouteSearch, title: "Chat helper" },
+    { image: sprouteLogin, title: "Login page" }
 ];
 
 export const footerSocials = [
@@ -60,11 +67,11 @@ export const footerSocials = [
 ];
 
 export const projectHighlight: HighlightProps = [
-    "Carefully designed financial UX for effortless daily use",
-    "Savings goals with manual and automatic contribution options",
-    "Visual insights using charts for income, expenses, and progress",
-    "Fully built with React + Tailwind and optimized for mobile",
-    "No backend dependencies — lightweight, fast, and reliable"
+    "AI-powered lead discovery built for WhatsApp outreach",
+    "Nine reply scenarios with tone-specific templates (casual, formal, pidgin)",
+    "Automated no-reply follow-up sequences that still sound human",
+    "Paystack subscription billing with serverless verification",
+    "Built with Next.js and Supabase, fast, secure, and scalable"
 ];
 
 export const coreSkills: SkillItem[] = [
@@ -87,11 +94,31 @@ export const tools: SkillItem[] = [
     { title: "Figma", icon: FaFigma }
 ];
 
+export const frontendSkills: SkillItem[] = [
+    { title: "HTML", icon: FaHtml5 },
+    { title: "CSS", icon: FaCss3Alt },
+    { title: "JavaScript", icon: FaSquareJs },
+    { title: "TypeScript", icon: SiTypescript },
+    { title: "ReactJS", icon: FaReact },
+    { title: "Next.js", icon: RiNextjsFill },
+    { title: "TailwindCSS", icon: RiTailwindCssFill }
+];
+
+export const backendSkills: SkillItem[] = [
+    { title: "Supabase", icon: SiSupabase },
+    { title: "Firebase", icon: SiFirebase }
+];
+
+export const ecommerceSkills: SkillItem[] = [
+    { title: "Shopify", icon: FaShopify },
+    { title: "WordPress", icon: FaWordpress }
+];
+
 export const projects: ProjectsProps[] = [
     {
         id: 1,
         slug: "trexpenser-expense-savings-tracker",
-        title: "Trexpenser — Personal Finance & Savings Manager",
+        title: "Trexpenser: Personal Finance & Savings Manager",
         shortDescription:
             "A smart personal finance application that helps users track income, manage expenses, and build savings goals with structured financial insights and progress tracking.",
         thumbnail: trexpenserThumbnail,
@@ -108,7 +135,7 @@ export const projects: ProjectsProps[] = [
     {
         id: 2,
         slug: "leeslagos-fashion-ecommerce",
-        title: "LeesLagos — Cosmetics E-commerce Store",
+        title: "LeesLagos: Cosmetics E-commerce Store",
         shortDescription:
             "A full-stack finance management system designed to help users control spending, automate savings behavior, and make better financial decisions through real-time tracking and structured goal systems.",
         thumbnail: leeslagosThumbnail,
@@ -125,7 +152,7 @@ export const projects: ProjectsProps[] = [
     {
         id: 3,
         slug: "softp-creative-portfolio",
-        title: "SOFT-P — Multidisciplinary Artist Portfolio",
+        title: "SOFT-P: Multidisciplinary Artist Portfolio",
         shortDescription:
             "A cinematic portfolio website for a Nigerian actor, music artist, and 2D animator, featuring Cloudinary media delivery, Framer Motion animations, and a Firebase-powered bookings system.",
         thumbnail: softpThumbnail,
@@ -142,7 +169,7 @@ export const projects: ProjectsProps[] = [
     {
         id: 4,
         slug: "sureplug-autos-motor-parts",
-        title: "SurePlug Autos — Motor Parts & Services",
+        title: "SurePlug Autos: Motor Parts & Services",
         shortDescription:
             "A high-performance landing page for a Nigerian auto parts business, built to drive inquiries and establish brand credibility with a fast, modern web presence.",
         thumbnail: sureplugThumbnail,
@@ -155,7 +182,7 @@ export const practiceProjects: ProjectsProps[] = [
     {
         id: 1,
         slug: "chirp-landing-page",
-        title: "Chirp Landing Page — Frontend Mentor",
+        title: "Chirp Landing Page: Frontend Mentor",
         shortDescription:
             "A pixel-perfect recreation of the Chirp landing page challenge using clean HTML and CSS.",
         thumbnail: chirpThumbnail,
@@ -166,7 +193,7 @@ export const practiceProjects: ProjectsProps[] = [
     {
         id: 2,
         slug: "elvanex-corporate-website",
-        title: "Elvanex — Digital Marketing Corporate Website",
+        title: "Elvanex: Digital Marketing Corporate Website",
         shortDescription:
             "A modern corporate website for a digital marketing agency, built with Next.js and optimized for performance, SEO, and responsive design.",
         thumbnail: elvanexThumbnail,
@@ -177,7 +204,7 @@ export const practiceProjects: ProjectsProps[] = [
     {
         id: 3,
         slug: "solly-store-ecommerce",
-        title: "Solly Store — Full Stack E-commerce Store",
+        title: "Solly Store: Full Stack E-commerce Store",
         shortDescription:
             "A full-featured e-commerce store with product catalogue, cart functionality, category filtering, and secure checkout across electronics, fashion, and accessories.",
         thumbnail: sollyThumbnail,
@@ -187,7 +214,7 @@ export const practiceProjects: ProjectsProps[] = [
     {
         id: 4,
         slug: "visyoned-eye-care-agency",
-        title: "Visyoned — Premium Eye Care Agency Website",
+        title: "Visyoned: Premium Eye Care Agency Website",
         shortDescription:
             "A premium eye care agency website combining clinical excellence with modern aesthetics, designed to help users find stylish and personalized vision care solutions.",
         thumbnail: visyonedThumbnail,
@@ -197,7 +224,7 @@ export const practiceProjects: ProjectsProps[] = [
     {
         id: 5,
         slug: "big-taste-restaurant-website",
-        title: "Big Taste — Restaurant & Food Ordering Website",
+        title: "Big Taste: Restaurant & Food Ordering Website",
         shortDescription:
             "A clean and conversion-focused restaurant website for a local Nigerian food business, featuring a WhatsApp ordering system, full menu display, testimonials, and location details.",
         thumbnail: bigTasteThumbnail,
@@ -207,6 +234,142 @@ export const practiceProjects: ProjectsProps[] = [
 ];
 
 export const caseStudies: CaseStudy[] = [
+    {
+        id: "sproute",
+        slug: "sproute-ai-whatsapp-prospecting",
+        title: "Sproute",
+        subtitle: "AI-Powered WhatsApp Lead Prospecting SaaS",
+        category: "SaaS Application",
+        status: "In Progress",
+        year: "2026",
+
+        shortDescription:
+            "Sproute helps freelancers find leads and manage WhatsApp outreach with AI-assisted messaging, tone-matched replies, and automated follow-ups.",
+
+        overview:
+            "Sproute is an AI-powered prospecting tool built for freelancers who rely on WhatsApp to find and close clients. Instead of manually searching for leads and drafting messages one by one, users get AI-assisted outreach: draft messages, reply handling across multiple tones, and automated follow-up sequences that still sound like a real person. The product is designed to remove the busywork from cold outreach while keeping every message human.",
+
+        problem: {
+            summary:
+                "Freelancers spend hours finding leads and writing outreach messages, and most of that effort gets lost to silence or generic-sounding follow-ups.",
+            points: [
+                "Manually searching for prospects is slow and inconsistent",
+                "Writing outreach messages from scratch takes time and often reads as generic",
+                "Follow-ups get forgotten or feel robotic when automated",
+                "Handling replies across many conversations at once is hard to manage"
+            ]
+        },
+
+        solution: {
+            summary:
+                "Sproute combines AI-assisted messaging with a structured outreach flow so users can prospect and follow up without losing the human touch.",
+            points: [
+                "AI-assisted lead discovery and message drafting",
+                "Reply handling across nine common scenarios, each with tone-specific templates",
+                "Automated no-reply follow-up sequences",
+                "A WhatsApp-style chat helper for managing conversations",
+                "Subscription billing handled through Paystack"
+            ]
+        },
+
+        features: [
+            {
+                title: "Outreach Flow",
+                details: [
+                    "No-reply follow-up sequence for unanswered messages",
+                    "Reply templates covering nine distinct scenarios",
+                    "Tone-specific variants: casual, formal, and pidgin",
+                    "Chat helper with WhatsApp-style message bubbles"
+                ]
+            },
+            {
+                title: "AI-Assisted Messaging",
+                details: [
+                    "Message generation powered by Gemini through serverless functions",
+                    "Centralized inline prompts for consistent output",
+                    "API keys handled server-side for security"
+                ]
+            },
+            {
+                title: "Subscriptions & Billing",
+                details: [
+                    "Paystack inline checkout for subscriptions",
+                    "Serverless endpoint for payment verification",
+                    "Plan status reflected in real time across the app"
+                ]
+            },
+            {
+                title: "Analytics",
+                details: [
+                    "Usage tracking with PostHog",
+                    "Performance monitoring with Vercel Analytics"
+                ]
+            }
+        ],
+
+        uxDecisions: [
+            {
+                decision: "Tone-specific reply templates",
+                reason: "A single generic tone does not fit every lead, so users can match the conversation style that fits the client."
+            },
+            {
+                decision: "Open location search instead of hardcoded cities",
+                reason: "Removing hardcoded Nigerian cities and geocoding suffixes lets any user worldwide prospect in their own area."
+            },
+            {
+                decision: "Server-side API keys",
+                reason: "Moving Gemini and search API keys server-side closed a security gap found during development."
+            },
+            {
+                decision: "WhatsApp-style chat interface",
+                reason: "A familiar chat layout reduces friction for users already used to WhatsApp."
+            }
+        ],
+
+        techStack: {
+            frontend: ["Next.js 15", "React", "TypeScript"],
+            styling: ["Tailwind CSS v4"],
+            stateManagement: ["TanStack Query v5", "Zustand"],
+            backend: ["Supabase", "Serverless functions"],
+            aiIntegration: ["Gemini AI"],
+            payments: ["Paystack"],
+            deployment: ["Vercel"]
+        },
+
+        challengesAndLearnings: [
+            "Structuring reply templates so nine scenarios feel distinct rather than repetitive",
+            "Moving API keys server-side after identifying a security vulnerability",
+            "Designing follow-up sequences that stay human rather than reading as automated",
+            "Building a location search flexible enough for a worldwide audience"
+        ],
+
+        outcomes: {
+            summary:
+                "Sproute is actively being built and refined, with core outreach and billing systems in place ahead of a wider launch.",
+            highlights: [
+                "Demonstrates end-to-end SaaS thinking: product, billing, and AI integration",
+                "Shows security-conscious backend design after catching and fixing a vulnerability",
+                "Built for a worldwide audience, not just a single market"
+            ]
+        },
+
+        links: {
+            live: "https://sproute-landing.vercel.app/"
+        },
+
+        cta: ["View Live App", "Read Other Case Studies"],
+
+        tags: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Supabase",
+            "Tailwind CSS",
+            "Paystack",
+            "AI Integration",
+            "SaaS"
+        ]
+    },
     {
         id: "trexpenser",
         slug: "trexpenser-expense-savings-tracker",
@@ -359,7 +522,7 @@ export const caseStudies: CaseStudy[] = [
             "LeesLagos is a modern fashion e-commerce platform designed to showcase and sell stylish clothing with a clean, conversion-focused shopping experience.",
 
         overview:
-            "LeesLagos is a fashion and lifestyle e-commerce website built to help a growing brand establish a strong online presence and convert visitors into buyers. The platform focuses on product clarity, smooth navigation, and a mobile-first shopping flow. Instead of overwhelming users with clutter, the experience emphasizes visual appeal, fast browsing, and frictionless purchasing — especially for mobile shoppers.",
+            "LeesLagos is a fashion and lifestyle e-commerce website built to help a growing brand establish a strong online presence and convert visitors into buyers. The platform focuses on product clarity, smooth navigation, and a mobile-first shopping flow. Instead of overwhelming users with clutter, the experience emphasizes visual appeal, fast browsing, and frictionless purchasing, especially for mobile shoppers.",
 
         problem: {
             summary:
@@ -499,7 +662,7 @@ export const caseStudies: CaseStudy[] = [
             "A high-performance landing page for a Nigerian auto parts business, built to drive inquiries and establish brand credibility with a fast, modern web presence.",
 
         overview:
-            "SurePlug Autos is a landing page built for a Nigerian motor parts and auto services business. The goal was simple but important: give a local business a professional digital presence that builds trust with potential customers, communicates services clearly, and drives real inquiries. Most auto businesses in Nigeria rely entirely on word of mouth and social media — SurePlug needed a web presence that would set them apart and hold up on any device.",
+            "SurePlug Autos is a landing page built for a Nigerian motor parts and auto services business. The goal was simple but important: give a local business a professional digital presence that builds trust with potential customers, communicates services clearly, and drives real inquiries. Most auto businesses in Nigeria rely entirely on word of mouth and social media, and SurePlug needed a web presence that would set them apart and hold up on any device.",
 
         problem: {
             summary:
@@ -566,7 +729,7 @@ export const caseStudies: CaseStudy[] = [
         uxDecisions: [
             {
                 decision: "WhatsApp as primary contact CTA",
-                reason: "WhatsApp is the dominant business communication channel in Nigeria — it removes friction for the target audience."
+                reason: "WhatsApp is the dominant business communication channel in Nigeria, and it removes friction for the target audience."
             },
             {
                 decision: "Services over features",
@@ -634,10 +797,10 @@ export const caseStudies: CaseStudy[] = [
         year: "2026",
 
         shortDescription:
-            "A cinematic portfolio website for a Nigerian actor, music artist, and 2D animator — featuring Cloudinary media delivery, Framer Motion animations, and a Firebase-powered bookings system.",
+            "A cinematic portfolio website for a Nigerian actor, music artist, and 2D animator, featuring Cloudinary media delivery, Framer Motion animations, and a Firebase-powered bookings system.",
 
         overview:
-            "SOFT-P is a personal portfolio website built for Paulinus Odinaka — a Theatre Arts graduate working across acting, music, and 2D animation. The challenge was creating a single digital space that could hold three distinct creative disciplines without feeling cluttered or unfocused. The result is a cinematic, media-rich experience that presents each craft with the weight it deserves, while giving industry contacts a clear path to book or collaborate.",
+            "SOFT-P is a personal portfolio website built for Paulinus Odinaka, a Theatre Arts graduate working across acting, music, and 2D animation. The challenge was creating a single digital space that could hold three distinct creative disciplines without feeling cluttered or unfocused. The result is a cinematic, media-rich experience that presents each craft with the weight it deserves, while giving industry contacts a clear path to book or collaborate.",
 
         problem: {
             summary:
@@ -738,11 +901,11 @@ export const caseStudies: CaseStudy[] = [
 
         outcomes: {
             summary:
-                "SOFT-P gives Paulinus Odinaka a professional, cinematic home for his entire creative body of work — one URL that represents everything he does.",
+                "SOFT-P gives Paulinus Odinaka a professional, cinematic home for his entire creative body of work, one URL that represents everything he does.",
             highlights: [
                 "Demonstrates ability to build client sites beyond standard business pages",
                 "Shows media-heavy architecture with Cloudinary and Firebase",
-                "Proves design range — from finance apps to creative portfolios"
+                "Proves design range, from finance apps to creative portfolios"
             ]
         },
 

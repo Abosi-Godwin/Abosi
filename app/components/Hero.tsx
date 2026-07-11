@@ -44,11 +44,11 @@ const Hero = () => {
 
                 <p className="mt-3 text-sm leading-relaxed text-gray-600 md:text-base">
                     I build fast, conversion-ready websites for growing
-                    businesses — from custom{" "}
+                    businesses, from custom{" "}
                     <strong className="text-gray-800">Next.js & React</strong>{" "}
                     apps to polished{" "}
                     <strong className="text-gray-800">
-                        Shopify & WordPress
+                        Headless Shopify Ecommerce
                     </strong>{" "}
                     stores that turn visitors into customers.
                 </p>
@@ -89,7 +89,7 @@ const Hero = () => {
                     <div className="w-px bg-gray-200" />
                     <div className="text-center md:text-left">
                         <p className="text-xl font-extrabold text-gray-900">
-                            4yr
+                            4yrs
                         </p>
                         <p className="text-xs text-gray-500">Experience</p>
                     </div>

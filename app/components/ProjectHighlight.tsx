@@ -19,17 +19,17 @@ const ProjectHighlight = () => {
         <section className="grid grid-cols-1 gap-x-12 gap-y-6 px-2 py-5 md:grid-cols-2 md:px-5 md:py-16">
             {/* Column 1: Text Content */}
             <div className="space-y-4">
-                <Heading text="Project Spotlight — Trexpenser" />
+                <Heading text="Project Spotlight: Sproute" />
                 <p className="leading-relaxed text-gray-700">
-                    A personal finance app that helps users track expenses,
-                    manage income, and set meaningful savings goals. Designed
-                    and built end-to-end with a focus on clarity, simplicity,
-                    and real-life usability.
+                    An AI-powered WhatsApp lead prospecting SaaS built for
+                    freelancers. Sproute helps users find potential clients,
+                    draft outreach messages, and manage replies, all without
+                    the busywork of manually chasing leads.
                 </p>
                 <p className="leading-relaxed text-gray-700">
-                    Every screen was designed with the goal of reducing
-                    friction. Users should be able to understand their money at
-                    a glance.
+                    Every part of the flow was designed to feel human. Reply
+                    handling, tone matching, and follow-ups all aim to sound
+                    like a real person reaching out, not an automated script.
                 </p>
 
                 {/* Feature List */}
@@ -66,13 +66,13 @@ const ProjectHighlight = () => {
                 </div>
 
                 <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400">
-                    <span>React</span> • <span>Supabase</span> •{" "}
-                    <span>TailwindCSS</span> •<span>Context API</span> •{" "}
-                    <span>Recharts</span> • <span>Framer Motion</span>
+                    <span>Next.js</span> • <span>Supabase</span> •{" "}
+                    <span>TypeScript</span> • <span>TanStack Query</span> •{" "}
+                    <span>Zustand</span> • <span>Paystack</span>
                 </div>
                 <div className="mt-6 border-t border-gray-100 pt-6 px-1 flex items-center justify-between gap-4">
                     <Link
-                        href={`/projects/trexpenser-expense-savings-tracker`}
+                        href={`/projects/sproute-ai-whatsapp-prospecting`}
                         className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-xs font-semibold tracking-wide text-white shadow-sm transition-all hover:opacity-90 hover:shadow-md active:scale-95"
                     >
                         View Case Study
@@ -80,7 +80,7 @@ const ProjectHighlight = () => {
                     </Link>
 
                     <a
-                        href="https://trexpenser.vercel.app/"
+                        href="https://sproute-landing.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-4 py-2.5 text-xs font-medium text-gray-500 transition-all hover:border-gray-400 hover:text-gray-700 active:scale-95"
