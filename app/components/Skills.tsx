@@ -5,7 +5,7 @@ import { frontendSkills, backendSkills, ecommerceSkills } from "../utils/assets"
 const Skills = () => {
     return (
         <div className="py-8 px-3">
-            <Heading text="Skills" />
+            <Heading text="What I Offer" />
             <div className="w-full pt-2 md:pt-5 flex gap-4 flex-col items-start
             md:items-start justify-between md:flex-row md:gap-2">
                 <SkillsList title="Frontend" items={frontendSkills} />
