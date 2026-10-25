@@ -85,7 +85,7 @@ export const coreSkills: SkillItem[] = [
 
 export const tools: SkillItem[] = [
     { title: "Shopify", icon: FaShopify },
-    { title: "WordPress", icon: FaWordpress },
+    
     { title: "Supabase", icon: SiSupabase },
     { title: "Git", icon: FaGitAlt },
     { title: "GitHub", icon: FaGithub },
@@ -173,7 +173,8 @@ export const projects: ProjectsProps[] = [
         thumbnail: sureplugThumbnail,
         tags: ["Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
         liveUrl: "https://sureplug-autos.vercel.app"
-    },    {
+    },
+    {
         id: 5,
         slug: "uniform-headless-shopify-storefront",
         title: "Uniform: Headless Shopify Storefront",
