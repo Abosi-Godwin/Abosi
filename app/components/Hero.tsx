@@ -34,7 +34,7 @@ const Hero = () => {
 
             <div className="max-w-lg text-center md:text-left">
                 <span className="inline-block rounded-full border border-secondary/30 bg-secondary/10 px-4 py-1 text-xs font-semibold tracking-widest text-secondary uppercase">
-                    Software Engineer
+                    Business Solution Provider 
                 </span>
 
                 <h1 className="mt-3 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-5xl">
