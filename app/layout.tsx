@@ -12,9 +12,9 @@ const nunito = Nunito({
     variable: "--font-nunito"
 });
 export const metadata: Metadata = {
-    title: "Abosi Godwin – Software Developer",
+    title: "Abosi Godwin | Ecommerce Developer (Shopify & Next.js)",
     description:
-        "Abosi Godwin is a software developer building modern web applications with Next.js, React, and scalable frontend architecture.",
+        "Abosi Godwin is an ecommerce developer building Shopify stores, custom Next.js storefronts, and headless commerce for businesses in Nigeria and worldwide.",
     metadataBase: new URL("https://abosi.vercel.app"),
     alternates: {
         canonical: "https://abosi.vercel.app"
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
         follow: true
     },
     openGraph: {
-        title: "Abosi Godwin – Software Developer",
+        title: "Abosi Godwin | Ecommerce Developer (Shopify & Next.js)",
         description:
-            "Software developer focused on modern web applications and frontend architecture.",
+            "Ecommerce developer building Shopify stores, custom storefronts, and headless commerce with Next.js.",
         url: "https://abosi.vercel.app",
         siteName: "Abosi Godwin",
         type: "website",
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Abosi Godwin – Software Developer",
-        description: "Building modern web applications with React and Next.js.",
+        title: "Abosi Godwin | Ecommerce Developer (Shopify & Next.js)",
+        description: "Building ecommerce websites with Shopify and Next.js.",
         images: ["https://abosi.vercel.app/Abosi.png"]
     },
     verification: {
@@ -74,7 +74,7 @@ export default function RootLayout({
                 name: "Abosi Godwin",
                 url: "https://abosi.vercel.app",
                 image: "https://abosi.vercel.app/Abosi.png",
-                jobTitle: "Software Developer",
+                jobTitle: "Ecommerce Developer",
                 worksFor: {
                     "@id": "https://abosi.vercel.app/#organization"
                 },
@@ -83,12 +83,15 @@ export default function RootLayout({
                     addressCountry: "Nigeria"
                 },
                 description:
-                    "Software developer specializing in building modern web applications using React, Next.js, and scalable frontend systems.",
+                    "Ecommerce developer specializing in Shopify stores, custom Next.js storefronts, and headless commerce built on the Shopify Storefront API.",
                 knowsAbout: [
-                    "React",
+                    "Ecommerce Development",
+                    "Shopify",
+                    "Shopify Storefront API",
+                    "Headless Commerce",
                     "Next.js",
+                    "React",
                     "TypeScript",
-                    "Frontend Architecture",
                     "Web Performance",
                     "JavaScript"
                 ],
@@ -113,7 +116,7 @@ export default function RootLayout({
                 "@type": "WebPage",
                 "@id": "https://abosi.vercel.app/#webpage",
                 url: "https://abosi.vercel.app",
-                name: "Abosi Godwin – Software Developer",
+                name: "Abosi Godwin | Ecommerce Developer (Shopify & Next.js)",
                 isPartOf: {
                     "@id": "https://abosi.vercel.app/#website"
                 },
@@ -121,7 +124,7 @@ export default function RootLayout({
                     "@id": "https://abosi.vercel.app/#person"
                 },
                 description:
-                    "Portfolio of Abosi Godwin, a software developer building modern web applications."
+                    "Portfolio of Abosi Godwin, an ecommerce developer building Shopify stores and custom Next.js storefronts."
             }
         ]
     };

@@ -10,7 +10,14 @@ const Projects = () => {
         <div className="py-8 px-4">
             <Heading text="Featured Projects" />
             <p>Real projects I've designed, developed, and shipped.</p>
-
+<div className="flex justify-center items-center gap-4">
+  <button>
+    Shopify 
+  </button>
+  <button>
+    Web Apps
+  </button>
+</div>
             <div className="grid grid-cols-1 gap-5 pt-5 md:grid-cols-3">
                 {projects.map(project => (
                     <Project key={project.id} data={project} />

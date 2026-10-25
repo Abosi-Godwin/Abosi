@@ -4,7 +4,6 @@ import {
     FaSquareJs,
     FaReact,
     FaShopify,
-    FaWordpress,
     FaGitAlt,
     FaGithub,
     FaFigma,
@@ -25,25 +24,25 @@ import {
     CaseStudy
 } from "./types";
 
-import myImage from "../../public/relaxe.jpg";
+import myImage from "../../public/projects/relaxe.jpg";
 
-import trexpenser from "../../public/trexpenser.png";
-import leeslagosThumbnail from "../../public/leeslagos-thumb.jpeg";
-import trexpenserThumbnail from "../../public/trexpenser.png";
-import chirpThumbnail from "../../public/chirp.jpg";
-import bigTasteThumbnail from "../../public/bigtaste-thumb.jpeg";
-import visyonedThumbnail from "../../public/visyond-thumb.jpeg";
-import softpThumbnail from "../../public/softp-thumb.jpeg";
-import sollyThumbnail from "../../public/sollystore.jpeg";
-import elvanexThumbnail from "../../public/elvanex.jpg";
-import sureplugThumbnail from "../../public/sureplugautos.png";
+import trexpenser from "../../public/projects/trexpenser.png";
+import leeslagosThumbnail from "../../public/projects/leeslagos-thumb.jpeg";
+import trexpenserThumbnail from "../../public/projects/trexpenser.png";
+import chirpThumbnail from "../../public/projects/chirp.jpg";
+import bigTasteThumbnail from "../../public/projects/bigtaste-thumb.jpeg";
+import visyonedThumbnail from "../../public/projects/visyond-thumb.jpeg";
+import softpThumbnail from "../../public/projects/softp-thumb.jpeg";
+import sollyThumbnail from "../../public/projects/sollystore.jpeg";
+import elvanexThumbnail from "../../public/projects/elvanex.jpg";
+import sureplugThumbnail from "../../public/projects/sureplugautos.png";
 
-import sprouteThumbnail from "../../public/sproute-thumb.png";
-import sprouteDashboard from "../../public/sproute-dashboard.jpg";
-import sprouteOutreach from "../../public/sproute-outreach.jpg";
-import sprouteSearch from "../../public/sproute-search.jpg";
-import sprouteLogin from "../../public/sproute-login.png";
-
+import sprouteThumbnail from "../../public/projects/sproute-thumb.png";
+import sprouteDashboard from "../../public/projects/sproute-dashboard.jpg";
+import sprouteOutreach from "../../public/projects/sproute-outreach.jpg";
+import sprouteSearch from "../../public/projects/sproute-search.jpg";
+import sprouteLogin from "../../public/projects/sproute-login.png";
+import uniformThumbnail from "../../public/projects/uniform.png";
 export const introInfo: IntroInfo[] = [
     { image: sprouteThumbnail, title: "Landing page" },
     { image: sprouteDashboard, title: "Dashboard" },
@@ -110,8 +109,7 @@ export const backendSkills: SkillItem[] = [
 ];
 
 export const ecommerceSkills: SkillItem[] = [
-    { title: "Shopify", icon: FaShopify },
-    { title: "WordPress", icon: FaWordpress }
+    { title: "Shopify", icon: FaShopify }
 ];
 
 export const projects: ProjectsProps[] = [
@@ -175,6 +173,20 @@ export const projects: ProjectsProps[] = [
         thumbnail: sureplugThumbnail,
         tags: ["Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
         liveUrl: "https://sureplug-autos.vercel.app"
+    },    {
+        id: 5,
+        slug: "uniform-headless-shopify-storefront",
+        title: "Uniform: Headless Shopify Storefront",
+        shortDescription:
+            "A headless Shopify storefront built with Next.js, featuring product browsing, search, and customer login and profiles through Shopify's Customer Account API.",
+        thumbnail: uniformThumbnail,
+        tags: [
+            "Shopify",
+            "Headless Commerce",
+            "Next.js",
+            "Customer Account API"
+        ],
+        liveUrl: "https://headless-demo-gray.vercel.app"
     }
 ];
 
