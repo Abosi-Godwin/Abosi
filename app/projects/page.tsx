@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { LuZap, LuTrendingUp, LuWrench, LuGithub } from "react-icons/lu";
-import { projects } from "../utils/assets";
+import { projects, practiceProjects } from "../utils/assets";
 import Heading from "../components/Heading";
 import Project from "../components/Project";
 import Link from "next/link";
@@ -73,6 +73,7 @@ const jsonLd = {
 
 const ProjectsPage = () => {
     const hasProjects = projects.length > 0;
+    const hasPracticeProjects = practiceProjects.length > 0;
 
     return (
         <>
@@ -101,12 +102,11 @@ const ProjectsPage = () => {
                     </nav>
 
                     {/* Intro */}
-                    <div className="text-center md:text-left">
+                    <div className="text-left md:text-left">
                         <Heading text="Featured Projects" />
                         <p className="mt-3 text-gray-600 max-w-2xl">
                             Full-stack web apps, SaaS products, and client
-                            builds, designed, developed, and shipped end to
-                            end.
+                            builds, designed, developed, and shipped end to end.
                         </p>
                     </div>
 
@@ -127,11 +127,30 @@ const ProjectsPage = () => {
 
                     {/* Featured */}
                     {hasProjects ? (
-                        <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grid-cols-3">
-                            {projects.map(project => (
-                                <Project key={project.id} data={project} />
-                            ))}
+                        <>
+                            <h2>Serious builds</h2>
+                            <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grid-cols-3">
+                                {projects.map(project => (
+                                    <Project key={project.id} data={project} />
+                                ))}
+                            </div>
+                        </>
+                    ) : (
+                        <div className="pt-16 text-center">
+                            <p className="text-gray-500 text-lg">
+                                Projects coming soon. Check back shortly.
+                            </p>
                         </div>
+                    )}
+                    {hasPracticeProjects ? (
+                        <>
+                            <h2>Practice builds</h2>
+                            <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grid-cols-3">
+                                {practiceProjects.map(project => (
+                                    <Project key={project.id} data={project} />
+                                ))}
+                            </div>
+                        </>
                     ) : (
                         <div className="pt-16 text-center">
                             <p className="text-gray-500 text-lg">
