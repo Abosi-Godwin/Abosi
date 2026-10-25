@@ -8,22 +8,38 @@ import Heading from "./Heading";
 import Project from "./Project";
 
 const FEATURED_LIMIT = 3;
-const TABS = ["Shopify", "Web Apps"] as const;
+const TABS = ["All", "Shopify", "Websites"] as const;
 
 type Tab = (typeof TABS)[number];
 
 const isShopify = (tags: string[]) =>
     tags.some(tag => tag.toLowerCase().includes("shopify"));
 
+function interleave<T>(first: T[], second: T[]): T[] {
+    const result: T[] = [];
+    const length = Math.max(first.length, second.length);
+
+    for (let i = 0; i < length; i++) {
+        if (first[i]) result.push(first[i]);
+        if (second[i]) result.push(second[i]);
+    }
+
+    return result;
+}
+
+const shopifyProjects = projects.filter(project => isShopify(project.tags));
+const websiteProjects = projects.filter(project => !isShopify(project.tags));
+
 const grouped: Record<Tab, typeof projects> = {
-    Shopify: projects.filter(project => isShopify(project.tags)),
-    "Web Apps": projects.filter(project => !isShopify(project.tags))
+    All: interleave(shopifyProjects, websiteProjects),
+    Shopify: shopifyProjects,
+    Websites: websiteProjects
 };
 
-const availableTabs = TABS.filter(tab => grouped[tab].length > 0);
+const showTabs = shopifyProjects.length > 0 && websiteProjects.length > 0;
 
 const Projects = () => {
-    const [active, setActive] = useState<Tab>(availableTabs[0] ?? "Web Apps");
+    const [active, setActive] = useState<Tab>("All");
 
     const visible = grouped[active].slice(0, FEATURED_LIMIT);
 
@@ -32,12 +48,12 @@ const Projects = () => {
             <Heading text="Featured Projects" />
             <p>Real projects I've designed, developed, and shipped.</p>
 
-            {availableTabs.length > 1 && (
+            {showTabs && (
                 <div
                     role="tablist"
                     className="flex justify-center items-center gap-3 pt-5"
                 >
-                    {availableTabs.map(tab => (
+                    {TABS.map(tab => (
                         <button
                             key={tab}
                             role="tab"
