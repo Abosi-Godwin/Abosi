@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+ import { Metadata } from "next";
 import { LuZap, LuTrendingUp, LuWrench, LuGithub } from "react-icons/lu";
 import { projects, practiceProjects } from "../utils/assets";
 import Heading from "../components/Heading";
@@ -71,6 +71,19 @@ const jsonLd = {
     ]
 };
 
+const SectionHeading = ({
+    title,
+    description
+}: {
+    title: string;
+    description: string;
+}) => (
+    <div className="mt-14">
+        <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+        <p className="mt-2 max-w-2xl text-gray-600">{description}</p>
+    </div>
+);
+
 const ProjectsPage = () => {
     const hasProjects = projects.length > 0;
     const hasPracticeProjects = practiceProjects.length > 0;
@@ -84,7 +97,6 @@ const ProjectsPage = () => {
 
             <section className="py-16 px-4">
                 <div className="max-w-6xl mx-auto">
-                    {/* Breadcrumb */}
                     <nav
                         aria-label="Breadcrumb"
                         className="pt-10 mb-6 flex items-center gap-2 text-sm text-gray-400"
@@ -101,9 +113,8 @@ const ProjectsPage = () => {
                         </span>
                     </nav>
 
-                    {/* Intro */}
                     <div className="text-left md:text-left">
-                        <Heading text="Featured Projects" />
+                        <Heading text="Projects" />
                         <p className="mt-3 text-gray-600 max-w-2xl">
                             Full-stack web apps, SaaS products, and client
                             builds, designed, developed, and shipped end to end.
@@ -125,11 +136,13 @@ const ProjectsPage = () => {
                         </span>
                     </div>
 
-                    {/* Featured */}
                     {hasProjects ? (
                         <>
-                            <h2>Serious builds</h2>
-                            <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grid-cols-3">
+                            <SectionHeading
+                                title="Production Builds"
+                                description="Live products and client work, built end to end."
+                            />
+                            <div className="grid grid-cols-1 gap-6 pt-6 sm:grid-cols-2 md:grid-cols-3">
                                 {projects.map(project => (
                                     <Project key={project.id} data={project} />
                                 ))}
@@ -144,8 +157,11 @@ const ProjectsPage = () => {
                     )}
                     {hasPracticeProjects ? (
                         <>
-                            <h2>Practice builds</h2>
-                            <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grid-cols-3">
+                            <SectionHeading
+                                title="Practice Builds"
+                                description="Smaller builds and concept projects where I sharpen specific skills."
+                            />
+                            <div className="grid grid-cols-1 gap-6 pt-6 sm:grid-cols-2 md:grid-cols-3">
                                 {practiceProjects.map(project => (
                                     <Project key={project.id} data={project} />
                                 ))}
@@ -159,7 +175,6 @@ const ProjectsPage = () => {
                         </div>
                     )}
 
-                    {/* GitHub CTA */}
                     <div className="mt-14 rounded-2xl border border-gray-100 bg-gray-50 px-6 py-10 text-center">
                         <LuGithub className="mx-auto mb-3 text-3xl text-gray-700" />
                         <h2 className="text-lg font-bold text-gray-900 mb-2">
