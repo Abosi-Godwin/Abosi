@@ -1,4 +1,4 @@
- import { Metadata } from "next";
+import { Metadata } from "next";
 import { LuZap, LuTrendingUp, LuWrench, LuGithub } from "react-icons/lu";
 import { projects, practiceProjects } from "../utils/assets";
 import Heading from "../components/Heading";
@@ -79,7 +79,7 @@ const SectionHeading = ({
     description: string;
 }) => (
     <div className="mt-14">
-        <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+        <h2 className="text-xl font-bold text-gray-900">{title}</h2>
         <p className="mt-2 max-w-2xl text-gray-600">{description}</p>
     </div>
 );
@@ -116,7 +116,7 @@ const ProjectsPage = () => {
                     <div className="text-left md:text-left">
                         <Heading text="Projects" />
                         <p className="mt-3 text-gray-600 max-w-2xl">
-                            Full-stack web apps, SaaS products, and client
+                            Full-stack web apps,Shopify headless store, SaaS products, and client
                             builds, designed, developed, and shipped end to end.
                         </p>
                     </div>
