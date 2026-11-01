@@ -73,7 +73,7 @@ const Hero = () => {
                 <div className="mt-6 flex justify-center gap-6 md:justify-start">
                     <div className="text-center md:text-left">
                         <p className="text-xl font-extrabold text-gray-900">
-                            10+
+                            24
                         </p>
                         <p className="text-xs text-gray-500">
                             Projects Shipped
@@ -82,7 +82,7 @@ const Hero = () => {
                     <div className="w-px bg-gray-200" />
                     <div className="text-center md:text-left">
                         <p className="text-xl font-extrabold text-gray-900">
-                            8+
+                            22
                         </p>
                         <p className="text-xs text-gray-500">Happy Clients</p>
                     </div>

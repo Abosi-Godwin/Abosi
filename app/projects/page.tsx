@@ -116,8 +116,9 @@ const ProjectsPage = () => {
                     <div className="text-left md:text-left">
                         <Heading text="Projects" />
                         <p className="mt-3 text-gray-600 max-w-2xl">
-                            Full-stack web apps,Shopify headless store, SaaS products, and client
-                            builds, designed, developed, and shipped end to end.
+                            Full-stack web apps, Shopify headless store, SaaS
+                            products, and client builds, designed, developed,
+                            and shipped end to end.
                         </p>
                     </div>
 
