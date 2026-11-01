@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedinIn, FaGithub, FaTwitter, FaUpwork } from "react-icons/fa6";
 import Heading from "../components/Heading";
-import mySocials from "../utils/assets";
+import {mySocials} from "../utils/assets";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -65,25 +65,25 @@ const Contact = () => {
                         <p className="text-sm font-semibold uppercase tracking-widest text-gray-400">
                             Find me on
                         </p>
-                         {mySocials.map(social => {
-                        const Icon = social.icon;
+                        {mySocials.map(social => {
+                            const Icon = social.icon;
 
-                        return (
-                            <a
-                                key={social.name}
-                                href={social.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={social.name}
-                                className="p-2 rounded-lg hover:bg-black/5
+                            return (
+                                <a
+                                    key={social.name}
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={social.name}
+                                    className="p-2 rounded-lg hover:bg-black/5
                 focus:outline-none focus-visible:ring-2
                 focus-visible:ring-primary transition-all duration-200
                 hover:scale-110"
-                            >
-                                <Icon className="text-lg" />
-                            </a>
-                        );
-                    })}
+                                >
+                                    <Icon className="text-lg" />
+                                </a>
+                            );
+                        })}
                     </div>
                 </motion.div>
 
