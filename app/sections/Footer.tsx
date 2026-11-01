@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { footerSocials } from "../utils/assets";
+import Image from "next/image";
 
 const currentYear = new Date().getFullYear();
 
@@ -16,25 +16,13 @@ const Footer = () => {
                 </p>
 
                 <div className="flex items-center justify-center gap-4">
-                    {footerSocials.map(social => {
-                        const Icon = social.icon;
-
-                        return (
-                            <a
-                                key={social.name}
-                                href={social.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={social.name}
-                                className="p-2 rounded-lg hover:bg-black/5
-                focus:outline-none focus-visible:ring-2
-                focus-visible:ring-primary transition-all duration-200
-                hover:scale-110"
-                            >
-                                <Icon className="text-lg" />
-                            </a>
-                        );
-                    })}
+                    <Image
+                        src="/https://www.codewars.com/users/Abosi-Godwin/badges/large"
+                        fill
+                        alt="Abosi Godwin codewars profile badge"
+                        className="object-cover object-top scale-110"
+                        
+                    />
                 </div>
             </div>
         </footer>
