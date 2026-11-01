@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     transpilePackages: ["swiper"],
+    images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.codewars.com',
+      },
+    ],
+  },
     skipTrailingSlashRedirect: true,
     async rewrites() {
         return [
@@ -21,3 +29,5 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+ 
