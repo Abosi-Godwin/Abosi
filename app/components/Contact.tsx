@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedinIn, FaGithub, FaTwitter, FaUpwork } from "react-icons/fa6";
 import Heading from "../components/Heading";
+import mySocials from "../utils/assets";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -64,40 +65,25 @@ const Contact = () => {
                         <p className="text-sm font-semibold uppercase tracking-widest text-gray-400">
                             Find me on
                         </p>
-                        <div className="flex gap-4">
+                         {mySocials.map(social => {
+                        const Icon = social.icon;
+
+                        return (
                             <a
-                                href="https://www.linkedin.com/in/abosigodwin"
+                                key={social.name}
+                                href={social.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 rounded-xl border border-gray-200 hover:border-primary hover:text-primary transition-colors"
+                                aria-label={social.name}
+                                className="p-2 rounded-lg hover:bg-black/5
+                focus:outline-none focus-visible:ring-2
+                focus-visible:ring-primary transition-all duration-200
+                hover:scale-110"
                             >
-                                <FaLinkedinIn size={18} />
+                                <Icon className="text-lg" />
                             </a>
-                            <a
-                                href="https://github.com/Abosi-Godwin"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-3 rounded-xl border border-gray-200 hover:border-primary hover:text-primary transition-colors"
-                            >
-                                <FaGithub size={18} />
-                            </a>
-                            <a
-                                href="https://x.com/AbosiGodwin"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-3 rounded-xl border border-gray-200 hover:border-primary hover:text-primary transition-colors"
-                            >
-                                <FaTwitter size={18} />
-                            </a>
-                            <a
-                                href="https://www.upwork.com/freelancers/~010c925ad55e60618b"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-3 rounded-xl border border-gray-200 hover:border-primary hover:text-primary transition-colors"
-                            >
-                                <FaUpwork size={18} />
-                            </a>
-                        </div>
+                        );
+                    })}
                     </div>
                 </motion.div>
 

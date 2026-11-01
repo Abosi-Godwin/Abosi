@@ -10,7 +10,8 @@ import {
     FaLinkedinIn,
     FaInstagram,
     FaTwitter,
-    FaFacebookF
+    FaFacebookF,
+    FaUpwork
 } from "react-icons/fa6";
 
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
@@ -51,19 +52,31 @@ export const introInfo: IntroInfo[] = [
     { image: sprouteLogin, title: "Login page" }
 ];
 
-export const footerSocials = [
+export const mySocials = [
     {
         url: "https://www.linkedin.com/in/abosigodwin",
         name: "LinkedIn",
         icon: FaLinkedinIn
     },
-    { url: "https://x.com/AbosiGodwin", name: "Twitter", icon: FaTwitter },
+    {
+        url: "https://github.com/Abosi-Godwin",
+        name: "Github",
+        icon: FaGithub
+    },
+    { url: "https://www.x.com/AbosiGodwin", name: "Twitter", icon: FaTwitter },
     {
         url: "https://www.facebook.com/AbosiGodwinN",
         name: "Facebook",
         icon: FaFacebookF
+    },
+
+    {
+        url: "https://www.upwork.com/freelancers/~010c925ad55e60618b",
+        name: "Upwork",
+        icon: FaUpwork
     }
 ];
+ 
 
 export const projectHighlight: HighlightProps = [
     "AI-powered lead discovery built for WhatsApp outreach",
@@ -85,7 +98,7 @@ export const coreSkills: SkillItem[] = [
 
 export const tools: SkillItem[] = [
     { title: "Shopify", icon: FaShopify },
-    
+
     { title: "Supabase", icon: SiSupabase },
     { title: "Git", icon: FaGitAlt },
     { title: "GitHub", icon: FaGithub },

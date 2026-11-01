@@ -21,7 +21,6 @@ const Footer = () => {
                         fill
                         alt="Abosi Godwin codewars profile badge"
                         className="object-cover object-top scale-110"
-                        
                     />
                 </div>
             </div>
