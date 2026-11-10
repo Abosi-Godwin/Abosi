@@ -5,10 +5,12 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "www.codewars.com",pathname: '/users/**',
+                hostname: "www.codewars.com",
+                pathname: "/users/**"
             }
         ]
     },
+    dangerouslyAllowSVG: true,
     skipTrailingSlashRedirect: true,
     async rewrites() {
         return [
