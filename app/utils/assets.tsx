@@ -185,7 +185,7 @@ export const projects: ProjectsProps[] = [
             "A high-performance landing page for a Nigerian auto parts business, built to drive inquiries and establish brand credibility with a fast, modern web presence.",
         thumbnail: sureplugThumbnail,
         tags: ["Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        liveUrl: "https://sureplug-autos.vercel.app"
+        liveUrl: "https://sureplugautos.vercel.app/"
     },
     {
         id: 5,
