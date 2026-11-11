@@ -1,13 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+
+import { motion } from "motion/react";
+
 import { ProjectsProps } from "../utils/types";
+import { fadeUp } from "../utils/motion";
 
 const Project = ({ data }: { data: ProjectsProps }) => {
     const { title, shortDescription, thumbnail, tags, liveUrl, slug } = data;
 
     return (
-        <article className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-            {/* image */}
+        <motion.article
+            variants={fadeUp}
+            whileHover={{ y: -4 }}
+            transition={{ type: "spring", stiffness: 300, damping: 24 }}
+            className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white transition-shadow duration-300 hover:shadow-xl"
+        >
             <Link href={`/projects/${slug}`}>
                 <div className="relative h-48 w-full overflow-hidden">
                     <Image
@@ -20,7 +30,6 @@ const Project = ({ data }: { data: ProjectsProps }) => {
                 </div>
             </Link>
 
-            {/* content */}
             <div className="p-5 flex flex-col gap-3">
                 <Link href={`/projects/${slug}`}>
                     <h3 className="text-lg font-semibold text-gray-900 line-clamp-2 hover:underline">
@@ -32,7 +41,6 @@ const Project = ({ data }: { data: ProjectsProps }) => {
                     {shortDescription}
                 </p>
 
-                {/* tags */}
                 <div className="flex flex-wrap gap-2 pt-1">
                     {tags.map((tag: string) => (
                         <span
@@ -44,7 +52,6 @@ const Project = ({ data }: { data: ProjectsProps }) => {
                     ))}
                 </div>
 
-                {/* CTA */}
                 <div className="pt-3 mt-auto flex items-center justify-between">
                     <Link
                         href={`/projects/${slug}`}
@@ -65,7 +72,7 @@ const Project = ({ data }: { data: ProjectsProps }) => {
                     )}
                 </div>
             </div>
-        </article>
+        </motion.article>
     );
 };
 
