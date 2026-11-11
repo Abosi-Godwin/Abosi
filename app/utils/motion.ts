@@ -17,3 +17,10 @@ export const stagger = (gap = 0.1, delayChildren = 0): Variants => ({
 });
 
 export const viewportOnce = { once: true, amount: 0.2 } as const;
+
+export const reveal = {
+    variants: fadeUp,
+    initial: "hidden",
+    whileInView: "show",
+    viewport: viewportOnce,
+} as const;

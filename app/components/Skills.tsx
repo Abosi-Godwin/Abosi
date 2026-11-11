@@ -1,18 +1,35 @@
+"use client";
+
+import { MotionConfig, motion } from "motion/react";
+
 import SkillsList from "./SkillsList";
 import Heading from "./Heading";
 import { frontendSkills, backendSkills, ecommerceSkills } from "../utils/assets";
+import { reveal } from "../utils/motion";
 
 const Skills = () => {
     return (
-        <div className="py-8 px-3">
-            <Heading text="What I Offer" />
-            <div className="w-full pt-2 md:pt-5 flex gap-4 flex-col items-start
-            md:items-start justify-between md:flex-row md:gap-2">
-                <SkillsList title="Frontend" items={frontendSkills} />
-                <SkillsList title="Backend" items={backendSkills} />
-                <SkillsList title="Ecommerce" items={ecommerceSkills} />
+        <MotionConfig reducedMotion="user">
+            <div className="py-8 px-3">
+                <motion.div {...reveal}>
+                    <Heading text="What I Offer" />
+                </motion.div>
+                <div className="w-full pt-2 md:pt-5 flex gap-4 flex-col items-start
+                md:items-start justify-between md:flex-row md:gap-2">
+                    <SkillsList title="Frontend" items={frontendSkills} />
+                    <SkillsList
+                        title="Backend"
+                        items={backendSkills}
+                        delay={0.12}
+                    />
+                    <SkillsList
+                        title="Ecommerce"
+                        items={ecommerceSkills}
+                        delay={0.24}
+                    />
+                </div>
             </div>
-        </div>
+        </MotionConfig>
     );
 };
 

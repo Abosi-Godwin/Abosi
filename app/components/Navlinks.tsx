@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { motion } from "motion/react";
 
 const links = [
     { label: "Home", href: "/" },
@@ -7,16 +13,45 @@ const links = [
 ];
 
 const Navlinks = () => {
+    const pathname = usePathname() ?? "";
+    const [hovered, setHovered] = useState<string | null>(null);
+
+    const isActive = (href: string) =>
+        href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+    const activeHref = links.find(link => isActive(link.href))?.href ?? null;
+    const underlineTarget = hovered ?? activeHref;
+
     return (
-        <ul className="hidden md:flex items-center gap-8">
+        <ul
+            className="hidden md:flex items-center gap-8"
+            onMouseLeave={() => setHovered(null)}
+            onBlur={() => setHovered(null)}
+        >
             {links.map(link => (
                 <li key={link.label}>
                     <Link
                         href={link.href}
-                        className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors relative group"
+                        onMouseEnter={() => setHovered(link.href)}
+                        onFocus={() => setHovered(link.href)}
+                        className={`relative text-sm font-semibold transition-colors ${
+                            isActive(link.href)
+                                ? "text-primary"
+                                : "text-gray-600 hover:text-primary"
+                        }`}
                     >
                         {link.label}
-                        <span className="absolute -bottom-0.5 left-0 w-0 h-[2px] bg-primary rounded-full transition-all duration-300 group-hover:w-full" />
+                        {underlineTarget === link.href && (
+                            <motion.span
+                                layoutId="nav-underline"
+                                className="absolute -bottom-0.5 left-0 h-[2px] w-full rounded-full bg-primary"
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 500,
+                                    damping: 38
+                                }}
+                            />
+                        )}
                     </Link>
                 </li>
             ))}
