@@ -7,8 +7,6 @@ import Header from "./sections/Header";
 import Main from "./sections/Main";
 import Footer from "./sections/Footer";
 
-
-
 import "swiper/css";
 
 const nunito = Nunito({
@@ -146,10 +144,9 @@ export default function RootLayout({
                     data-key="288BqJyc/4h+l3LpZouJPw"
                     strategy="afterInteractive"
                 />
-  <Header />
-            <Main />
+               
                 {children}
-            <Footer />
+                
             </body>
         </html>
     );
