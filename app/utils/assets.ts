@@ -247,16 +247,7 @@ export const practiceProjects: ProjectsProps[] = [
         tags: ["Next.js", "TailwindCSS", "Healthcare", "Landing Page"],
         liveUrl: "https://visyoned.vercel.app"
     },
-    {
-        id: 5,
-        slug: "big-taste-restaurant-website",
-        title: "Big Taste: Restaurant & Food Ordering Website",
-        shortDescription:
-            "A clean and conversion-focused restaurant website for a local Nigerian food business, featuring a WhatsApp ordering system, full menu display, testimonials, and location details.",
-        thumbnail: bigTasteThumbnail,
-        tags: ["Next.js", "TailwindCSS", "Restaurant", "WhatsApp Integration"],
-        liveUrl: "https://big-taste.vercel.app"
-    }
+     
 ];
 
 export const caseStudies: CaseStudy[] = [

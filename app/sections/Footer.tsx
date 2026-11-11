@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
 import { MotionConfig, motion } from "motion/react";
 
@@ -26,7 +25,7 @@ const Footer = () => {
                         </p>
 
                         <div className="flex items-center justify-center gap-4">
-                            <div className="relative w-40 h-40">
+                            <div className="relative w-40 h-12">
                                 <img
                                     src="https://www.codewars.com/users/Abosi-Godwin/badges/large"
                                     alt="Abosi Godwin codewars profile badge"
