@@ -143,7 +143,7 @@ export default function RootLayout({
                     data-key="288BqJyc/4h+l3LpZouJPw"
                     strategy="afterInteractive"
                 />
-<Header />
+                <Header />
                 {children}
                 <Footer />
             </body>
