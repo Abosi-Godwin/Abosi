@@ -46,7 +46,7 @@ const Contact = () => {
     return (
         <section className="py-20 px-4" id="contact">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                {/* Left — copy */}
+             
                 <motion.div
                     initial={{ opacity: 0, x: -24 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +65,7 @@ const Contact = () => {
                         <p className="text-sm font-semibold uppercase tracking-widest text-gray-400">
                             Find me on
                         </p>
-                        <div className="flex justify-around items-center">
+                        <div className="flex justify-around items-start">
                             {mySocials.map(social => {
                                 const Icon = social.icon;
 
@@ -88,8 +88,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </motion.div>
-
-                {/* Right — form */}
+ 
                 <motion.div
                     initial={{ opacity: 0, x: 24 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -98,7 +97,6 @@ const Contact = () => {
                     className="space-y-4"
                 >
                     <form onSubmit={handleSubmit}>
-                        {/* Name */}
                         <div className="space-y-1.5">
                             <label className="text-sm font-medium text-gray-700">
                                 Name
@@ -113,7 +111,6 @@ const Contact = () => {
                             />
                         </div>
 
-                        {/* Email */}
                         <div className="space-y-1.5">
                             <label className="text-sm font-medium text-gray-700">
                                 Email
@@ -128,7 +125,6 @@ const Contact = () => {
                             />
                         </div>
 
-                        {/* Message */}
                         <div className="space-y-1.5">
                             <label className="text-sm font-medium text-gray-700">
                                 Message
@@ -143,7 +139,6 @@ const Contact = () => {
                             />
                         </div>
 
-                        {/* Submit */}
                         <button
                             type="submit"
                             disabled={status === "loading"}
@@ -154,7 +149,6 @@ const Contact = () => {
                                 : "Send Message"}
                         </button>
                     </form>
-                    {/* Feedback */}
                     {status === "success" && (
                         <motion.p
                             initial={{ opacity: 0, y: 6 }}

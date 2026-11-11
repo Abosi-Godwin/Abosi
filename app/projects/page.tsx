@@ -6,14 +6,15 @@ import Project from "../components/Project";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Projects | Abosi Godwin, Full-Stack Developer",
+    title: "Abosi Godwin | Ecommerce Developer (Shopify & Next.js)",
     description:
-        "Explore projects built by Abosi Godwin, full-stack web apps, e-commerce stores, and SaaS products using Next.js, React, TypeScript, and Supabase.",
+        "Explore projects built by Abosi Godwin, full-stack web apps, e-commerce  stores, and SaaS products using Shopify , Next.js, React, TypeScript, and Supabase.",
     alternates: {
         canonical: "https://abosi.vercel.app/projects"
     },
+    
     openGraph: {
-        title: "Projects | Abosi Godwin, Full-Stack Developer",
+        title: "Projects | Abosi Godwin | Ecommerce Developer (Shopify & Next.js)",
         description:
             "Full-stack web apps, e-commerce stores, and SaaS products by Abosi Godwin.",
         url: "https://abosi.vercel.app/projects",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Projects | Abosi Godwin, Full-Stack Developer",
+        title: "Projects | Abosi Godwin | Ecommerce Developer (Shopify & Next.js)",
         description:
             "Full-stack web apps, e-commerce stores, and SaaS products by Abosi Godwin.",
         images: ["https://abosi.vercel.app/Abosi.png"]

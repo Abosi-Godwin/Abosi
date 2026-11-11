@@ -10,8 +10,6 @@ import { LuRocket, LuGithub, LuArrowLeft } from "react-icons/lu";
 type Props = {
     params: Promise<{ projectName: string }>;
 };
-
-// Dynamic metadata per project
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { projectName } = await params;
     const item = caseStudies.find(data => data.slug === projectName);
@@ -115,27 +113,30 @@ const ProjectDetails = async ({ params }: Props) => {
             />
 
             <main className="py-24 px-5 max-w-6xl mx-auto space-y-24">
-
-                {/* ================= HERO ================= */}
                 <section className="space-y-8">
-
-                    {/* Breadcrumb */}
                     <nav
                         aria-label="Breadcrumb"
                         className="flex items-center gap-2 text-sm text-gray-400"
                     >
-                        <Link href="/" className="hover:text-primary transition-colors">
+                        <Link
+                            href="/"
+                            className="hover:text-primary transition-colors"
+                        >
                             Home
                         </Link>
                         <span>/</span>
-                        <Link href="/projects" className="hover:text-primary transition-colors">
+                        <Link
+                            href="/projects"
+                            className="hover:text-primary transition-colors"
+                        >
                             Projects
                         </Link>
                         <span>/</span>
-                        <span className="text-gray-600 font-medium">{item.title}</span>
+                        <span className="text-gray-600 font-medium">
+                            {item.title}
+                        </span>
                     </nav>
 
-                    {/* Back link */}
                     <Link
                         href="/projects"
                         className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-primary transition-colors"
@@ -163,7 +164,6 @@ const ProjectDetails = async ({ params }: Props) => {
                     </div>
                 </section>
 
-                {/* ================= OVERVIEW ================= */}
                 <section className="grid md:grid-cols-3 gap-12">
                     <SectionTitle>Overview</SectionTitle>
                     <div className="md:col-span-2 text-lg leading-relaxed text-gray-700">
@@ -171,7 +171,6 @@ const ProjectDetails = async ({ params }: Props) => {
                     </div>
                 </section>
 
-                {/* ================= PROBLEM / SOLUTION ================= */}
                 <section className="grid md:grid-cols-2 gap-12 bg-gray-50 p-10 rounded-3xl">
                     <div className="space-y-4">
                         <Badge color="red">The Problem</Badge>
@@ -193,7 +192,6 @@ const ProjectDetails = async ({ params }: Props) => {
                     </div>
                 </section>
 
-                {/* ================= FEATURES ================= */}
                 <section className="space-y-12">
                     <SectionTitle centered>Core Features</SectionTitle>
                     <div className="grid md:grid-cols-2 gap-6">
@@ -203,11 +201,15 @@ const ProjectDetails = async ({ params }: Props) => {
                                 className="border border-gray-200 p-6 rounded-2xl hover:shadow-lg hover:border-primary/30 transition-all bg-white"
                             >
                                 <div className="space-y-3">
-                                    <h4 className="font-bold text-lg">{feature.title}</h4>
+                                    <h4 className="font-bold text-lg">
+                                        {feature.title}
+                                    </h4>
                                     <ul className="space-y-2 text-sm text-gray-600">
-                                        {feature.details.slice(0, 4).map((detail, idx) => (
-                                            <li key={idx}>• {detail}</li>
-                                        ))}
+                                        {feature.details
+                                            .slice(0, 4)
+                                            .map((detail, idx) => (
+                                                <li key={idx}>• {detail}</li>
+                                            ))}
                                     </ul>
                                 </div>
                             </div>
@@ -215,7 +217,6 @@ const ProjectDetails = async ({ params }: Props) => {
                     </div>
                 </section>
 
-                {/* ================= UX + TECH ================= */}
                 <section className="grid md:grid-cols-2 gap-20">
                     <div>
                         <SectionTitle>UX Strategy</SectionTitle>
@@ -225,7 +226,9 @@ const ProjectDetails = async ({ params }: Props) => {
                                     <p className="font-semibold italic text-secondary">
                                         "{ux.decision}"
                                     </p>
-                                    <p className="text-sm text-gray-600">{ux.reason}</p>
+                                    <p className="text-sm text-gray-600">
+                                        {ux.reason}
+                                    </p>
                                 </div>
                             ))}
                         </div>
@@ -234,23 +237,27 @@ const ProjectDetails = async ({ params }: Props) => {
                     <div>
                         <SectionTitle>Tech Stack</SectionTitle>
                         <div className="space-y-6">
-                            {Object.entries(item.techStack).map(([group, techs]) => (
-                                <div key={group} className="space-y-3">
-                                    <p className="text-xs uppercase tracking-widest text-gray-500">
-                                        {group}
-                                    </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {(techs as string[]).map((tech, i) => (
-                                            <span
-                                                key={i}
-                                                className="px-3 py-1 bg-purple-50 text-secondary rounded-full text-xs font-medium"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
+                            {Object.entries(item.techStack).map(
+                                ([group, techs]) => (
+                                    <div key={group} className="space-y-3">
+                                        <p className="text-xs uppercase tracking-widest text-gray-500">
+                                            {group}
+                                        </p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {(techs as string[]).map(
+                                                (tech, i) => (
+                                                    <span
+                                                        key={i}
+                                                        className="px-3 py-1 bg-purple-50 text-secondary rounded-full text-xs font-medium"
+                                                    >
+                                                        {tech}
+                                                    </span>
+                                                )
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                )
+                            )}
                         </div>
                         <div className="mt-10">
                             <h3 className="font-bold mb-3">Key Learnings</h3>
@@ -263,7 +270,6 @@ const ProjectDetails = async ({ params }: Props) => {
                     </div>
                 </section>
 
-                {/* ================= CTA ================= */}
                 <footer className="pt-12 border-t border-gray-200 flex flex-wrap gap-4 justify-between items-center">
                     <div className="flex gap-4">
                         {item.links.live && (
