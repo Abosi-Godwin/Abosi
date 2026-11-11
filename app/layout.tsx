@@ -3,8 +3,6 @@ import { Nunito } from "next/font/google";
 import Script from "next/script";
 import "./styles/globals.css";
 
-
-
 import "swiper/css";
 
 const nunito = Nunito({
