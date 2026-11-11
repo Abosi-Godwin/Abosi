@@ -1,7 +1,8 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
+
+import { motion } from "motion/react";
 
 const Hero = () => {
     const scrollToContact = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="flex w-full flex-col items-center gap-8 px-5 pt-16 md:flex-row md:justify-between md:gap-0 md:pt-28 lg:px-16">
+        <motion.section initial={{backgroundColor:"red"}} className="flex w-full flex-col items-center gap-8 px-5 pt-16 md:flex-row md:justify-between md:gap-0 md:pt-28 lg:px-16">
             <div className="relative shrink-0">
                 <div className="absolute -top-3 right-0 z-10 flex items-center gap-1.5 rounded-full bg-green-500 px-3 py-1 text-xs font-semibold text-white shadow-md">
                     <span>Available</span>
@@ -34,7 +35,7 @@ const Hero = () => {
 
             <div className="max-w-lg text-center md:text-left">
                 <span className="inline-block rounded-full border border-secondary/30 bg-secondary/10 px-4 py-1 text-xs font-semibold tracking-widest text-secondary uppercase">
-                    Business Solution Provider 
+                    Business Solution Provider
                 </span>
 
                 <h1 className="mt-3 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-5xl">
@@ -95,7 +96,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

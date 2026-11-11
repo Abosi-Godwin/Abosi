@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import Script from "next/script";
 import "./styles/globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./sections/Footer";
+
+
 import "swiper/css";
 
 const nunito = Nunito({
@@ -141,9 +141,9 @@ export default function RootLayout({
                     data-key="288BqJyc/4h+l3LpZouJPw"
                     strategy="afterInteractive"
                 />
-                <Navbar />
+               
                 {children}
-                <Footer />
+              
             </body>
         </html>
     );
