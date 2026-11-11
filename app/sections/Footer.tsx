@@ -27,9 +27,8 @@ const Footer = () => {
 
                         <div className="flex items-center justify-center gap-4">
                             <div className="relative w-40 h-12">
-                                <image
+                                <img
                                     src="https://www.codewars.com/users/Abosi-Godwin/badges/large"
-                                  
                                     alt="Abosi Godwin codewars profile badge"
                                     className="object-contain object-center"
                                 />
