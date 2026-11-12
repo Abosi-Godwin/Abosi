@@ -32,9 +32,9 @@ const Project = ({ data }: { data: ProjectsProps }) => {
 
             <div className="p-5 flex flex-col gap-3">
                 <Link href={`/projects/${slug}`}>
-                    <h3 className="text-lg font-semibold text-gray-900 line-clamp-2 hover:underline">
+                    <h2 className="text-lg font-semibold text-gray-900 line-clamp-2 hover:underline">
                         {title}
-                    </h3>
+                    </h2>
                 </Link>
 
                 <p className="text-sm text-gray-600 line-clamp-3">

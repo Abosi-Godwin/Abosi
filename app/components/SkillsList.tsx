@@ -43,7 +43,8 @@ const SkillsList = ({ title, items, delay = 0 }: SkillsListProps) => {
                                            rounded-md odd:bg-gray-50 hover:bg-gray-100
                                            transition-colors duration-200"
                             >
-                                <Icon className="text-secondary text-lg" />
+                                <Icon className="text-secondary text-lg"
+                                alt={`${item.title} icon`} />
                                 <span className="text-sm font-medium tracking-wide">
                                     {item.title}
                                 </span>
