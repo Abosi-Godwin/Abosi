@@ -19,4 +19,4 @@ function Badge({
     );
 }
 
-export default Badge
+export default Badge;

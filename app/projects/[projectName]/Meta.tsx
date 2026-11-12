@@ -5,4 +5,4 @@ function Meta({ label, value }: { label: string; value: string }) {
         </div>
     );
 }
-export default Meta
+export default Meta;

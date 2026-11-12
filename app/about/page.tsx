@@ -1,146 +1,224 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+
+const siteUrl = "https://abosi.vercel.app";
+const pageUrl = `${siteUrl}/about`;
+const title = "About Abosi Godwin | Ecommerce Developer (Shopify & Next.js)";
+const description =
+    "Self-taught ecommerce developer in Nigeria. I build Shopify stores, headless Next.js storefronts and Paystack checkouts for clients in Nigeria and worldwide.";
+const socialDescription =
+    "Ecommerce developer building Shopify stores, headless Next.js storefronts and Paystack checkouts. Freelance, and open to full-time roles.";
+const ogImage = `${siteUrl}/Abosi.png`;
+
 export const metadata: Metadata = {
-    title: "About Abosi Godwin | Full-Stack Developer",
-    description:
-        "Learn about Abosi Godwin, a self-taught Full-Stack Developer specializing in Next.js, React, TypeScript, and Supabase. Available for freelance and full-time opportunities worldwide.",
+    title,
+    description,
     alternates: {
-        canonical: "https://abosi.vercel.app/about"
+        canonical: pageUrl
+    },
+    robots: {
+        index: true,
+        follow: true
     },
     openGraph: {
-        title: "About Abosi Godwin | Full-Stack Developer",
-        description:
-            "Full-Stack Developer specializing in Next.js, React, TypeScript & Supabase. Freelancer, open to full-time roles.",
-        url: "https://abosi.vercel.app/about",
+        title,
+        description: socialDescription,
+        url: pageUrl,
         siteName: "Abosi Godwin",
         type: "profile",
+        firstName: "Abosi",
+        lastName: "Godwin",
         images: [
             {
-                url: "https://abosi.vercel.app/Abosi.png",
+                url: ogImage,
                 width: 1200,
                 height: 630,
-                alt: "Abosi Godwin, Full-Stack Developer"
+                alt: "Abosi Godwin, Ecommerce Developer"
             }
         ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title,
+        description: socialDescription,
+        images: [ogImage]
     }
 };
 
-export default function AboutPage() {
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebPage",
-                "@id": "https://abosi.vercel.app/about#webpage",
-                url: "https://abosi.vercel.app/about",
-                name: "About Abosi Godwin | Full-Stack Developer",
-                isPartOf: { "@id": "https://abosi.vercel.app/#website" },
-                about: { "@id": "https://abosi.vercel.app/#person" },
-                description:
-                    "Learn about Abosi Godwin, a self-taught Full-Stack Developer specializing in Next.js, React, TypeScript, and Supabase.",
-                breadcrumb: {
-                    "@id": "https://abosi.vercel.app/about#breadcrumb"
-                }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://abosi.vercel.app/about#breadcrumb",
-                itemListElement: [
-                    {
-                        "@type": "ListItem",
-                        position: 1,
-                        name: "Home",
-                        item: "https://abosi.vercel.app"
-                    },
-                    {
-                        "@type": "ListItem",
-                        position: 2,
-                        name: "About",
-                        item: "https://abosi.vercel.app/about"
-                    }
-                ]
-            },
-            {
-                "@type": "Person",
-                "@id": "https://abosi.vercel.app/#person",
-                name: "Abosi Godwin",
-                url: "https://abosi.vercel.app",
-                jobTitle: "Full-Stack Developer",
-                description:
-                    "Self-taught Full-Stack Developer specializing in Next.js, React, TypeScript, and Supabase. Available for freelance projects and full-time opportunities worldwide.",
-                image: {
-                    "@type": "ImageObject",
-                    url: "https://abosi.vercel.app/Abosi.png",
-                    width: 800,
-                    height: 800
-                },
-                knowsAbout: [
-                    "Next.js",
-                    "React",
-                    "TypeScript",
-                    "TailwindCSS",
-                    "Supabase",
-                    "Full-Stack Development",
-                    "JavaScript",
-                    "Framer Motion"
-                ],
-                hasOccupation: {
-                    "@type": "Occupation",
-                    name: "Full-Stack Developer",
-                    skills: "Next.js, React, TypeScript, Supabase, TailwindCSS, JavaScript"
-                },
-                sameAs: [
-                    "https://github.com/Abosi-Godwin",
-                    "https://linkedin.com/in/AbosiGodwin",
-                    "https://twitter.com/AbosiGodwin",
-                    "https://medium.com/@AbosiGodwin"
-                ]
-            }
-        ]
-    };
+const stats = [
+    { value: "24", label: "Projects Shipped" },
+    { value: "22", label: "Happy Clients" },
+    { value: "4yrs", label: "Experience" },
+    { value: "Ecommerce", label: "Specialization" }
+];
 
-    const skills = [
+const services = [
+    {
+        icon: "🛍️",
+        title: "Shopify Stores",
+        description:
+            "Custom themes and full store builds on Shopify, set up so owners can manage products, orders and content without needing a developer."
+    },
+    {
+        icon: "⚡",
+        title: "Headless & Custom Storefronts",
+        description:
+            "Next.js storefronts on the Shopify Storefront API with fast pages, search and customer accounts, built for speed and full control of the shopping experience."
+    },
+    {
+        icon: "💳",
+        title: "Payments, Backend & SaaS",
+        description:
+            "Paystack checkout, Supabase backends and complete products like Sproute, taken from first idea to production."
+    }
+];
+
+const skills = [
+    {
+        category: "Frontend",
+        items: [
+            "React 19",
+            "Next.js 15",
+            "TypeScript",
+            "TailwindCSS",
+            "Framer Motion"
+        ]
+    },
+    {
+        category: "Ecommerce",
+        items: [
+            "Shopify",
+            "Shopify Storefront API",
+            "Headless Commerce",
+            "Paystack"
+        ]
+    },
+    {
+        category: "Backend & Tools",
+        items: [
+            "Supabase",
+            "PostgreSQL",
+            "Resend",
+            "TanStack Query",
+            "Zustand",
+            "Git",
+            "Figma",
+            "Vercel"
+        ]
+    }
+];
+
+const faqs = [
+    {
+        q: "Who is Abosi Godwin?",
+        a: "Abosi Godwin is a self-taught ecommerce developer based in Nigeria with 4 years of experience building Shopify stores, headless Next.js storefronts and full-stack web products."
+    },
+    {
+        q: "What does Abosi Godwin specialize in?",
+        a: "Shopify stores, custom and headless storefronts with Next.js and the Shopify Storefront API, Paystack payment integrations, and Supabase backends when a project needs custom logic."
+    },
+    {
+        q: "Does Abosi Godwin work with businesses in Nigeria?",
+        a: "Yes. He builds stores for Nigerian businesses, including Paystack payments and WhatsApp-friendly ordering, and also works with clients worldwide."
+    },
+    {
+        q: "Is Abosi Godwin available for freelance work?",
+        a: "Yes. He takes freelance projects worldwide and is open to full-time roles with product teams and agencies."
+    },
+    {
+        q: "How can I hire Abosi Godwin?",
+        a: "Use the contact form on this site or message him on LinkedIn. He usually responds within 24 hours."
+    }
+];
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
         {
-            category: "Frontend",
-            items: ["React 19", "Next.js 15", "TypeScript", "TailwindCSS"]
+            "@type": "ProfilePage",
+            "@id": `${pageUrl}#webpage`,
+            url: pageUrl,
+            name: title,
+            inLanguage: "en",
+            isPartOf: { "@id": `${siteUrl}/#website` },
+            mainEntity: { "@id": `${siteUrl}/#person` },
+            description,
+            breadcrumb: { "@id": `${pageUrl}#breadcrumb` }
         },
         {
-            category: "Backend & Database",
-            items: ["Supabase", "PostgreSQL", "REST APIs", "Resend"]
+            "@type": "BreadcrumbList",
+            "@id": `${pageUrl}#breadcrumb`,
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: siteUrl
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "About",
+                    item: pageUrl
+                }
+            ]
         },
         {
-            category: "Tools & Workflow",
-            items: [
-                "TanStack Query",
-                "Zustand",
+            "@type": "Person",
+            "@id": `${siteUrl}/#person`,
+            name: "Abosi Godwin",
+            url: siteUrl,
+            jobTitle: "Ecommerce Developer",
+            description:
+                "Self-taught ecommerce developer building Shopify stores, headless Next.js storefronts and Paystack checkouts for clients in Nigeria and worldwide.",
+            image: ogImage,
+            address: {
+                "@type": "PostalAddress",
+                addressCountry: "NG"
+            },
+            knowsAbout: [
+                "Ecommerce Development",
+                "Shopify",
+                "Headless Commerce",
+                "Shopify Storefront API",
+                "Next.js",
+                "React",
+                "TypeScript",
+                "TailwindCSS",
+                "Supabase",
                 "Paystack",
-                "Git",
-                "Figma",
-                "Vercel",
                 "Framer Motion"
+            ],
+            hasOccupation: {
+                "@type": "Occupation",
+                name: "Ecommerce Developer",
+                skills: "Shopify, Next.js, React, TypeScript, Supabase, Paystack, TailwindCSS"
+            },
+            sameAs: [
+                "https://github.com/Abosi-Godwin",
+                "https://www.linkedin.com/in/abosigodwin",
+                "https://x.com/AbosiGodwin",
+                "https://www.upwork.com/freelancers/~010c925ad55e60618b"
             ]
         }
-    ];
+    ]
+};
 
-    const stats = [
-        { value: "3+", label: "Years of Experience" },
-        { value: "20+", label: "Projects Delivered" },
-        { value: "Full-Stack", label: "Specialization" },
-        { value: "100%", label: "Client Satisfaction" }
-    ];
-
+export default function AboutPage() {
     return (
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c")
+                }}
             />
 
             <main className="min-h-screen bg-white text-gray-900">
-                {/* Breadcrumb */}
                 <nav
                     aria-label="Breadcrumb"
-                    className="pt-10 mb-6 flex items-center gap-2 text-sm text-gray-400"
+                    className="pt-10 mb-6 max-w-5xl mx-auto px-6 flex items-center gap-2 text-sm text-gray-400"
                 >
                     <Link
                         href="/"
@@ -151,7 +229,7 @@ export default function AboutPage() {
                     <span>/</span>
                     <span className="text-gray-600 font-medium">About</span>
                 </nav>
-                {/* Hero */}
+
                 <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
                     <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-4">
                         About Me
@@ -159,25 +237,25 @@ export default function AboutPage() {
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
                         Hi, I&apos;m{" "}
                         <span className="text-primary">Abosi Godwin</span>.
-                        <br />I build products that{" "}
+                        <br />
+                        Ecommerce developer for{" "}
                         <span className="italic font-light">
-                            work end to end.
+                            Shopify & Next.js.
                         </span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed">
-                        A self-taught Full-Stack Developer with 3+ years of
-                        hands-on experience shipping modern web products. I
-                        specialize in{" "}
-                        <strong className="text-gray-800">Next.js</strong>,{" "}
-                        <strong className="text-gray-800">React</strong>,{" "}
-                        <strong className="text-gray-800">TypeScript</strong>,
-                        and <strong className="text-gray-800">Supabase</strong>,
-                        from pixel-perfect UIs to production-ready backends.
+                        A self-taught ecommerce developer from Nigeria with 4
+                        years of experience. I build{" "}
+                        <strong className="text-gray-800">Shopify</strong>{" "}
+                        stores, headless{" "}
+                        <strong className="text-gray-800">Next.js</strong>{" "}
+                        storefronts and custom full-stack products, from the
+                        storefront to checkout, payments and the backend behind
+                        them.
                     </p>
                 </section>
 
-                {/* Stats */}
-                <section className="py-14 bg-primary">
+                <section className="py-14 bg-gradient-bg border-y border-secondary/40">
                     <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
                         {stats.map(stat => (
                             <div key={stat.label}>
@@ -192,7 +270,6 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* Story */}
                 <section className="py-24 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <div>
                         <h2 className="text-3xl font-bold mb-6 text-gray-900">
@@ -201,36 +278,46 @@ export default function AboutPage() {
                         <div className="space-y-4 text-gray-600 leading-relaxed">
                             <p>
                                 I didn&apos;t learn to code in a classroom. I
-                                learned by building, breaking things, reading
-                                docs at midnight, and shipping projects that
-                                pushed me past what I knew. That self-taught
-                                discipline is now my strongest asset.
+                                got into web development in 2020 through
+                                Shopify and WordPress, then kept building until
+                                I could take a store from first design to
+                                launch on my own.
                             </p>
                             <p>
                                 Before development, I managed a cosmetics retail
-                                operation, which gave me a sharp eye for how
-                                real businesses actually work. I understand
-                                clients not just as a developer, but as someone
-                                who has sat on the other side of the table. That
-                                perspective shapes every product I build.
+                                shop. I know what happens on the other side of
+                                a store: stock to count, customers to serve and
+                                sales that depend on a smooth checkout. That
+                                shapes how I build every store.
                             </p>
                             <p>
-                                Today I work as a freelancer building full-stack
-                                web products while developing my own SaaS,
-                                Sproute, an AI-powered WhatsApp lead prospecting
-                                tool for freelancers. My goal is simple: write
-                                software that solves real problems and holds up
-                                in production.
+                                Today I work as a freelancer building Shopify
+                                stores, custom Next.js storefronts and headless
+                                setups on the Shopify Storefront API, including
+                                Paystack payments for businesses selling in
+                                Nigeria. On the side I&apos;m building my own
+                                product, Sproute, an AI-powered WhatsApp lead
+                                prospecting tool for freelancers. You can see
+                                what I&apos;ve shipped in my{" "}
+                                <Link
+                                    href="/projects"
+                                    className="text-primary font-medium underline underline-offset-4"
+                                >
+                                    projects
+                                </Link>
+                                .
                             </p>
                         </div>
                     </div>
 
                     <div className="relative">
-                        <div className="w-full aspect-square rounded-2xl bg-purple-50 overflow-hidden border border-purple-100 flex items-center justify-center">
-                            <img
+                        <div className="relative w-full aspect-square rounded-2xl bg-purple-50 overflow-hidden border border-purple-100">
+                            <Image
                                 src="/Abosi.png"
-                                alt="Abosi Godwin, Full-Stack Developer"
-                                className="w-full h-full object-cover"
+                                alt="Abosi Godwin, Ecommerce Developer"
+                                fill
+                                sizes="(min-width: 768px) 40vw, 90vw"
+                                className="object-cover"
                             />
                         </div>
                         <div className="absolute -bottom-4 -left-4 bg-white border border-gray-100 shadow-lg rounded-xl px-5 py-3">
@@ -244,44 +331,27 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* What I Do */}
                 <section className="py-20 bg-gray-50 px-6">
                     <div className="max-w-5xl mx-auto">
                         <h2 className="text-3xl font-bold mb-4 text-gray-900">
                             What I Do
                         </h2>
                         <p className="text-gray-500 mb-12 max-w-xl">
-                            I cover the full product stack, from UI to
-                            database, so you don&apos;t need to hire three
-                            people to ship one idea.
+                            I take online stores from first design to launch, so
+                            you don&apos;t need to hire three people to get
+                            selling.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-8">
-                            {[
-                                {
-                                    icon: "⚛️",
-                                    title: "Frontend Development",
-                                    description:
-                                        "Fast, responsive, accessible UIs with React and Next.js. From landing pages to complex dashboards, I write clean, scalable code that performs."
-                                },
-                                {
-                                    icon: "🗄️",
-                                    title: "Backend & Database",
-                                    description:
-                                        "Auth, APIs, and database design with Supabase and PostgreSQL. I build secure, well-structured backends that power real products."
-                                },
-                                {
-                                    icon: "🚀",
-                                    title: "SaaS & Product Building",
-                                    description:
-                                        "I don't just write code, I think in products. I've shipped Sproute end-to-end and understand what it takes to build something people actually use."
-                                }
-                            ].map(service => (
+                            {services.map(service => (
                                 <div
                                     key={service.title}
                                     className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-primary hover:shadow-md transition-all duration-300"
                                 >
-                                    <span className="text-3xl mb-4 block">
+                                    <span
+                                        className="text-3xl mb-4 block"
+                                        aria-hidden="true"
+                                    >
                                         {service.icon}
                                     </span>
                                     <h3 className="text-lg font-bold text-gray-900 mb-3">
@@ -296,14 +366,13 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* Skills */}
                 <section className="py-24 px-6 max-w-5xl mx-auto">
                     <h2 className="text-3xl font-bold mb-4 text-gray-900">
                         Skills & Tools
                     </h2>
                     <p className="text-gray-500 mb-12 max-w-xl">
-                        The technologies I use daily to ship production-ready
-                        products.
+                        The technologies I use daily to ship fast, reliable
+                        online stores and products.
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-10">
@@ -328,7 +397,6 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* FAQ */}
                 <section className="py-20 bg-gray-50 px-6">
                     <div className="max-w-3xl mx-auto">
                         <h2 className="text-3xl font-bold mb-12 text-gray-900">
@@ -336,43 +404,16 @@ export default function AboutPage() {
                         </h2>
 
                         <div className="space-y-8">
-                            {[
-                                {
-                                    q: "Who is Abosi Godwin?",
-                                    a: "Abosi Godwin is a self-taught Full-Stack Developer with 3+ years of experience building modern web products using Next.js, React, TypeScript, and Supabase."
-                                },
-                                {
-                                    q: "What does Abosi Godwin specialize in?",
-                                    a: "Abosi specializes in full-stack web development, frontend UIs with React and Next.js, backend logic and databases with Supabase, and shipping complete SaaS products."
-                                },
-                                {
-                                    q: "Is Abosi Godwin available for freelance work?",
-                                    a: "Yes. Abosi is available for freelance projects worldwide and is open to full-time opportunities with product teams and engineering organizations."
-                                },
-                                {
-                                    q: "How can I hire Abosi Godwin?",
-                                    a: "Reach out through the contact form at abosi.vercel.app or connect directly on LinkedIn. He typically responds within 24 hours."
-                                }
-                            ].map(faq => (
+                            {faqs.map(faq => (
                                 <div
                                     key={faq.q}
                                     className="border-b border-gray-200 pb-8"
-                                    itemScope
-                                    itemType="https://schema.org/Question"
                                 >
-                                    <h3
-                                        className="text-lg font-semibold text-gray-900 mb-2"
-                                        itemProp="name"
-                                    >
+                                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
                                         {faq.q}
                                     </h3>
-                                    <p
-                                        className="text-gray-600 leading-relaxed"
-                                        itemScope
-                                        itemType="https://schema.org/Answer"
-                                        itemProp="acceptedAnswer"
-                                    >
-                                        <span itemProp="text">{faq.a}</span>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        {faq.a}
                                     </p>
                                 </div>
                             ))}
@@ -380,24 +421,23 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* CTA */}
                 <section className="py-24 px-6 text-center max-w-2xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
                         Let&apos;s build something great together.
                     </h2>
                     <p className="text-gray-500 mb-10">
-                        Whether you have a product to ship, a role to fill, or
-                        just want to connect, my inbox is always open.
+                        Whether you need a Shopify store, a custom storefront or
+                        a developer for your team, my inbox is always open.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
+                        <Link
                             href="/#contact"
                             className="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
                         >
                             Get In Touch
-                        </a>
+                        </Link>
                         <a
-                            href="https://linkedin.com/in/AbosiGodwin"
+                            href="https://www.linkedin.com/in/abosigodwin"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="border border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-primary hover:text-primary transition-colors"
