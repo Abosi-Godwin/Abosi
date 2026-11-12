@@ -1,14 +1,21 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import type { IconType } from "react-icons";
+import {
+    LuShoppingBag,
+    LuGlobe,
+    LuLayoutDashboard,
+    LuDatabase
+} from "react-icons/lu";
 
 const siteUrl = "https://abosi.vercel.app";
 const pageUrl = `${siteUrl}/about`;
 const title = "About Abosi Godwin | Ecommerce Developer (Shopify & Next.js)";
 const description =
-    "Self-taught ecommerce developer in Nigeria. I build Shopify stores, headless Next.js storefronts and Paystack checkouts for clients in Nigeria and worldwide.";
+    "Self-taught ecommerce developer in Nigeria. I build Shopify stores, Next.js storefronts, business websites and web apps for clients worldwide.";
 const socialDescription =
-    "Ecommerce developer building Shopify stores, headless Next.js storefronts and Paystack checkouts. Freelance, and open to full-time roles.";
+    "Ecommerce developer building Shopify stores, Next.js storefronts, business websites and web apps. Freelance, and open to full-time roles.";
 const ogImage = `${siteUrl}/Abosi.png`;
 
 export const metadata: Metadata = {
@@ -49,28 +56,37 @@ export const metadata: Metadata = {
 const stats = [
     { value: "24", label: "Projects Shipped" },
     { value: "22", label: "Happy Clients" },
-    { value: "4yrs", label: "Experience" },
-    { value: "Ecommerce", label: "Specialization" }
+    { value: "4yrs", label: "Experience" }
 ];
 
-const services = [
+const services: {
+    icon: IconType;
+    title: string;
+    description: string;
+}[] = [
     {
-        icon: "🛍️",
-        title: "Shopify Stores",
+        icon: LuShoppingBag,
+        title: "Ecommerce Stores",
         description:
-            "Custom themes and full store builds on Shopify, set up so owners can manage products, orders and content without needing a developer."
+            "Shopify stores and headless Next.js storefronts on the Storefront API, with product search, customer accounts and Paystack checkout for sales in Nigeria and abroad."
     },
     {
-        icon: "⚡",
-        title: "Headless & Custom Storefronts",
+        icon: LuGlobe,
+        title: "Websites & Landing Pages",
         description:
-            "Next.js storefronts on the Shopify Storefront API with fast pages, search and customer accounts, built for speed and full control of the shopping experience."
+            "Fast, responsive business websites and landing pages with React and Next.js, built to load quickly, rank well and turn visitors into enquiries."
     },
     {
-        icon: "💳",
-        title: "Payments, Backend & SaaS",
+        icon: LuLayoutDashboard,
+        title: "Web Apps & Dashboards",
         description:
-            "Paystack checkout, Supabase backends and complete products like Sproute, taken from first idea to production."
+            "Interactive web apps with clean, accessible interfaces, from sign-up and login flows to charts, data views and subscription billing."
+    },
+    {
+        icon: LuDatabase,
+        title: "Backend & SaaS",
+        description:
+            "Auth, APIs and database design with Supabase and PostgreSQL. I shipped Sproute end to end, so I know what it takes to turn an idea into a product people use."
     }
 ];
 
@@ -112,15 +128,15 @@ const skills = [
 const faqs = [
     {
         q: "Who is Abosi Godwin?",
-        a: "Abosi Godwin is a self-taught ecommerce developer based in Nigeria with 4 years of experience building Shopify stores, headless Next.js storefronts and full-stack web products."
+        a: "Abosi Godwin is a self-taught ecommerce developer based in Nigeria with 4 years of experience building Shopify stores, headless Next.js storefronts, business websites and web apps."
     },
     {
         q: "What does Abosi Godwin specialize in?",
-        a: "Shopify stores, custom and headless storefronts with Next.js and the Shopify Storefront API, Paystack payment integrations, and Supabase backends when a project needs custom logic."
+        a: "Shopify stores, custom and headless storefronts with Next.js and the Shopify Storefront API, business websites, web apps, Paystack payment integrations, and Supabase backends when a project needs custom logic."
     },
     {
         q: "Does Abosi Godwin work with businesses in Nigeria?",
-        a: "Yes. He builds stores for Nigerian businesses, including Paystack payments and WhatsApp-friendly ordering, and also works with clients worldwide."
+        a: "Yes. He builds stores and websites for Nigerian businesses, including Paystack payments and WhatsApp-friendly ordering, and also works with clients worldwide."
     },
     {
         q: "Is Abosi Godwin available for freelance work?",
@@ -171,7 +187,7 @@ const jsonLd = {
             url: siteUrl,
             jobTitle: "Ecommerce Developer",
             description:
-                "Self-taught ecommerce developer building Shopify stores, headless Next.js storefronts and Paystack checkouts for clients in Nigeria and worldwide.",
+                "Self-taught ecommerce developer building Shopify stores, headless Next.js storefronts, business websites and web apps for clients in Nigeria and worldwide.",
             image: ogImage,
             address: {
                 "@type": "PostalAddress",
@@ -182,6 +198,8 @@ const jsonLd = {
                 "Shopify",
                 "Headless Commerce",
                 "Shopify Storefront API",
+                "Web Development",
+                "Web Applications",
                 "Next.js",
                 "React",
                 "TypeScript",
@@ -215,14 +233,14 @@ export default function AboutPage() {
                 }}
             />
 
-            <main className="min-h-screen bg-white text-gray-900">
+            <main className="min-h-screen w-full overflow-x-hidden bg-white text-gray-900">
                 <nav
                     aria-label="Breadcrumb"
                     className="pt-10 mb-6 max-w-5xl mx-auto px-6 flex items-center gap-2 text-sm text-gray-400"
                 >
                     <Link
                         href="/"
-                        className="hover:text-primary transition-colors"
+                        className="hover:text-secondary transition-colors"
                     >
                         Home
                     </Link>
@@ -231,12 +249,12 @@ export default function AboutPage() {
                 </nav>
 
                 <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
-                    <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-4">
+                    <p className="inline-block rounded-full border border-secondary/30 bg-secondary/10 px-4 py-1 text-xs font-semibold tracking-widest text-secondary uppercase mb-4">
                         About Me
                     </p>
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
                         Hi, I&apos;m{" "}
-                        <span className="text-primary">Abosi Godwin</span>.
+                        <span className="text-secondary">Abosi Godwin</span>.
                         <br />
                         Ecommerce developer for{" "}
                         <span className="italic font-light">
@@ -249,20 +267,27 @@ export default function AboutPage() {
                         <strong className="text-gray-800">Shopify</strong>{" "}
                         stores, headless{" "}
                         <strong className="text-gray-800">Next.js</strong>{" "}
-                        storefronts and custom full-stack products, from the
-                        storefront to checkout, payments and the backend behind
+                        storefronts, business websites and web apps, from the
+                        interface to checkout, payments and the backend behind
                         them.
                     </p>
                 </section>
 
-                <section className="py-14 bg-gradient-bg border-y border-secondary/40">
-                    <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-                        {stats.map(stat => (
-                            <div key={stat.label}>
-                                <p className="text-4xl font-extrabold text-white">
+                <section className="w-full border-y border-gray-100 py-12">
+                    <div className="max-w-5xl mx-auto px-6 flex justify-center gap-6 md:gap-16 text-center">
+                        {stats.map((stat, index) => (
+                            <div
+                                key={stat.label}
+                                className={
+                                    index > 0
+                                        ? "border-l border-gray-200 pl-6 md:pl-16"
+                                        : ""
+                                }
+                            >
+                                <p className="text-3xl md:text-4xl font-extrabold text-gray-900">
                                     {stat.value}
                                 </p>
-                                <p className="text-light text-sm mt-1 font-medium">
+                                <p className="mt-1 text-xs md:text-sm text-gray-500">
                                     {stat.label}
                                 </p>
                             </div>
@@ -292,16 +317,16 @@ export default function AboutPage() {
                             </p>
                             <p>
                                 Today I work as a freelancer building Shopify
-                                stores, custom Next.js storefronts and headless
-                                setups on the Shopify Storefront API, including
-                                Paystack payments for businesses selling in
-                                Nigeria. On the side I&apos;m building my own
-                                product, Sproute, an AI-powered WhatsApp lead
-                                prospecting tool for freelancers. You can see
-                                what I&apos;ve shipped in my{" "}
+                                stores, headless Next.js storefronts, business
+                                websites and web apps, including Paystack
+                                payments for businesses selling in Nigeria. On
+                                the side I&apos;m building my own product,
+                                Sproute, an AI-powered WhatsApp lead prospecting
+                                tool for freelancers. You can see what
+                                I&apos;ve shipped in my{" "}
                                 <Link
                                     href="/projects"
-                                    className="text-primary font-medium underline underline-offset-4"
+                                    className="text-secondary font-medium underline underline-offset-4"
                                 >
                                     projects
                                 </Link>
@@ -311,20 +336,20 @@ export default function AboutPage() {
                     </div>
 
                     <div className="relative">
-                        <div className="relative w-full aspect-square rounded-2xl bg-purple-50 overflow-hidden border border-purple-100">
+                        <div className="relative w-full aspect-square rounded-2xl bg-secondary/10 overflow-hidden border border-secondary/20">
                             <Image
                                 src="/Abosi.png"
                                 alt="Abosi Godwin, Ecommerce Developer"
                                 fill
                                 sizes="(min-width: 768px) 40vw, 90vw"
-                                className="object-cover"
+                                className="object-cover object-top"
                             />
                         </div>
-                        <div className="absolute -bottom-4 -left-4 bg-white border border-gray-100 shadow-lg rounded-xl px-5 py-3">
+                        <div className="absolute -bottom-4 left-4 bg-white border border-gray-100 shadow-lg rounded-xl px-5 py-3">
                             <p className="text-xs text-gray-500 font-medium">
                                 Available for
                             </p>
-                            <p className="text-sm font-bold text-primary">
+                            <p className="text-sm font-bold text-secondary">
                                 Freelance & Full-time
                             </p>
                         </div>
@@ -337,31 +362,31 @@ export default function AboutPage() {
                             What I Do
                         </h2>
                         <p className="text-gray-500 mb-12 max-w-xl">
-                            I take online stores from first design to launch, so
-                            you don&apos;t need to hire three people to get
-                            selling.
+                            From online stores to business websites and full web
+                            apps, I cover the whole stack, so you don&apos;t
+                            need to hire three people to get a project live.
                         </p>
 
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {services.map(service => (
-                                <div
-                                    key={service.title}
-                                    className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-primary hover:shadow-md transition-all duration-300"
-                                >
-                                    <span
-                                        className="text-3xl mb-4 block"
-                                        aria-hidden="true"
+                        <div className="grid md:grid-cols-2 gap-8">
+                            {services.map(service => {
+                                const Icon = service.icon;
+                                return (
+                                    <div
+                                        key={service.title}
+                                        className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-secondary hover:shadow-md transition-all duration-300"
                                     >
-                                        {service.icon}
-                                    </span>
-                                    <h3 className="text-lg font-bold text-gray-900 mb-3">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-gray-500 text-sm leading-relaxed">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            ))}
+                                        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10 text-secondary">
+                                            <Icon size={24} aria-hidden="true" />
+                                        </div>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-3">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-gray-500 text-sm leading-relaxed">
+                                            {service.description}
+                                        </p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
@@ -372,13 +397,13 @@ export default function AboutPage() {
                     </h2>
                     <p className="text-gray-500 mb-12 max-w-xl">
                         The technologies I use daily to ship fast, reliable
-                        online stores and products.
+                        stores, websites and web apps.
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-10">
                         {skills.map(group => (
                             <div key={group.category}>
-                                <h3 className="text-xs font-semibold tracking-widest text-primary uppercase mb-4">
+                                <h3 className="text-xs font-semibold tracking-widest text-secondary uppercase mb-4">
                                     {group.category}
                                 </h3>
                                 <ul className="space-y-3">
@@ -387,7 +412,7 @@ export default function AboutPage() {
                                             key={item}
                                             className="flex items-center gap-3 text-gray-700 font-medium"
                                         >
-                                            <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                                            <span className="w-2 h-2 rounded-full bg-secondary flex-shrink-0" />
                                             {item}
                                         </li>
                                     ))}
@@ -426,13 +451,14 @@ export default function AboutPage() {
                         Let&apos;s build something great together.
                     </h2>
                     <p className="text-gray-500 mb-10">
-                        Whether you need a Shopify store, a custom storefront or
-                        a developer for your team, my inbox is always open.
+                        Whether you need a Shopify store, a business website, a
+                        web app or a developer for your team, my inbox is always
+                        open.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <Link
                             href="/#contact"
-                            className="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                            className="rounded-md bg-secondary px-7 py-2.5 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105 active:scale-95"
                         >
                             Get In Touch
                         </Link>
@@ -440,7 +466,7 @@ export default function AboutPage() {
                             href="https://www.linkedin.com/in/abosigodwin"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="border border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-primary hover:text-primary transition-colors"
+                            className="rounded-md border-2 border-gray-300 px-7 py-2.5 text-sm font-bold text-gray-700 transition-colors hover:border-secondary hover:text-secondary"
                         >
                             View LinkedIn
                         </a>
