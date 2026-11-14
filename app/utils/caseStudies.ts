@@ -281,121 +281,173 @@ export const caseStudies: CaseStudy[] = [
         id: "leeslagos",
         slug: "leeslagos-fashion-ecommerce",
         title: "LeesLagos",
-        subtitle: "Modern Fashion & Lifestyle Store",
-        category: "E-commerce Website",
+        subtitle: "Perfume Store with Checkout & Order Tracking",
+        category: "E-commerce Web App",
         status: "Completed",
         year: "2025",
 
         shortDescription:
-            "LeesLagos is a modern fashion e-commerce platform designed to showcase and sell stylish clothing with a clean, conversion-focused shopping experience.",
+            "A perfume and accessories store on React and Firebase, with Paystack checkout, server-side payment verification, order tracking and PDF receipts by email.",
 
         overview:
-            "LeesLagos is a fashion and lifestyle e-commerce website built to help a growing brand establish a strong online presence and convert visitors into buyers. The platform focuses on product clarity, smooth navigation, and a mobile-first shopping flow. Instead of overwhelming users with clutter, the experience emphasizes visual appeal, fast browsing, and frictionless purchasing, especially for mobile shoppers.",
+            "LeesLagos is a perfume and accessories store built end to end with React and Firebase. Shoppers browse the catalogue, save items to a cart or wishlist, sign in, and pay in naira through Paystack. Every payment is checked on the server before an order is saved, a PDF receipt is emailed to the customer, and the order can be tracked from placement to delivery. It covers the full path a real store needs, not just a storefront.",
 
         problem: {
             summary:
-                "Many small fashion brands struggle with presenting their products professionally online and converting social media traffic into actual sales.",
+                "Small online sellers often take orders in chat, confirm payments by hand and answer 'where is my order?' one message at a time.",
             points: [
-                "Poor product presentation reduces buyer trust",
-                "Cluttered layouts distract users from purchasing",
-                "Mobile shopping experience is often neglected",
-                "Lack of clear product structure hurts discoverability"
+                "Manual payment confirmation is slow and easy to get wrong",
+                "Customers get no receipt and no way to see where an order is",
+                "Trusting a payment popup alone lets unpaid orders slip through",
+                "Orders scattered across chats are hard to look up later"
             ]
         },
 
         solution: {
             summary:
-                "LeesLagos provides a clean, mobile-first storefront optimized for product discovery and conversion.",
+                "LeesLagos gives the store a complete buying flow: browse, pay, get a verified order, receive a receipt and follow delivery.",
             points: [
-                "Visually focused product layout",
-                "Clear navigation and product categorization",
-                "Mobile-optimized shopping experience",
-                "Conversion-focused product pages",
-                "Simple and scalable store structure"
+                "Paystack checkout that takes payment in naira",
+                "Serverless verification that confirms each payment before an order exists",
+                "Orders saved in Firestore against the customer's account",
+                "Automatic PDF receipt and tracking link sent by email",
+                "A five-step tracker customers can open any time"
             ]
         },
 
         features: [
             {
-                title: "Product Catalog",
+                title: "Catalogue and Product Pages",
                 details: [
-                    "Well-structured product collections",
-                    "Clean product cards with key information",
-                    "Category-based product filtering",
-                    "Scalable structure for future inventory growth"
+                    "Fragrances and accessories with prices in naira",
+                    "Product pages load through a React Router data loader",
+                    "Stock status, brand tag, colour and size on every product",
+                    "Similar products suggested from the same category"
                 ]
             },
             {
-                title: "Product Details Experience",
+                title: "Cart and Wishlist",
                 details: [
-                    "High-visibility product imagery",
-                    "Clear pricing and product descriptions",
-                    "Size and variant selection support",
-                    "Focused call-to-action for purchases"
+                    "Cart built on a reducer and Context API with a live subtotal",
+                    "Cart and wishlist saved in localStorage, so a refresh loses nothing",
+                    "Add to cart, or use Buy Now to jump straight to checkout",
+                    "Navbar badges show how many items are saved"
                 ]
             },
             {
-                title: "Mobile-First Shopping",
+                title: "Accounts and Protected Routes",
                 details: [
-                    "Responsive layout across devices",
-                    "Thumb-friendly navigation",
-                    "Optimized spacing for small screens",
-                    "Fast-loading product views"
+                    "Email and password sign-up and login with Firebase Auth",
+                    "Google sign-in on the login page",
+                    "Checkout, orders and tracking sit behind route guards",
+                    "Name and email prefilled at checkout from the account"
                 ]
             },
             {
-                title: "Brand Presentation",
+                title: "Paystack Checkout",
                 details: [
-                    "Consistent visual identity",
-                    "Clean typography and spacing system",
-                    "Modern fashion-focused aesthetic",
-                    "Designed to build brand credibility"
+                    "Billing form validated with React Hook Form",
+                    "Paystack popup handles card entry, so card details never touch the app",
+                    "Each order gets a unique order ID, with items and address sent as transaction metadata",
+                    "Cancelled payments are caught and the customer is told straight away"
+                ]
+            },
+            {
+                title: "Server-Side Payment Verification",
+                details: [
+                    "A Vercel serverless function checks every payment with Paystack",
+                    "The Paystack secret key stays on the server, never in the browser",
+                    "Failed transactions and underpaid amounts are rejected",
+                    "Only a verified payment creates the order and clears the cart"
+                ]
+            },
+            {
+                title: "Order Tracking",
+                details: [
+                    "Look up an order by ID, from recent orders, or through the email link",
+                    "Five steps: Order Received, Processing, Packaging, Shipped, Delivered",
+                    "Overview with customer details, price summary, delivery info and items",
+                    "Status comes from a field on the Firestore order, so one update moves the tracker"
+                ]
+            },
+            {
+                title: "PDF Receipts and Email",
+                details: [
+                    "Receipt PDF generated on the server with react-pdf",
+                    "Sent through SendGrid as soon as the payment is confirmed",
+                    "Email carries a Track Your Order link for that exact order",
+                    "Sent in the background so the customer never waits on the email"
+                ]
+            },
+            {
+                title: "Order History and Support",
+                details: [
+                    "My Orders lists the signed-in user's orders, newest first",
+                    "Item thumbnails, total, status and a one-tap Track Order button",
+                    "WhatsApp, phone and email support links on the tracking page",
+                    "Clear screens for orders not found and for customers with no orders yet"
                 ]
             }
         ],
 
         uxDecisions: [
             {
-                decision: "Visual-first product layout",
-                reason: "Fashion buyers rely heavily on imagery before making purchase decisions."
+                decision: "Browse first, sign in at checkout",
+                reason: "Guests can explore, fill a cart and save a wishlist without friction. An account is only asked for when money is about to change hands."
             },
             {
-                decision: "Minimal navigation structure",
-                reason: "Reduces friction and helps users reach products faster."
+                decision: "Create the order only after payment is verified",
+                reason: "The order list never holds unpaid or half-finished orders, so what the store sees is what was actually paid for."
             },
             {
-                decision: "Mobile-first design approach",
-                reason: "Most traffic for fashion brands comes from mobile users."
+                decision: "A receipt email that links straight to the tracker",
+                reason: "Customers land on the right order in one tap instead of copying an ID by hand."
             },
             {
-                decision: "Conversion-focused product pages",
-                reason: "Keeps users focused on purchasing rather than wandering."
+                decision: "Five plain-language tracking steps",
+                reason: "Order Received to Delivered, with a short sentence under the current step, so nobody has to decode a status code."
+            },
+            {
+                decision: "Naira across the whole flow",
+                reason: "Catalogue, cart, payment and receipt all use the same currency customers actually pay in."
             }
         ],
 
         techStack: {
-            frontend: ["ReactJs"],
-            styling: ["Tailwind CSS"],
-            stateManagement: ["Context API"],
-            backend: ["Firebase"],
+            frontend: ["React 19", "Vite", "React Router 7"],
+            styling: ["Tailwind CSS", "Motion", "Swiper"],
+            stateAndForms: [
+                "Context API",
+                "useReducer",
+                "TanStack Query",
+                "React Hook Form"
+            ],
+            backend: [
+                "Firebase Auth",
+                "Cloud Firestore",
+                "Vercel Serverless Functions"
+            ],
+            payments: ["Paystack"],
+            receipts: ["React PDF", "SendGrid"],
             deployment: ["Vercel"]
         },
 
         challengesAndLearnings: [
-            "Designing an e-commerce layout that balances aesthetics and performance",
-            "Optimizing responsive behavior across multiple screen sizes",
-            "Structuring product data for scalability",
-            "Maintaining visual consistency across the storefront"
+            "Not trusting the browser for payment status: the popup's success callback is only a signal, so the order is created after a server call confirms the transaction with Paystack",
+            "Sequencing the post-payment steps in the right order: verify, save the order, clear the cart, then send the receipt without blocking the page",
+            "Generating a PDF receipt inside a serverless function and attaching it to a SendGrid email",
+            "Keeping cart and wishlist in step with localStorage through reducers without losing items on refresh",
+            "Modelling an order as a single Firestore document keyed by order ID, so tracking is one read"
         ],
 
         outcomes: {
             summary:
-                "LeesLagos successfully delivers a clean, modern fashion storefront that strengthens brand credibility and improves the online shopping experience.",
+                "LeesLagos covers the whole path from browsing to delivery: a shopper can find a product, pay in naira, get a verified order and a PDF receipt by email, then follow the order until it arrives.",
             highlights: [
-                "Demonstrates strong e-commerce UX thinking",
-                "Shows ability to design for conversion",
-                "Balances visual design with performance",
-                "Creates a scalable foundation for future growth"
+                "Payments confirmed on the server before any order is saved",
+                "PDF receipt and tracking link emailed automatically after payment",
+                "Order history and tracking tied to each customer's account",
+                "Built end to end: catalogue, auth, payments, database, serverless functions and email"
             ]
         },
 
@@ -408,13 +460,15 @@ export const caseStudies: CaseStudy[] = [
 
         tags: [
             "React",
+            "Vite",
             "Firebase",
-            "Tailwind CSS",
+            "Firestore",
+            "Paystack",
             "E-commerce",
-            "Fashion Store",
-            "Product Design",
-            "Responsive Design",
-            "Frontend Development"
+            "Order Tracking",
+            "Serverless Functions",
+            "Tailwind CSS",
+            "Payment Integration"
         ]
     },
     {
@@ -1349,5 +1403,5 @@ export const caseStudies: CaseStudy[] = [
             "Responsive Design"
         ]
     },
-     
+    
 ];

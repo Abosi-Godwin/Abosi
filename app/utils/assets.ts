@@ -17,12 +17,7 @@ import {
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiSupabase, SiVercel, SiFirebase } from "react-icons/si";
 
-import {
-    SkillItem,
-    HighlightProps,
-    IntroInfo,
-    ProjectsProps
-} from "./types";
+import { SkillItem, HighlightProps, IntroInfo, ProjectsProps } from "./types";
 
 import myImage from "../../public/projects/relaxe.jpg";
 
@@ -42,6 +37,7 @@ import sprouteOutreach from "../../public/projects/sproute-outreach.jpg";
 import sprouteSearch from "../../public/projects/sproute-search.jpg";
 import sprouteLogin from "../../public/projects/sproute-login.png";
 import uniformThumbnail from "../../public/projects/uniform.png";
+
 export const introInfo: IntroInfo[] = [
     { image: sprouteThumbnail, title: "Landing page" },
     { image: sprouteDashboard, title: "Dashboard" },
@@ -67,14 +63,12 @@ export const mySocials = [
         name: "Facebook",
         icon: FaFacebookF
     },
-
     {
         url: "https://www.upwork.com/freelancers/~010c925ad55e60618b",
         name: "Upwork",
         icon: FaUpwork
     }
 ];
- 
 
 export const projectHighlight: HighlightProps = [
     "AI-powered lead discovery built for WhatsApp outreach",
@@ -161,16 +155,16 @@ export const projects: ProjectsProps[] = [
     {
         id: 2,
         slug: "leeslagos-fashion-ecommerce",
-        title: "LeesLagos: Cosmetics E-commerce Store",
+        title: "LeesLagos: Perfume Store with Checkout & Order Tracking",
         shortDescription:
-            "A full e-commerce store with a product catalogue, cart, Paystack checkout, delivery tracking and email notifications, built with React and Firebase.",
+            "A perfume and accessories store with Paystack checkout, server-verified payments, order tracking and PDF receipts by email, built with React and Firebase.",
         thumbnail: leeslagosThumbnail,
         tags: [
             "React",
             "TailwindCSS",
             "E-commerce",
             "Firebase",
-            "Firestore",
+            "Paystack",
             "Full-Stack"
         ],
         liveUrl: "https://leeslagos.vercel.app"
