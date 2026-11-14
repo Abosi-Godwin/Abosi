@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { LuZap, LuTrendingUp, LuWrench, LuGithub } from "react-icons/lu";
-import { projects, practiceProjects, caseStudies } from "../utils/assets";
+import { projects, practiceProjects } from "../utils/assets";
+import { caseStudies } from "../utils/caseStudies";
 import Heading from "../components/Heading";
 import Project from "../components/Project";
 import { Reveal, RevealGroup, RevealItem } from "../components/Reveal";

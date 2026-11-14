@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { caseStudies } from "../../utils/assets";
+import { caseStudies } from "../../utils/caseStudies";
 import SectionTitle from "./SectionTitle";
 import Meta from "./Meta";
 import Badge from "./Badge";
